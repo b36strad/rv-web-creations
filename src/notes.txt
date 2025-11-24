@@ -1,0 +1,17 @@
+added css styling to 'quote' button in styles.css to 
+match logo color that overrides bootstrap styling
+
+added project-intake.html 
+
+https://yourdomain.com/project-intake.html
+
+Send this link to clients after your discovery 
+call or in your onboarding email.
+
+clickup-project-template-guide.md added
+
+Next step: Copy this structure into ClickUp, save it as a template, 
+and use it for every project. Your first setup will take 1-2 hours, 
+but then every new project is just "Create from Template" 
+and you're done in 5 minutes!
+

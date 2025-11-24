@@ -1,0 +1,19 @@
+{
+  "name": "web-creations-site-2",
+  "version": "1.0.0",
+  "description": "A new website built with Bootstrap 5.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "node-sass src/scss/styles.scss src/css/styles.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "live-server": "^1.2.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

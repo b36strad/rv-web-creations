@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Web Creations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch to request a quote or ask a question about a new or existing website.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-primary text-white rounded" href="#main-content">Skip to content</a>
+  
+  <!-- Header with Bootstrap Navbar -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+          <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+          <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+          <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+        </svg>
+        <div class="d-flex flex-column">
+          <span class="fw-bold text-uppercase ls-wider fs-7" style="color: #f8b400;">WEB CREATIONS</span>
+          <span class="small opacity-75">Custom small business websites</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="btn btn-gold btn-sm rounded-pill ms-lg-2" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="small text-uppercase text-muted mb-2 fw-semibold ls-wider">Contact</div>
+          <h1 class="h2 fw-bold mb-3">Let's talk about your website.</h1>
+          <p class="lead text-muted mb-4">
+            Share a few details and you'll get a reply with next steps, usually including 
+            a short call to see what makes the most sense for your situation.
+          </p>
+
+          <div class="mb-4">
+            <img
+              src="images/contact-900-opt.jpg"
+              srcset="images/contact-480-opt.jpg 480w, images/contact-900-opt.jpg 900w, images/contact-1600-opt.jpg 1600w"
+              sizes="(max-width: 767px) 100vw, 720px"
+              alt="Person writing an email on a laptop"
+              class="img-fluid rounded-4 shadow-sm">
+          </div>
+
+          <div class="alert alert-light border mb-4">
+            <p class="mb-2">
+              <strong>I'd love to connect!</strong> Just fill out the form with your number and a good time for me to call, and I'll reach out right away.
+            </p>
+            <p class="small text-muted mb-0">
+              Keeping my number off-site helps cut down on spam, so thanks for understanding.
+            </p>
+          </div>
+
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-lg-5">
+              <!-- Success/Error Message -->
+              <div id="formMessage" class="alert d-none" role="alert"></div>
+              
+              <form id="contactForm" class="row g-3" method="POST" action="contact-handler.php">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="(555) 123-4567">
+                </div>
+                <div class="col-md-6">
+                  <label for="call-time" class="form-label">Best time to call</label>
+                  <select class="form-select" id="call-time" name="call-time">
+                    <option value="">Select an option</option>
+                    <option value="Morning (8am-12pm)">Morning (8am-12pm)</option>
+                    <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+                    <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+                    <option value="Anytime">Anytime</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="business" class="form-label">Business name</label>
+                  <input type="text" class="form-control" id="business" name="business" placeholder="Business name">
+                </div>
+                <div class="col-md-6">
+                  <label for="website" class="form-label">Current website (if any)</label>
+                  <input type="url" class="form-control" id="website" name="website" placeholder="https://">
+                </div>
+                <div class="col-md-6">
+                  <label for="project-type" class="form-label">What are you looking for?</label>
+                  <select class="form-select" id="project-type" name="project-type">
+                    <option value="">Select an option</option>
+                    <option value="New website">New website</option>
+                    <option value="Redesign / refresh">Redesign / refresh</option>
+                    <option value="Ongoing care & updates">Ongoing care &amp; updates</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="budget" class="form-label">Rough budget range</label>
+                  <select class="form-select" id="budget" name="budget">
+                    <option value="">Select an option</option>
+                    <option value="Still figuring that out">Still figuring that out</option>
+                    <option value="Lower range">Lower range</option>
+                    <option value="Mid range">Mid range</option>
+                    <option value="Higher range">Higher range</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Tell me a bit about your project <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="5" 
+                            placeholder="What do you need your website to do? Any deadlines?" required></textarea>
+                </div>
+                <!-- Honeypot field for spam protection (hidden from users) -->
+                <input type="text" name="website_url" style="display:none" tabindex="-1" autocomplete="off">
+                
+                <div class="col-12">
+                  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg rounded-pill px-4">
+                    <span class="btn-text">Submit</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <div class="mb-3 d-flex align-items-center justify-content-center gap-2">
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+                    <text x="8" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8b400">R</text>
+                    <text x="22" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">V</text>
+                </svg>
+                <span class="fw-bold" style="color: #f8b400;">WEB CREATIONS</span>
+            </div>
+            <p class="mb-1">Building websites that work as hard as you do</p>
+            <p class="mb-2">info@rvwebcreations.com</p>
+      <div class="mb-3">
+        <a href="policies.html" class="text-white-50 text-decoration-none me-3 small">Privacy Policy</a>
+        <a href="policies.html#terms" class="text-white-50 text-decoration-none small">Terms & Conditions</a>
+      </div>
+            <p class="mb-0">&copy; 2025 
+                <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin: 0 4px;">
+                    <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+                    <text x="8" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8b400">R</text>
+                    <text x="22" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">V</text>
+                </svg>
+                <span style="color: #f8b400;">WEB CREATIONS</span>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Contact Form Handler Script -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = this;
+      const formData = new FormData(form);
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const spinner = submitBtn.querySelector('.spinner-border');
+      const messageDiv = document.getElementById('formMessage');
+      
+      // Disable submit button and show loading state
+      submitBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      spinner.classList.remove('d-none');
+      messageDiv.classList.add('d-none');
+      
+      // Submit form via AJAX
+      fetch('contact-handler.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Show message
+        messageDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
+        
+        if (data.success) {
+          messageDiv.classList.add('alert-success');
+          messageDiv.textContent = data.message;
+          form.reset(); // Clear form
+        } else {
+          messageDiv.classList.add('alert-danger');
+          messageDiv.textContent = data.message;
+        }
+        
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      })
+      .catch(error => {
+        messageDiv.classList.remove('d-none', 'alert-success');
+        messageDiv.classList.add('alert-danger');
+        messageDiv.textContent = 'Sorry, there was a problem sending your message. Please email me directly at info@rvwebcreations.com';
+      })
+      .finally(() => {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        btnText.textContent = 'Submit';
+        spinner.classList.add('d-none');
+      });
+    });
+  </script>
+</body>
+</html>
