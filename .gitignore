@@ -17,3 +17,26 @@ build/
 *.zip
 *.tar.gz
 *.rar
+
+# Environment and credentials (NEVER COMMIT THESE)
+.env
+.env.local
+.env.production
+.env.staging
+config.local.php
+secrets.json
+credentials.json
+
+# Database dumps with real data
+*.sql.backup
+*-backup.sql
+database-dump-*.sql
+
+# Client data (if stored locally)
+clients/
+uploads/
+client-files/
+
+# Local configuration
+config/local.php
+config/production.php
