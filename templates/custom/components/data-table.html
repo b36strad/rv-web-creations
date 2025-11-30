@@ -1,0 +1,421 @@
+<!-- Advanced Data Table Component -->
+<!--
+  Usage: Display large datasets with sorting, filtering, and pagination
+  Features: Sort columns, search/filter, pagination, responsive
+  Requirements: Bootstrap 5
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Data Table</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../_base/css/variables.css">
+  
+  <style>
+    .table-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .table-search {
+      flex: 1;
+      max-width: 400px;
+      min-width: 200px;
+    }
+    
+    .table-container {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.075);
+      overflow: hidden;
+    }
+    
+    .data-table {
+      margin-bottom: 0;
+    }
+    
+    .data-table thead th {
+      background: var(--color-primary);
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    
+    .data-table thead th:hover {
+      background: var(--color-accent);
+    }
+    
+    .data-table thead th.sortable::after {
+      content: '⇅';
+      margin-left: 0.5rem;
+      opacity: 0.5;
+    }
+    
+    .data-table thead th.sort-asc::after {
+      content: '↑';
+      opacity: 1;
+    }
+    
+    .data-table thead th.sort-desc::after {
+      content: '↓';
+      opacity: 1;
+    }
+    
+    .data-table tbody tr {
+      transition: all 0.2s ease;
+    }
+    
+    .data-table tbody tr:hover {
+      background: #f8f9fa;
+    }
+    
+    .data-table tbody td {
+      padding: 1rem;
+      vertical-align: middle;
+    }
+    
+    .badge-status {
+      padding: 0.375rem 0.75rem;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    
+    .table-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-top: 1px solid #dee2e6;
+    }
+    
+    .table-info {
+      color: #6c757d;
+      font-size: 0.875rem;
+    }
+    
+    .pagination {
+      margin: 0;
+    }
+    
+    .action-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .table-responsive {
+        overflow-x: auto;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col">
+      <h2>Project Dashboard</h2>
+      <p class="text-muted">Manage all your active projects</p>
+    </div>
+  </div>
+  
+  <!-- Table Controls -->
+  <div class="table-controls">
+    <div class="table-search">
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="bi bi-search"></i>
+        </span>
+        <input type="text" class="form-control" id="searchInput" placeholder="Search projects...">
+      </div>
+    </div>
+    
+    <div class="d-flex gap-2">
+      <select class="form-select" id="statusFilter" style="width: auto;">
+        <option value="">All Status</option>
+        <option value="active">Active</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+        <option value="cancelled">Cancelled</option>
+      </select>
+      
+      <button class="btn btn-primary">
+        <i class="bi bi-plus-lg me-2"></i>New Project
+      </button>
+    </div>
+  </div>
+  
+  <!-- Data Table -->
+  <div class="table-container">
+    <div class="table-responsive">
+      <table class="table data-table">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="id">#</th>
+            <th class="sortable" data-sort="name">Project Name</th>
+            <th class="sortable" data-sort="client">Client</th>
+            <th class="sortable" data-sort="status">Status</th>
+            <th class="sortable" data-sort="budget">Budget</th>
+            <th class="sortable" data-sort="deadline">Deadline</th>
+            <th class="sortable" data-sort="progress">Progress</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Data will be inserted here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Pagination -->
+    <div class="table-pagination">
+      <div class="table-info">
+        Showing <span id="showingStart">1</span> to <span id="showingEnd">10</span> of <span id="totalRows">50</span> entries
+      </div>
+      
+      <nav>
+        <ul class="pagination" id="pagination">
+          <!-- Pagination will be inserted here -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Sample Data (replace with API call in production)
+const projectsData = [
+  { id: 1, name: 'E-commerce Website', client: 'TechCorp Inc', status: 'active', budget: 25000, deadline: '2025-12-15', progress: 65 },
+  { id: 2, name: 'Mobile App Development', client: 'StartupXYZ', status: 'active', budget: 45000, deadline: '2026-01-20', progress: 30 },
+  { id: 3, name: 'Brand Identity Design', client: 'Fashion Co', status: 'completed', budget: 8000, deadline: '2025-11-01', progress: 100 },
+  { id: 4, name: 'Marketing Website', client: 'Local Business', status: 'pending', budget: 5000, deadline: '2025-12-01', progress: 0 },
+  { id: 5, name: 'SaaS Dashboard', client: 'Cloud Services', status: 'active', budget: 60000, deadline: '2026-02-15', progress: 45 },
+  { id: 6, name: 'Portfolio Website', client: 'John Smith', status: 'completed', budget: 3500, deadline: '2025-10-15', progress: 100 },
+  { id: 7, name: 'Booking System', client: 'Hotel Chain', status: 'active', budget: 35000, deadline: '2025-12-30', progress: 75 },
+  { id: 8, name: 'CRM Integration', client: 'Sales Team Pro', status: 'pending', budget: 15000, deadline: '2026-01-10', progress: 0 },
+  { id: 9, name: 'Blog Platform', client: 'Content Agency', status: 'active', budget: 12000, deadline: '2025-12-20', progress: 55 },
+  { id: 10, name: 'Landing Page', client: 'Event Organizers', status: 'completed', budget: 2500, deadline: '2025-11-15', progress: 100 },
+  { id: 11, name: 'API Development', client: 'FinTech Startup', status: 'active', budget: 40000, deadline: '2026-01-25', progress: 20 },
+  { id: 12, name: 'Website Redesign', client: 'Retail Store', status: 'cancelled', budget: 10000, deadline: '2025-11-30', progress: 15 },
+  { id: 13, name: 'Mobile Optimization', client: 'News Portal', status: 'active', budget: 8500, deadline: '2025-12-10', progress: 80 },
+  { id: 14, name: 'Custom Plugin', client: 'WordPress Users', status: 'completed', budget: 4000, deadline: '2025-10-30', progress: 100 },
+  { id: 15, name: 'SEO Optimization', client: 'Marketing Firm', status: 'active', budget: 6000, deadline: '2026-01-05', progress: 60 },
+];
+
+// Table State
+let currentPage = 1;
+let itemsPerPage = 10;
+let filteredData = [...projectsData];
+let sortColumn = 'id';
+let sortDirection = 'asc';
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  renderTable();
+  setupEventListeners();
+});
+
+function setupEventListeners() {
+  // Search
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    filteredData = projectsData.filter(project => 
+      project.name.toLowerCase().includes(searchTerm) ||
+      project.client.toLowerCase().includes(searchTerm) ||
+      project.status.toLowerCase().includes(searchTerm)
+    );
+    currentPage = 1;
+    renderTable();
+  });
+  
+  // Status filter
+  document.getElementById('statusFilter').addEventListener('change', (e) => {
+    const status = e.target.value;
+    filteredData = status ? projectsData.filter(p => p.status === status) : [...projectsData];
+    currentPage = 1;
+    renderTable();
+  });
+  
+  // Sorting
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const column = th.dataset.sort;
+      if (sortColumn === column) {
+        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortColumn = column;
+        sortDirection = 'asc';
+      }
+      sortData();
+      renderTable();
+      updateSortIndicators();
+    });
+  });
+}
+
+function sortData() {
+  filteredData.sort((a, b) => {
+    let aVal = a[sortColumn];
+    let bVal = b[sortColumn];
+    
+    // Handle different data types
+    if (typeof aVal === 'string') {
+      aVal = aVal.toLowerCase();
+      bVal = bVal.toLowerCase();
+    }
+    
+    if (sortDirection === 'asc') {
+      return aVal > bVal ? 1 : -1;
+    } else {
+      return aVal < bVal ? 1 : -1;
+    }
+  });
+}
+
+function updateSortIndicators() {
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.sort === sortColumn) {
+      th.classList.add(`sort-${sortDirection}`);
+    }
+  });
+}
+
+function renderTable() {
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageData = filteredData.slice(start, end);
+  
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = pageData.map(project => `
+    <tr>
+      <td><strong>#${project.id}</strong></td>
+      <td>${project.name}</td>
+      <td>${project.client}</td>
+      <td>${getStatusBadge(project.status)}</td>
+      <td>$${project.budget.toLocaleString()}</td>
+      <td>${formatDate(project.deadline)}</td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="progress flex-grow-1 me-2" style="height: 8px;">
+            <div class="progress-bar ${getProgressColor(project.progress)}" 
+                 style="width: ${project.progress}%"></div>
+          </div>
+          <small class="text-muted">${project.progress}%</small>
+        </div>
+      </td>
+      <td>
+        <div class="action-buttons">
+          <button class="btn btn-sm btn-outline-primary" title="View">
+            <i class="bi bi-eye"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" title="Edit">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="btn btn-sm btn-outline-danger" title="Delete">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+  
+  renderPagination();
+  updateTableInfo();
+}
+
+function getStatusBadge(status) {
+  const badges = {
+    active: '<span class="badge bg-success badge-status">Active</span>',
+    pending: '<span class="badge bg-warning badge-status">Pending</span>',
+    completed: '<span class="badge bg-primary badge-status">Completed</span>',
+    cancelled: '<span class="badge bg-danger badge-status">Cancelled</span>'
+  };
+  return badges[status] || status;
+}
+
+function getProgressColor(progress) {
+  if (progress === 100) return 'bg-success';
+  if (progress >= 50) return 'bg-info';
+  if (progress > 0) return 'bg-warning';
+  return 'bg-secondary';
+}
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function renderPagination() {
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const pagination = document.getElementById('pagination');
+  
+  let html = `
+    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage - 1}); return false;">Previous</a>
+    </li>
+  `;
+  
+  // Show max 5 page numbers
+  let startPage = Math.max(1, currentPage - 2);
+  let endPage = Math.min(totalPages, startPage + 4);
+  
+  if (endPage - startPage < 4) {
+    startPage = Math.max(1, endPage - 4);
+  }
+  
+  for (let i = startPage; i <= endPage; i++) {
+    html += `
+      <li class="page-item ${i === currentPage ? 'active' : ''}">
+        <a class="page-link" href="#" onclick="changePage(${i}); return false;">${i}</a>
+      </li>
+    `;
+  }
+  
+  html += `
+    <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+      <a class="page-link" href="#" onclick="changePage(${currentPage + 1}); return false;">Next</a>
+    </li>
+  `;
+  
+  pagination.innerHTML = html;
+}
+
+function changePage(page) {
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  if (page < 1 || page > totalPages) return;
+  currentPage = page;
+  renderTable();
+}
+
+function updateTableInfo() {
+  const start = (currentPage - 1) * itemsPerPage + 1;
+  const end = Math.min(currentPage * itemsPerPage, filteredData.length);
+  
+  document.getElementById('showingStart').textContent = filteredData.length > 0 ? start : 0;
+  document.getElementById('showingEnd').textContent = end;
+  document.getElementById('totalRows').textContent = filteredData.length;
+}
+</script>
+
+</body>
+</html>
