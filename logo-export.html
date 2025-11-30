@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV Web Creations Logo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .logo-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      border: 6px dashed #f8b400 !important;
+      margin-top: 40px;
+    }
+
+    .logo-container::before {
+      content: '📸 SCREENSHOT THIS AREA 📸';
+      position: absolute;
+      top: -35px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: #f8b400;
+      color: #1f4f7b;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Horizontal Logo - Business Card Version */
+    .logo-horizontal {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-horizontal .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-horizontal .company-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #f8b400;
+      line-height: 1;
+    }
+
+    .logo-horizontal .tagline {
+      font-size: 13px;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+
+    /* Different Sizes */
+    .size-label {
+      text-align: center;
+      color: #6c757d;
+      font-size: 14px;
+      margin-bottom: -20px;
+    }
+
+    /* Large (for print) */
+    .logo-large {
+      transform: scale(2);
+      transform-origin: center;
+    }
+
+    /* Medium (for digital) */
+    .logo-medium {
+      transform: scale(1.5);
+      transform-origin: center;
+    }
+
+    /* Small (for web headers) */
+    .logo-small {
+      transform: scale(1);
+    }
+
+    /* Dark background version */
+    .dark-bg {
+      background: #212529;
+    }
+
+    .dark-bg .company-name {
+      color: #f8b400;
+    }
+
+    .dark-bg .tagline {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .instructions {
+      max-width: 600px;
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .instructions h2 {
+      margin-top: 0;
+      color: #1f4f7b;
+    }
+
+    .instructions ol {
+      padding-left: 20px;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="instructions">
+    <h2>Logo Export Instructions</h2>
+    <p>Choose the version you need and take a screenshot:</p>
+    <ol>
+      <li><strong>For Business Cards/Print:</strong> Use the "Large (Print Quality)" version</li>
+      <li><strong>For Website/Digital:</strong> Use the "Medium (Digital)" version</li>
+      <li><strong>Screenshot Tips:</strong>
+        <ul>
+          <li>macOS: Cmd+Shift+4, then drag around the logo</li>
+          <li>Windows: Windows+Shift+S, then drag around the logo</li>
+        </ul>
+      </li>
+      <li><strong>Recommended sizes:</strong>
+        <ul>
+          <li>Business card: 600-800px wide PNG</li>
+          <li>Website header: 300-400px wide PNG</li>
+          <li>Social media: 400-600px wide PNG</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Large Version - For Print/Business Cards -->
+  <div class="size-label">Large (Print Quality - Business Cards)</div>
+  <div class="logo-container" style="padding: 80px;">
+    <div class="logo-horizontal logo-large">
+      <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+        <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+        <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+      </svg>
+      <div class="text">
+        <span class="company-name">WEB CREATIONS</span>
+        <span class="tagline">Custom small business websites</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medium Version - For Digital Use -->
+  <div class="size-label">Medium (Digital - Websites/Social)</div>
+  <div class="logo-container">
+    <div class="logo-horizontal logo-medium">
+      <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+        <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+        <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+      </svg>
+      <div class="text">
+        <span class="company-name">WEB CREATIONS</span>
+        <span class="tagline">Custom small business websites</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small Version - Current Header Size -->
+  <div class="size-label">Small (Current Website Header)</div>
+  <div class="logo-container">
+    <div class="logo-horizontal logo-small">
+      <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+        <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+        <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+      </svg>
+      <div class="text">
+        <span class="company-name">WEB CREATIONS</span>
+        <span class="tagline">Custom small business websites</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Background Version -->
+  <div class="size-label">Medium on Dark Background (For dark designs)</div>
+  <div class="logo-container dark-bg">
+    <div class="logo-horizontal logo-medium">
+      <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+        <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+        <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+      </svg>
+      <div class="text">
+        <span class="company-name">WEB CREATIONS</span>
+        <span class="tagline">Custom small business websites</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo Mark Only (for favicons/icons) -->
+  <div class="size-label">RV Mark Only (For Favicons/App Icons)</div>
+  <div class="logo-container">
+    <svg width="160" height="160" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
+      <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+      <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="white"/>
+    </svg>
+  </div>
+
+</body>
+</html>

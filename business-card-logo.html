@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card Logo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .screenshot-area {
+      border: 8px solid red;
+      padding: 30px;
+      background: transparent;
+      position: relative;
+    }
+
+    .label {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: red;
+      color: white;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo svg {
+      margin-top: -8px;
+      margin-bottom: -8px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .company-name {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #f8b400;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="screenshot-area">
+    <div class="label">⬇️ SCREENSHOT EVERYTHING INSIDE THE RED BOX ⬇️</div>
+    
+    <div class="logo">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="8" fill="transparent"/>
+        <path d="M10 28V12H14C15.5 12 16.5 12.3 17.5 13C18.5 13.7 19 14.8 19 16.2C19 17 18.8 17.7 18.4 18.3C18 18.9 17.4 19.3 16.6 19.5L19.5 28H16.5L13.8 20H12.5V28H10ZM12.5 18H14C14.8 18 15.4 17.8 15.8 17.4C16.2 17 16.4 16.4 16.4 15.7C16.4 15 16.2 14.5 15.8 14.1C15.4 13.7 14.8 13.5 14 13.5H12.5V18Z" fill="#f8b400"/>
+        <path d="M23 12L26.5 28H29L32.5 12H30L27.75 23L25.5 12H23Z" fill="#ffffff"/>
+      </svg>
+      
+      <div class="text">
+        <span class="company-name">WEB CREATIONS</span>
+        <span class="tagline">Custom small business websites</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
