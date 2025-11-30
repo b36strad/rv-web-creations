@@ -15,6 +15,34 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// ═══════════════════════════════════════════════════════
+// DATABASE CONFIGURATION
+// ═══════════════════════════════════════════════════════
+// Update these with your database credentials
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'rv_web_creations');
+define('DB_USER', 'your_username');
+define('DB_PASS', 'your_password');
+
+// Connect to database
+try {
+    $pdo = new PDO(
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+        DB_USER,
+        DB_PASS,
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false
+        ]
+    );
+} catch (PDOException $e) {
+    // Log error but don't expose details to client
+    error_log("Database connection failed: " . $e->getMessage());
+    echo json_encode(['success' => false, 'message' => 'System error. Please try again or email info@rvwebcreations.com']);
+    exit;
+}
+
 // Function to sanitize input
 function sanitizeInput($data) {
     return htmlspecialchars(strip_tags(trim($data)));
@@ -94,6 +122,20 @@ $possibleDelays = sanitizeInput($_POST['possibleDelays'] ?? '');
 
 $additionalNotes = sanitizeInput($_POST['additionalNotes'] ?? '');
 
+// NEW FIELDS from enhanced form
+$contentStatus = sanitizeInput($_POST['contentStatus'] ?? '');
+$existingWebsite = sanitizeInput($_POST['existingWebsite'] ?? '');
+$existingUrl = sanitizeInput($_POST['existingUrl'] ?? '');
+$migrationDetails = sanitizeInput($_POST['migrationDetails'] ?? '');
+$maintenanceInterest = sanitizeInput($_POST['maintenanceInterest'] ?? '');
+$supportNeeds = sanitizeArray($_POST['supportNeeds'] ?? []);
+$maintenanceBilling = sanitizeInput($_POST['maintenanceBilling'] ?? '');
+$hostingNeeded = sanitizeInput($_POST['hostingNeeded'] ?? '');
+$referralSource = sanitizeInput($_POST['referralSource'] ?? '');
+$referralName = sanitizeInput($_POST['referralName'] ?? '');
+$nonprofitStatus = sanitizeInput($_POST['nonprofitStatus'] ?? '');
+$paymentPreference = sanitizeInput($_POST['paymentPreference'] ?? '');
+
 // Validate required fields
 if (empty($companyName) || empty($email)) {
     echo json_encode(['success' => false, 'message' => 'Company name and email are required.']);
@@ -103,6 +145,122 @@ if (empty($companyName) || empty($email)) {
 // Validate email format
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['success' => false, 'message' => 'Invalid email format.']);
+    exit;
+}
+
+// ═══════════════════════════════════════════════════════
+// SAVE TO DATABASE
+// ═══════════════════════════════════════════════════════
+try {
+    $sql = "INSERT INTO project_intakes (
+        company_name, contact_person, email, phone, 
+        preferred_communication, current_website, business_address,
+        business_description, website_goals, primary_action, business_priorities,
+        ideal_customer, multiple_audiences, audience_problems,
+        branding_status, branding_assets, brand_personality,
+        content_status, images_options, pages_needed,
+        features, num_products, product_categories, ecommerce_options,
+        shipping_options, payment_options,
+        websites_liked, competitor_sites, dislikes,
+        seo_services, tracking_tools, seo_copywriting,
+        platform, hosting, domain_status, security,
+        maintenance_options, site_updater,
+        budget, timeline, timeline_date,
+        urgency, decision_maker, possible_delays,
+        existing_website, existing_url, migration_details,
+        maintenance_interest, support_needs, maintenance_billing, hosting_needed,
+        referral_source, referral_name, nonprofit_status, payment_preference,
+        additional_notes,
+        submitted_at, ip_address, status
+    ) VALUES (
+        :company_name, :contact_person, :email, :phone,
+        :preferred_communication, :current_website, :business_address,
+        :business_description, :website_goals, :primary_action, :business_priorities,
+        :ideal_customer, :multiple_audiences, :audience_problems,
+        :branding_status, :branding_assets, :brand_personality,
+        :content_status_new, :images_options, :pages_needed,
+        :features, :num_products, :product_categories, :ecommerce_options,
+        :shipping_options, :payment_options,
+        :websites_liked, :competitor_sites, :dislikes,
+        :seo_services, :tracking_tools, :seo_copywriting,
+        :platform, :hosting, :domain_status, :security,
+        :maintenance_options, :site_updater,
+        :budget, :timeline, :timeline_date,
+        :urgency, :decision_maker, :possible_delays,
+        :existing_website, :existing_url, :migration_details,
+        :maintenance_interest, :support_needs, :maintenance_billing, :hosting_needed,
+        :referral_source, :referral_name, :nonprofit_status, :payment_preference,
+        :additional_notes,
+        NOW(), :ip_address, 'new'
+    )";
+    
+    $stmt = $pdo->prepare($sql);
+    
+    $stmt->execute([
+        ':company_name' => $companyName,
+        ':contact_person' => $contactPerson,
+        ':email' => $email,
+        ':phone' => $phone,
+        ':preferred_communication' => $preferredCommunication,
+        ':current_website' => $currentWebsite,
+        ':business_address' => $businessAddress,
+        ':business_description' => $businessDescription,
+        ':website_goals' => $websiteGoals,
+        ':primary_action' => $primaryAction,
+        ':business_priorities' => $businessPriorities,
+        ':ideal_customer' => $idealCustomer,
+        ':multiple_audiences' => $multipleAudiences,
+        ':audience_problems' => $audienceProblems,
+        ':branding_status' => $brandingStatus,
+        ':branding_assets' => $brandingAssets,
+        ':brand_personality' => $brandPersonality,
+        ':content_status_new' => $contentStatus,
+        ':images_options' => $imagesOptions,
+        ':pages_needed' => $pages,
+        ':features' => $features,
+        ':num_products' => $numProducts,
+        ':product_categories' => $productCategories,
+        ':ecommerce_options' => $ecommerceOptions,
+        ':shipping_options' => $shippingOptions,
+        ':payment_options' => $paymentOptions,
+        ':websites_liked' => $websitesLiked,
+        ':competitor_sites' => $competitorSites,
+        ':dislikes' => $dislikes,
+        ':seo_services' => $seoServices,
+        ':tracking_tools' => $trackingTools,
+        ':seo_copywriting' => $seoCopywriting,
+        ':platform' => $platform,
+        ':hosting' => $hosting,
+        ':domain_status' => $domainStatus,
+        ':security' => $security,
+        ':maintenance_options' => $maintenanceOptions,
+        ':site_updater' => $siteUpdater,
+        ':budget' => $budget,
+        ':timeline' => $timeline,
+        ':timeline_date' => $timelineDate,
+        ':urgency' => $urgency,
+        ':decision_maker' => $decisionMaker,
+        ':possible_delays' => $possibleDelays,
+        ':existing_website' => $existingWebsite,
+        ':existing_url' => $existingUrl,
+        ':migration_details' => $migrationDetails,
+        ':maintenance_interest' => $maintenanceInterest,
+        ':support_needs' => $supportNeeds,
+        ':maintenance_billing' => $maintenanceBilling,
+        ':hosting_needed' => $hostingNeeded,
+        ':referral_source' => $referralSource,
+        ':referral_name' => $referralName,
+        ':nonprofit_status' => $nonprofitStatus,
+        ':payment_preference' => $paymentPreference,
+        ':additional_notes' => $additionalNotes,
+        ':ip_address' => $_SERVER['REMOTE_ADDR']
+    ]);
+    
+    $intakeId = $pdo->lastInsertId();
+    
+} catch (PDOException $e) {
+    error_log("Database insert failed: " . $e->getMessage());
+    echo json_encode(['success' => false, 'message' => 'Error saving your submission. Please try again.']);
     exit;
 }
 

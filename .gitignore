@@ -12,3 +12,8 @@ build/
 .tmp.driveupload/
 .tmp.drivedownload/
 *.tmp
+
+# Backup files
+*.zip
+*.tar.gz
+*.rar

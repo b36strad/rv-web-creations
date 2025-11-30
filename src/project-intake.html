@@ -756,26 +756,26 @@
         <div class="card-header">11. Budget &amp; Timeline</div>
         <div class="card-body row g-3">
           <div class="col-md-6">
-            <label class="form-label d-block">Estimated budget</label>
+            <label class="form-label d-block">Estimated budget for website project</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="budget1" name="budget" value="$500–$1,000" />
-              <label class="form-check-label" for="budget1">$500–$1,000</label>
+              <input class="form-check-input" type="radio" id="budget1" name="budget" value="$2,500–$6,000" />
+              <label class="form-check-label" for="budget1">$2,500–$6,000 (Starter Site)</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="budget2" name="budget" value="$1,000–$2,000" />
-              <label class="form-check-label" for="budget2">$1,000–$2,000</label>
+              <input class="form-check-input" type="radio" id="budget2" name="budget" value="$7,500–$12,000" />
+              <label class="form-check-label" for="budget2">$7,500–$12,000 (Growth Site)</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="budget3" name="budget" value="$2,000–$5,000" />
-              <label class="form-check-label" for="budget3">$2,000–$5,000</label>
+              <input class="form-check-input" type="radio" id="budget3" name="budget" value="$12,000–$18,000" />
+              <label class="form-check-label" for="budget3">$12,000–$18,000 (Growth Site - Advanced)</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="budget4" name="budget" value="$5,000+" />
-              <label class="form-check-label" for="budget4">$5,000+</label>
+              <input class="form-check-input" type="radio" id="budget4" name="budget" value="$18,000+" />
+              <label class="form-check-label" for="budget4">$18,000+ (Custom/Enterprise)</label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" id="budgetUnsure" name="budget" value="Not sure" />
-              <label class="form-check-label" for="budgetUnsure">Not sure — need options</label>
+              <label class="form-check-label" for="budgetUnsure">Not sure — need guidance</label>
             </div>
           </div>
           <div class="col-md-6">
@@ -823,9 +823,185 @@
         </div>
       </div>
 
-      <!-- 13. Additional Notes -->
+      <!-- 13. Content Readiness & Migration -->
       <div class="card section-card">
-        <div class="card-header">13. Additional Notes</div>
+        <div class="card-header">13. Content Readiness &amp; Migration</div>
+        <div class="card-body row g-3">
+          <div class="col-12">
+            <label class="form-label d-block">What is the status of your content (text, images, etc.)?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="contentReady" name="contentStatus" value="Ready and organized" />
+              <label class="form-check-label" for="contentReady">Ready and organized - I have all text and images prepared</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="contentPartial" name="contentStatus" value="Partially ready" />
+              <label class="form-check-label" for="contentPartial">Partially ready - I have some content but needs organization</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="contentHelp" name="contentStatus" value="Need help" />
+              <label class="form-check-label" for="contentHelp">Need help - I need assistance with writing and sourcing images</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="contentFull" name="contentStatus" value="Full copywriting needed" />
+              <label class="form-check-label" for="contentFull">Start from scratch - Full professional copywriting needed</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label d-block">Do you have an existing website?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="existingNo" name="existingWebsite" value="No" />
+              <label class="form-check-label" for="existingNo">No - This is a new website</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="existingYes" name="existingWebsite" value="Yes" />
+              <label class="form-check-label" for="existingYes">Yes - Need to migrate/redesign</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="existingUrl" class="form-label">If yes, what is the current website URL?</label>
+            <input type="url" class="form-control" id="existingUrl" name="existingUrl" placeholder="https://example.com" />
+          </div>
+          <div class="col-12">
+            <label for="migrationDetails" class="form-label">If migrating, approximately how many pages and what needs to be transferred?</label>
+            <textarea class="form-control" id="migrationDetails" name="migrationDetails" rows="2" placeholder="e.g., 20 pages, blog posts, product catalog, customer accounts"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. Ongoing Support Preferences -->
+      <div class="card section-card">
+        <div class="card-header">14. Ongoing Support &amp; Maintenance Interest</div>
+        <div class="card-body row g-3">
+          <div class="col-12">
+            <label class="form-label d-block">Are you interested in ongoing website maintenance after launch?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="maintenanceYes" name="maintenanceInterest" value="Yes" />
+              <label class="form-check-label" for="maintenanceYes">Yes - I'd like ongoing support</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="maintenanceMaybe" name="maintenanceInterest" value="Maybe" />
+              <label class="form-check-label" for="maintenanceMaybe">Maybe - Want to learn more</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="maintenanceNo" name="maintenanceInterest" value="No" />
+              <label class="form-check-label" for="maintenanceNo">No - I'll manage it myself</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="form-label d-block">If interested, what level of support would you need? (Select all that apply)</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportUpdates" name="supportNeeds[]" value="Content updates" />
+              <label class="form-check-label" for="supportUpdates">Regular content updates</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportSecurity" name="supportNeeds[]" value="Security monitoring" />
+              <label class="form-check-label" for="supportSecurity">Security monitoring and updates</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportBackups" name="supportNeeds[]" value="Backups" />
+              <label class="form-check-label" for="supportBackups">Regular backups</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportSEO" name="supportNeeds[]" value="SEO optimization" />
+              <label class="form-check-label" for="supportSEO">Ongoing SEO optimization</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportAnalytics" name="supportNeeds[]" value="Analytics reporting" />
+              <label class="form-check-label" for="supportAnalytics">Monthly analytics reporting</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="supportPriority" name="supportNeeds[]" value="Priority support" />
+              <label class="form-check-label" for="supportPriority">Priority email/phone support</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label d-block">Preferred maintenance plan billing</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="billingMonthly" name="maintenanceBilling" value="Monthly" />
+              <label class="form-check-label" for="billingMonthly">Monthly (billed each month)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="billingAnnual" name="maintenanceBilling" value="Annual" />
+              <label class="form-check-label" for="billingAnnual">Annual (save with yearly payment)</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label d-block">Will you need hosting services?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="hostingYes" name="hostingNeeded" value="Yes" />
+              <label class="form-check-label" for="hostingYes">Yes - Please include hosting</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="hostingNo" name="hostingNeeded" value="No" />
+              <label class="form-check-label" for="hostingNo">No - I have my own hosting</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="hostingUnsure" name="hostingNeeded" value="Unsure" />
+              <label class="form-check-label" for="hostingUnsure">Unsure - Need advice</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Payment & Contract Preferences -->
+      <div class="card section-card">
+        <div class="card-header">15. Payment &amp; Contract Preferences</div>
+        <div class="card-body row g-3">
+          <div class="col-12">
+            <label class="form-label d-block">How did you hear about RV Web Creations?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="sourceReferral" name="referralSource" value="Referral" />
+              <label class="form-check-label" for="sourceReferral">Referral from existing client</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="sourceSearch" name="referralSource" value="Search" />
+              <label class="form-check-label" for="sourceSearch">Google/Online search</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="sourceSocial" name="referralSource" value="Social" />
+              <label class="form-check-label" for="sourceSocial">Social media</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="sourceOther" name="referralSource" value="Other" />
+              <label class="form-check-label" for="sourceOther">Other</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="referralName" class="form-label">If referred, who referred you? (for discount)</label>
+            <input type="text" class="form-control" id="referralName" name="referralName" placeholder="Client name who referred you" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label d-block">Are you a nonprofit organization?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="nonprofitYes" name="nonprofitStatus" value="Yes" />
+              <label class="form-check-label" for="nonprofitYes">Yes (may qualify for discount)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="nonprofitNo" name="nonprofitStatus" value="No" />
+              <label class="form-check-label" for="nonprofitNo">No</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="form-label d-block">Payment structure preference</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="paymentStandard" name="paymentPreference" value="Standard" />
+              <label class="form-check-label" for="paymentStandard">Standard - 50% deposit, 25% midpoint, 25% at launch</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="paymentFull" name="paymentPreference" value="Full upfront" />
+              <label class="form-check-label" for="paymentFull">Full payment upfront (may qualify for 5% discount)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="paymentMilestone" name="paymentPreference" value="Milestone" />
+              <label class="form-check-label" for="paymentMilestone">Multiple milestones (for larger projects)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. Additional Notes -->
+      <div class="card section-card">
+        <div class="card-header">16. Additional Notes</div>
         <div class="card-body">
           <label for="additionalNotes" class="form-label">Please share anything else I should know to make this project a success.</label>
           <textarea class="form-control" id="additionalNotes" name="additionalNotes" rows="4"></textarea>
