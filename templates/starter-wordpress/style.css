@@ -1,0 +1,181 @@
+/*
+Theme Name: RV Starter Theme
+Theme URI: https://rvwebcreations.com
+Author: RV Web Creations
+Author URI: https://rvwebcreations.com
+Description: A professional Bootstrap 5 WordPress theme converted from the Starter static template. Perfect for small business websites with blog functionality.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rv-starter
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, bootstrap, responsive
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+*/
+
+/*
+ * This is the theme stylesheet file required by WordPress.
+ * The actual styles are in /css/styles.css
+ * 
+ * This file must exist for WordPress to recognize the theme,
+ * but we'll use our custom Bootstrap-based stylesheet instead.
+ */
+
+/* Basic WordPress Required Styles */
+.alignleft {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* WordPress Gallery Styles */
+.gallery {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+/* WordPress Caption Styles */
+.wp-caption {
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.wp-caption-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* WordPress Blocks - Basic Support */
+.wp-block-image {
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-image img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Screen Reader Text */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Sticky Posts */
+.sticky {
+  border-left: 3px solid var(--color-primary, #007bff);
+  padding-left: 1rem;
+}
+
+/* Post Navigation */
+.post-navigation,
+.posts-navigation {
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* Comment Form */
+.comment-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  width: 100%;
+}
+
+.comment-reply-title small {
+  font-size: 0.875rem;
+}
+
+/* WordPress Admin Bar Spacing */
+body.admin-bar {
+  margin-top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar {
+    margin-top: 46px;
+  }
+}
