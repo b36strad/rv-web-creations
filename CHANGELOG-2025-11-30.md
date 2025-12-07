@@ -9,7 +9,7 @@
 ## December 7, 2025 - Template Updates & Portfolio Reorganization
 
 **Time:** Updated throughout the day  
-**Focus:** Professional Services template image optimization and portfolio page content flow
+**Focus:** Professional Services template image optimization, portfolio page content flow, homepage CTA improvements, and typography enhancements
 
 ### Changes Made
 
@@ -64,6 +64,98 @@
 - Logical progression from "what I've built" → "why templates" → "available templates"
 - Reduced redundancy and improved page flow
 
+#### 3. Homepage CTA Improvements
+**File Modified:** `src/index.html`
+
+**Hero Section Updates:**
+
+1. **Updated Headline**
+   - Old: "Do you want a website that is simple, clear, and profitable — not just 'pretty?'"
+   - New: "Small business websites that convert visitors into customers"
+   - Rationale: More direct, identifies target audience immediately, focuses on conversion (what you control) vs traffic (what marketing controls)
+
+2. **Added Primary CTA Buttons**
+   - "Get Your Free Quote" (gold button with icon)
+   - "View Pricing & Packages" (outline button)
+   - Positioned prominently in hero after supporting copy
+   - Increased visibility and reduced friction
+
+3. **Added Supporting Copy Paragraph**
+   - Text: "Modern websites win by being obvious, fast, and effortless to use..."
+   - Purpose: Fill vertical space, align buttons with sidebar cards, reinforce design philosophy
+   - Improves content flow between lead text and feature badges
+
+4. **Increased Badge Readability**
+   - Font size: Increased to 15px (0.9375rem) from default ~13px
+   - Font weight: Changed to normal (removed bold)
+   - Result: Better readability for feature badges
+
+5. **Added Social Proof Banner**
+   - Positioned after hero section, before design philosophy
+   - Content: Star icon, "Professional websites for small businesses", pricing preview ($2,500+), timeline (2-6 weeks)
+   - Purpose: Set expectations early, filter qualified leads, build credibility
+
+**Closing CTA Section Redesign:**
+
+1. **Added Urgency Badge**
+   - Text: "Free quote within 24 hours"
+   - Clock icon for visual emphasis
+   - Creates time-based motivation
+
+2. **Dual Button Layout**
+   - Primary: "Get Your Free Quote" (gold button with email icon)
+   - Secondary: "See Pricing & Packages" (outline button)
+   - Centered layout for focus
+   - Replaced email link with actionable buttons
+
+3. **Improved Copy**
+   - Shortened and more direct
+   - Clear benefit: "Get a free quote and clear timeline"
+   - Email as tertiary option below buttons
+
+**Spacing Improvements:**
+- Removed alert box that created excessive white space
+- Adjusted margins for better vertical balance
+- Aligned hero buttons with bottom edge of sidebar cards
+- Tighter, more compact hero section
+
+#### 4. Typography & Accessibility Enhancements
+**File Modified:** `src/css/styles.css`
+
+**Base Font Size:**
+- Increased from 16px (default) to 17px
+- Aligns with Apple.com and other modern sites
+- Better readability across all devices
+
+**Color Improvements:**
+
+1. **`.text-muted` Darkened**
+   - Old: `#6c757d` (Bootstrap default, 4.5:1 contrast)
+   - New: `#4a5568` (7.3:1 contrast)
+   - Result: WCAG AA compliant, much more readable
+   - Used extensively throughout site for secondary text
+
+2. **`.lead` Text Darkened**
+   - New color: `#2d3748` (11.5:1 contrast)
+   - Font size: 1.15rem (19.55px with 17px base)
+   - No longer uses muted color for important intro paragraphs
+   - Result: WCAG AAA compliant
+
+3. **Minimum Small Text Size**
+   - Set to: 0.875rem (14.875px with 17px base)
+   - Ensures small text remains readable and accessible
+
+**Contrast Ratios (All WCAG Compliant):**
+- Body text (`#1f2933`): 13.8:1 (AAA) ✅
+- Lead text (`#2d3748`): 11.5:1 (AAA) ✅
+- Text-muted (`#4a5568`): 7.3:1 (AA) ✅
+- Small text-muted: 7.3:1 (AA) ✅
+
+**Industry Comparison:**
+- Font size (17px): Matches Apple.com, between Google (16px) and Medium (21px)
+- Colors: Nearly identical to Tailwind CSS defaults (most popular CSS framework)
+- Exceeds most websites on accessibility standards
+
 ### Technical Details
 
 **Image Selection Process:**
@@ -73,8 +165,21 @@
 
 **Content Flow Optimization:**
 - Applied marketing funnel logic: Demonstrate → Educate → Present Options → Reinforce → Convert
-- Removed duplicate ~130 lines of code
+- Removed duplicate ~130 lines of code from portfolio page
 - Improved page readability and visitor journey
+- Added urgency and social proof elements to homepage
+
+**CTA Strategy:**
+- Multiple touchpoints: Hero buttons, social proof, closing section
+- Reduced friction: Direct buttons vs email links
+- Clear hierarchy: Primary (Get Quote) vs Secondary (View Pricing)
+- Urgency triggers: "24 hours", "2-6 weeks", pricing preview
+
+**Accessibility Focus:**
+- All text meets or exceeds WCAG AA standards
+- Many elements achieve WCAG AAA (highest level)
+- Industry-standard font sizes and colors
+- Better readability for users with vision impairments
 
 ---
 

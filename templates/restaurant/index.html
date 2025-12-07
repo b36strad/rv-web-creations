@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[RESTAURANT NAME] - [Type of cuisine] in [City]. View our menu, make reservations, and order online.">
+  <meta name="keywords" content="restaurant, [cuisine type], [city], dining, menu">
+  <meta name="author" content="[RESTAURANT NAME]">
+  
+  <title>[RESTAURANT NAME] | [Cuisine Type] Restaurant</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Base Template CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Demo Banner Styles -->
+  <style>
+    .demo-banner {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1050;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .demo-banner p {
+      margin: 0;
+      font-weight: 500;
+    }
+    .demo-banner .btn {
+      padding: 0.375rem 1.25rem;
+      font-weight: 600;
+      border: 2px solid white;
+    }
+    .demo-banner .btn:hover {
+      background: white;
+      color: #667eea;
+    }
+  </style>
+</head>
+<body>
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-auto">
+          <p class="mb-0">
+            <i class="bi bi-info-circle me-2"></i>
+            This is a live demo of the Restaurant Template
+          </p>
+        </div>
+        <div class="col-auto">
+          <a href="../../src/pricing.html" class="btn btn-outline-light btn-sm">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); top: 3.5rem;">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        [Restaurant Name]
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-warning text-dark fw-semibold" href="#reserve">
+              <i class="bi bi-calendar-check me-2"></i>Reserve Table
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+      <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop&q=80'); background-size: cover; background-position: center; height: 600px;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+        <div class="container position-relative h-100">
+          <div class="row h-100 align-items-center justify-content-center text-center text-white">
+            <div class="col-lg-8">
+              <h1 class="display-3 fw-bold mb-3">Exceptional [Cuisine] Dining</h1>
+              <p class="lead mb-4 fs-4">
+                Experience authentic flavors crafted with passion and the finest ingredients
+              </p>
+              <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="#menu" class="btn btn-warning btn-lg text-dark fw-semibold px-4">
+                  <i class="bi bi-book me-2"></i>View Menu
+                </a>
+                <a href="#reserve" class="btn btn-outline-light btn-lg px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Reserve Table
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <section class="py-4 bg-warning">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <i class="bi bi-clock fs-3"></i>
+              <div class="text-start">
+                <div class="small fw-semibold text-uppercase">Hours</div>
+                <div class="fw-bold">Mon-Sun: 11am-10pm</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <i class="bi bi-geo-alt fs-3"></i>
+              <div class="text-start">
+                <div class="small fw-semibold text-uppercase">Location</div>
+                <div class="fw-bold">123 Main St, City, ST 12345</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <i class="bi bi-telephone fs-3"></i>
+              <div class="text-start">
+                <div class="small fw-semibold text-uppercase">Call Us</div>
+                <div class="fw-bold">(555) 123-4567</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Online Section -->
+    <section class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-lg-8">
+            <h3 class="h5 mb-3 fw-bold">Order Online for Pickup or Delivery</h3>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="#" class="btn btn-light text-dark fw-semibold">
+                <i class="bi bi-bag me-2"></i>Order Direct
+              </a>
+              <a href="#" class="btn btn-outline-light">
+                <i class="bi bi-door-open me-2"></i>DoorDash
+              </a>
+              <a href="#" class="btn btn-outline-light">
+                <i class="bi bi-car-front me-2"></i>Uber Eats
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Signature Dishes</h2>
+          <p class="lead text-muted">Discover our most loved creations</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm hover-lift h-100">
+              <div class="position-relative overflow-hidden" style="height: 300px;">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80" 
+                     alt="Signature dish" 
+                     class="w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 fw-bold mb-0">[Dish Name]</h3>
+                  <span class="badge bg-warning text-dark">Popular</span>
+                </div>
+                <p class="text-muted mb-3">
+                  [Brief description of the dish, highlighting key ingredients and flavors that make it special]
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fs-4 fw-bold text-primary">$24</span>
+                  <a href="#menu" class="btn btn-sm btn-outline-primary">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm hover-lift h-100">
+              <div class="position-relative overflow-hidden" style="height: 300px;">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&q=80" 
+                     alt="Signature dish" 
+                     class="w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 fw-bold mb-0">[Dish Name]</h3>
+                  <span class="badge bg-success text-white">Chef's Choice</span>
+                </div>
+                <p class="text-muted mb-3">
+                  [Brief description of the dish, highlighting key ingredients and flavors that make it special]
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fs-4 fw-bold text-primary">$28</span>
+                  <a href="#menu" class="btn btn-sm btn-outline-primary">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm hover-lift h-100">
+              <div class="position-relative overflow-hidden" style="height: 300px;">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop&q=80" 
+                     alt="Signature dish" 
+                     class="w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 fw-bold mb-0">[Dish Name]</h3>
+                  <span class="badge bg-danger text-white">Spicy</span>
+                </div>
+                <p class="text-muted mb-3">
+                  [Brief description of the dish, highlighting key ingredients and flavors that make it special]
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fs-4 fw-bold text-primary">$22</span>
+                  <a href="#menu" class="btn btn-sm btn-outline-primary">Order Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#menu" class="btn btn-dark btn-lg">
+            View Full Menu <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Our Menu</h2>
+          <p class="lead text-muted">Fresh ingredients, bold flavors</p>
+        </div>
+
+        <!-- Menu Categories -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-10">
+            <ul class="nav nav-pills justify-content-center flex-wrap gap-2" id="menuTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="appetizers-tab" data-bs-toggle="pill" data-bs-target="#appetizers" type="button">
+                  Appetizers
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="entrees-tab" data-bs-toggle="pill" data-bs-target="#entrees" type="button">
+                  Entrées
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="desserts-tab" data-bs-toggle="pill" data-bs-target="#desserts" type="button">
+                  Desserts
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="drinks-tab" data-bs-toggle="pill" data-bs-target="#drinks" type="button">
+                  Drinks
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="tab-content" id="menuTabContent">
+              <!-- Appetizers -->
+              <div class="tab-pane fade show active" id="appetizers" role="tabpanel">
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Appetizer Name]</h3>
+                        <p class="text-muted mb-2">Fresh ingredients with signature seasoning, served with house-made sauce</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-secondary-subtle text-secondary">Vegetarian</span>
+                          <span class="badge bg-secondary-subtle text-secondary">Gluten-free</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$12</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Appetizer Name]</h3>
+                        <p class="text-muted mb-2">Crispy and flavorful, paired with artisan dipping sauces</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-danger-subtle text-danger">Spicy</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$10</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Appetizer Name]</h3>
+                        <p class="text-muted mb-2">A crowd favorite featuring premium ingredients and bold flavors</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-warning-subtle text-dark">Popular</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$14</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Entrees -->
+              <div class="tab-pane fade" id="entrees" role="tabpanel">
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Entrée Name]</h3>
+                        <p class="text-muted mb-2">Tender, perfectly seasoned protein with seasonal vegetables and signature sides</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-success-subtle text-success">Chef's Special</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$28</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Entrée Name]</h3>
+                        <p class="text-muted mb-2">Rich, comforting flavors with locally sourced ingredients</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-secondary-subtle text-secondary">Vegetarian</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$24</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Entrée Name]</h3>
+                        <p class="text-muted mb-2">A house favorite combining traditional techniques with modern flair</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                          <span class="badge bg-warning-subtle text-dark">Best Seller</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$26</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Desserts -->
+              <div class="tab-pane fade" id="desserts" role="tabpanel">
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Dessert Name]</h3>
+                        <p class="text-muted mb-2">Decadent and indulgent, made fresh daily by our pastry chef</p>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$9</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Dessert Name]</h3>
+                        <p class="text-muted mb-2">A classic favorite with a modern twist</p>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$8</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Drinks -->
+              <div class="tab-pane fade" id="drinks" role="tabpanel">
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">[Cocktail Name]</h3>
+                        <p class="text-muted mb-2">Premium spirits with fresh mixers and house-made ingredients</p>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$12</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">Add to Order</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                  <div class="card-body p-4">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h3 class="h5 fw-bold mb-2">Wine Selection</h3>
+                        <p class="text-muted mb-2">Curated list of domestic and international wines by the glass or bottle</p>
+                      </div>
+                      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <div class="fs-3 fw-bold text-primary mb-2">$9+</div>
+                        <button class="btn btn-sm btn-warning text-dark fw-semibold">See List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="text-muted mb-0">
+            <i class="bi bi-info-circle me-2"></i>
+            Prices and menu items subject to change. Ask about daily specials and seasonal offerings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop&q=80" 
+                 alt="Restaurant interior" 
+                 class="img-fluid rounded-3 shadow-lg">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold mb-4">Our Story</h2>
+            <p class="lead text-muted mb-4">
+              Since [year], we've been serving authentic [cuisine] to the [city] community, 
+              combining traditional recipes with locally sourced ingredients.
+            </p>
+            <p class="mb-4">
+              Our chef, [Chef Name], brings [X] years of culinary experience and a passion for 
+              creating memorable dining experiences. Every dish is crafted with care, using time-honored 
+              techniques and the freshest seasonal ingredients.
+            </p>
+            <p class="mb-4">
+              Whether you're joining us for a casual lunch, romantic dinner, or special celebration, 
+              we're committed to providing exceptional food and warm hospitality.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <div class="text-center">
+                <div class="display-6 fw-bold text-primary">[X]+</div>
+                <div class="small text-muted">Years Serving</div>
+              </div>
+              <div class="text-center">
+                <div class="display-6 fw-bold text-primary">[X]k+</div>
+                <div class="small text-muted">Happy Customers</div>
+              </div>
+              <div class="text-center">
+                <div class="display-6 fw-bold text-primary">4.8</div>
+                <div class="small text-muted">Star Rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Gallery</h2>
+          <p class="lead text-muted">See our restaurant and dishes</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-1x1">
+              <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&h=600&fit=crop&q=80" 
+                   alt="Restaurant photo" 
+                   class="img-fluid w-100 h-100 object-fit-cover rounded hover-zoom">
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-dark">
+            <i class="bi bi-instagram me-2"></i>Follow Us on Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reserve" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-lg">
+              <div class="card-body p-4 p-lg-5">
+                <div class="text-center mb-4">
+                  <h2 class="display-6 fw-bold mb-3">Reserve Your Table</h2>
+                  <p class="text-muted">Book your dining experience with us</p>
+                </div>
+
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="name" class="form-label fw-semibold">Full Name *</label>
+                      <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label fw-semibold">Phone Number *</label>
+                      <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="date" class="form-label fw-semibold">Date *</label>
+                      <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="time" class="form-label fw-semibold">Time *</label>
+                      <select class="form-select" id="time" required>
+                        <option value="">Select time...</option>
+                        <option>11:00 AM</option>
+                        <option>11:30 AM</option>
+                        <option>12:00 PM</option>
+                        <option>12:30 PM</option>
+                        <option>1:00 PM</option>
+                        <option>1:30 PM</option>
+                        <option>5:00 PM</option>
+                        <option>5:30 PM</option>
+                        <option>6:00 PM</option>
+                        <option>6:30 PM</option>
+                        <option>7:00 PM</option>
+                        <option>7:30 PM</option>
+                        <option>8:00 PM</option>
+                        <option>8:30 PM</option>
+                        <option>9:00 PM</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="guests" class="form-label fw-semibold">Number of Guests *</label>
+                      <select class="form-select" id="guests" required>
+                        <option value="">Select...</option>
+                        <option>1 guest</option>
+                        <option>2 guests</option>
+                        <option>3 guests</option>
+                        <option>4 guests</option>
+                        <option>5 guests</option>
+                        <option>6 guests</option>
+                        <option>7+ guests</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label fw-semibold">Email</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="col-12">
+                      <label for="notes" class="form-label fw-semibold">Special Requests</label>
+                      <textarea class="form-control" id="notes" rows="3" placeholder="Allergies, dietary restrictions, special occasions, etc."></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-warning btn-lg w-100 text-dark fw-semibold">
+                        <i class="bi bi-calendar-check me-2"></i>Confirm Reservation
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="text-center mt-4">
+                  <p class="small text-muted mb-0">
+                    Or call us at <strong>(555) 123-4567</strong> to book your table
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-6 fw-bold mb-3">What Our Guests Say</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card bg-transparent border-light h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </div>
+                <p class="mb-3">
+                  "Absolutely amazing food and service! The [dish name] was incredible. We'll definitely be back."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&q=80" 
+                       alt="Customer" 
+                       class="rounded-circle me-3" 
+                       width="50" 
+                       height="50">
+                  <div>
+                    <div class="fw-semibold">Sarah M.</div>
+                    <small class="text-white-50">Yelp Review</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-transparent border-light h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </div>
+                <p class="mb-3">
+                  "Best [cuisine] in [city]! The atmosphere is perfect for date night, and the staff is so friendly."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&q=80" 
+                       alt="Customer" 
+                       class="rounded-circle me-3" 
+                       width="50" 
+                       height="50">
+                  <div>
+                    <div class="fw-semibold">Michael R.</div>
+                    <small class="text-white-50">Google Review</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-transparent border-light h-100">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </div>
+                <p class="mb-3">
+                  "A hidden gem! Every dish we tried was delicious. Can't wait to come back and try more of the menu."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&q=80" 
+                       alt="Customer" 
+                       class="rounded-circle me-3" 
+                       width="50" 
+                       height="50">
+                  <div>
+                    <div class="fw-semibold">Jennifer L.</div>
+                    <small class="text-white-50">TripAdvisor</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="display-6 fw-bold mb-4">Visit Us</h2>
+            
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-3">
+                <i class="bi bi-geo-alt text-primary me-2"></i>Location
+              </h3>
+              <p class="text-muted mb-0">
+                123 Main Street<br>
+                City, State 12345
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-3">
+                <i class="bi bi-clock text-primary me-2"></i>Hours
+              </h3>
+              <div class="text-muted">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Monday - Thursday:</span>
+                  <span class="fw-semibold">11:00 AM - 10:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Friday - Saturday:</span>
+                  <span class="fw-semibold">11:00 AM - 11:00 PM</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Sunday:</span>
+                  <span class="fw-semibold">12:00 PM - 9:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-3">
+                <i class="bi bi-telephone text-primary me-2"></i>Contact
+              </h3>
+              <p class="text-muted mb-2">
+                Phone: <a href="tel:5551234567" class="text-decoration-none">(555) 123-4567</a>
+              </p>
+              <p class="text-muted mb-0">
+                Email: <a href="mailto:info@restaurant.com" class="text-decoration-none">info@restaurant.com</a>
+              </p>
+            </div>
+
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-outline-dark">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="btn btn-outline-dark">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-dark">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="ratio ratio-4x3">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841558931147!2d-73.98784368459395!3d40.74881797932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+                style="border:0; border-radius: 0.5rem;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="h4 fw-bold mb-3">[Restaurant Name]</h3>
+          <p class="text-white-50 mb-3">
+            Serving exceptional [cuisine] with passion since [year]. Join us for an unforgettable dining experience.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-text-white">
+              <i class="bi bi-facebook fs-5"></i>
+            </a>
+            <a href="#" class="text-white-50 hover-text-white">
+              <i class="bi bi-instagram fs-5"></i>
+            </a>
+            <a href="#" class="text-white-50 hover-text-white">
+              <i class="bi bi-twitter fs-5"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <h4 class="h6 fw-bold mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#menu" class="text-white-50 text-decoration-none hover-text-white">Menu</a></li>
+            <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none hover-text-white">About</a></li>
+            <li class="mb-2"><a href="#reserve" class="text-white-50 text-decoration-none hover-text-white">Reservations</a></li>
+            <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none hover-text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <h4 class="h6 fw-bold mb-3">Hours</h4>
+          <ul class="list-unstyled text-white-50 small">
+            <li class="mb-1">Mon-Thu: 11am-10pm</li>
+            <li class="mb-1">Fri-Sat: 11am-11pm</li>
+            <li class="mb-1">Sunday: 12pm-9pm</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-5">
+          <h4 class="h6 fw-bold mb-3">Location</h4>
+          <p class="text-white-50 small mb-2">
+            123 Main Street<br>
+            City, State 12345
+          </p>
+          <p class="text-white-50 small mb-0">
+            <i class="bi bi-telephone me-1"></i> (555) 123-4567
+          </p>
+        </div>
+      </div>
+      <hr class="my-4 border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-white-50 small mb-0">
+            &copy; 2025 [Restaurant Name]. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white-50 text-decoration-none hover-text-white small me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-text-white small">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
