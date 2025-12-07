@@ -1,0 +1,18 @@
+# Product Images
+
+Add your product images here:
+
+Required images:
+- product-hero.jpg (1200x800px) - Hero section image
+- product-main.jpg (800x800px) - Main product photo
+- product-1.jpg (600x600px) - Gallery image 1
+- product-2.jpg (600x600px) - Gallery image 2
+- product-3.jpg (600x600px) - Gallery image 3
+- product-4.jpg (600x600px) - Gallery image 4
+
+For the demo, you can use placeholder images from:
+- Unsplash.com
+- Pexels.com
+- Or your own product photos
+
+Once added, delete this placeholder.txt file.

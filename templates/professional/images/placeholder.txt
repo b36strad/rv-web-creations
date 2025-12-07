@@ -1,0 +1,13 @@
+# Professional placeholder for headshot/office images
+
+Add professional images here:
+
+Required images:
+- Professional headshot (800x1000px)
+- Office exterior/interior photos
+- Team photos (if applicable)
+- Professional environment shots
+
+For the demo, using placeholder images from Unsplash.
+
+Once added, delete this placeholder.txt file.
