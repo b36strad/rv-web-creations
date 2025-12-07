@@ -37,6 +37,10 @@
   color: var(--bs-primary) !important;
 }
 
+.text-gold {
+  color: var(--color-accent) !important;
+}
+
 .border-primary {
   border-color: var(--bs-primary) !important;
 }

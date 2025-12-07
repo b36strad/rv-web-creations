@@ -6,7 +6,249 @@
 
 ---
 
-## December 7, 2025 - Template Updates & Portfolio Reorganization
+## December 7, 2025 (Late Evening) - Homepage Visual Polish
+
+**Time:** Late evening session  
+**Focus:** Homepage heading refinements and consistent gold accent throughout numbered badges
+
+### Changes
+
+#### 1. Homepage Hero Heading
+**File Modified:** `src/index.html`
+
+- Shortened headline from "Small business websites that convert visitors into customers" to "Websites that convert visitors into customers"
+- Improved line breaks to prevent "customers" from wrapping to third line
+- Applied two-tone color scheme:
+  - "Websites that" → Navy blue (text-primary)
+  - "convert visitors into customers" → Gold (text-gold)
+- Creates stronger visual hierarchy and ties to CTA button colors
+
+#### 2. Text Utility Class Addition
+**File Modified:** `src/css/styles.css`
+
+- Added `.text-gold` utility class using `var(--color-accent)`
+- Maintains consistency with existing CSS variable system
+- Enables reusable gold text styling throughout site
+
+#### 3. Numbered Badge Standardization
+**File Modified:** `src/index.html`
+
+Changed numbered badges from navy (`bg-primary`) to gold accent color in two sections:
+
+**Design Philosophy Section (2 cards):**
+- Card 1: "What guides every layout"
+- Card 2: "What this means for your business"
+
+**Process Section (3 cards):**
+- Card 1: "Discover & Define"
+- Card 2: "Design for Real Users"
+- Card 3: "Build, Launch & Improve"
+
+All badges now use:
+```css
+background-color: var(--color-accent);
+color: #212529;
+```
+
+**Rationale:** Gold badges create stronger visual hierarchy, guide eye through sequential steps, and reinforce brand accent color throughout homepage. Trust/credibility section badges remain navy to distinguish supporting evidence from process steps.
+
+### Visual Impact
+
+- **Increased contrast:** Gold stands out more than navy on white cards
+- **Brand consistency:** Gold ties together hero headline, process badges, and CTA buttons
+- **Sequential clarity:** Numbered steps are more prominent and easier to follow
+- **Balanced palette:** Mix of navy (trust), gold (action), and colored left borders maintains visual interest
+
+---
+
+## December 7, 2025 (Evening) - New Templates & Portfolio Expansion
+
+**Time:** Evening session  
+**Focus:** Created two new templates (Blog and Restaurant), restructured portfolio to 6-template system, removed self-referential project case study
+
+### Major Changes
+
+#### 1. Blog Template - Complete New Template
+**Files Created:**
+- `templates/blog/index.html` - Homepage with featured posts and blog grid
+- `templates/blog/post.html` - Single post template with long-form content
+- `templates/blog/css/styles.css` - Blog-specific typography and styling
+- `templates/blog/css/variables.css` - Design system variables
+- `templates/blog/css/utilities.css` - Helper classes
+- `templates/blog/js/main.js` - Interactive features
+
+**Key Features:**
+- Featured post section with large card layout
+- Recent posts grid with category filtering
+- Newsletter signup (multiple placements - hero, mid-page, post footer)
+- Optimized typography for long-form reading (1.125rem body, 1.8 line-height)
+- Author bio sections with social links
+- Social sharing buttons (Twitter, LinkedIn, copy link)
+- Related posts section
+- Category badges and filtering system
+- Reading progress bar (optional)
+- Back-to-top button with smooth scroll
+- Mobile-first responsive design
+
+**Target Audience:** Coaches, consultants, content creators, thought leaders
+
+**Pricing:** $2,500
+
+#### 2. Restaurant Template - Complete New Template
+**Files Created:**
+- `templates/restaurant/index.html` - Full restaurant website
+- `templates/restaurant/css/styles.css` - Restaurant-specific styling
+- `templates/restaurant/css/variables.css` - Design system variables
+- `templates/restaurant/css/utilities.css` - Helper classes
+- `templates/restaurant/js/main.js` - Interactive features
+
+**Key Features:**
+- Full-page hero with appetizing food photography
+- Quick info bar (hours, location, phone) - always visible
+- Online ordering integration callouts (DoorDash, Uber Eats, direct ordering)
+- Featured signature dishes section with pricing
+- Tabbed digital menu system:
+  * Appetizers
+  * Entrées
+  * Desserts
+  * Drinks
+- Menu items with pricing, descriptions, dietary badges (vegetarian, gluten-free, spicy)
+- "Add to Order" buttons with visual feedback
+- About section with restaurant story and stats
+- Photo gallery (6 images) with hover zoom effects
+- Reservation form with date/time/guests selection
+- Customer testimonials with star ratings
+- Contact section with embedded Google Maps
+- Instagram integration callout
+- Phone number auto-formatting
+- Smooth scroll navigation with active section highlighting
+
+**Target Audience:** Restaurants, cafes, food trucks, catering, bakeries
+
+**Pricing:** $2,500
+
+#### 3. Portfolio Page - Complete Restructure
+**File Modified:** `src/portfolio.html`
+
+**Major Changes:**
+
+1. **Removed Self-Referential Project Case Study**
+   - Deleted: Full RV Web Creations website case study (project overview, features, technical details)
+   - Reason: Listing own website as portfolio project suggested lack of client work
+   - Replaced with: Templates as primary portfolio showcase
+
+2. **New Introduction Section**
+   - Headline: "Professional Templates Built with Modern Best Practices"
+   - Lead text: Positions templates as ready-to-customize solutions
+   - Focus: Launch faster with proven designs that convert
+
+3. **Removed "Why Choose Our Templates?" Section**
+   - Eliminated: Info box with template benefits explanation
+   - Simplified: Direct presentation of templates without sales copy
+
+4. **Layout Change: 2-Column to 3-Column Grid**
+   - Old: `col-lg-6` (2 templates per row on desktop)
+   - New: `col-lg-6 col-xl-4` (2 on tablets, 3 on large screens)
+   - Allows all 6 templates to display evenly
+
+5. **Template Naming Consistency**
+   - Removed "Template" suffix from first three for consistency:
+     * ~~Starter Template~~ → **Starter**
+     * ~~Growth Template~~ → **Growth**
+     * ~~Shop Template~~ → **Shop**
+   - Matches naming pattern of last three:
+     * Professional Services
+     * Blog & Content Hub
+     * Restaurant & Food Service
+
+6. **Added New Template Cards**
+   - Blog & Content Hub (removed "NEW" badge)
+   - Restaurant & Food Service (added "NEW" badge)
+
+**Complete 6-Template Lineup:**
+1. **Starter** - Basic small business presence ($2,500)
+2. **Growth** - Established businesses with more pages ($7,500)
+3. **Shop** - E-commerce functionality ($5,000+)
+4. **Professional Services** - Lawyers, doctors, accountants ($3,500)
+5. **Blog & Content Hub** - Coaches, consultants, creators ($2,500)
+6. **Restaurant & Food Service** - Food businesses ($2,500) ✨ NEW
+
+#### 4. Professional Services Template Link Fix
+**File Modified:** `src/portfolio.html`
+
+**Fixed:** Professional Services "View Live Demo" button now correctly points to `templates/professional/index.html` instead of broken `#` link
+
+### Technical Details
+
+**Blog Template Styling:**
+- Article content optimized for readability
+- Responsive typography (1.125rem → 1rem on mobile)
+- Hover effects on cards (translateY -4px)
+- Reading progress bar (fixed top, 3px height)
+- Custom blockquote styling with left border
+- Code blocks with syntax highlighting support
+
+**Restaurant Template Styling:**
+- Menu item cards with hover effects (translateX 8px)
+- Gallery with image zoom on hover (scale 1.1)
+- Sticky navigation with background opacity change on scroll
+- Tabbed menu navigation with Bootstrap pills
+- Form focus states using warning color
+- Print-friendly menu styles (hides navigation, buttons)
+
+**JavaScript Enhancements:**
+
+*Blog Template:*
+- Copy link to clipboard functionality
+- Newsletter form submission with success message
+- Social share window popups
+- Category filtering buttons
+- Lazy loading fallback for older browsers
+
+*Restaurant Template:*
+- Reservation form validation and submission
+- "Add to Order" button animations
+- Phone number auto-formatting: (555) 123-4567
+- Smooth scroll with offset for fixed navigation
+- Active navigation link highlighting on scroll
+- Date picker minimum date set to today
+- Gallery images open in new tab on click
+
+### Files Changed Summary
+
+**Created (11 new files):**
+- templates/blog/index.html
+- templates/blog/post.html
+- templates/blog/css/styles.css
+- templates/blog/css/variables.css
+- templates/blog/css/utilities.css
+- templates/blog/js/main.js
+- templates/restaurant/index.html
+- templates/restaurant/css/styles.css
+- templates/restaurant/css/variables.css
+- templates/restaurant/css/utilities.css
+- templates/restaurant/js/main.js
+
+**Modified (1 file):**
+- src/portfolio.html (major restructure)
+
+**Git Commit:**
+```
+Add Blog and Restaurant templates, update portfolio structure
+
+- Created Blog template for coaches/consultants/content creators
+- Created Restaurant template for food service businesses
+- Removed self-referential project case study from portfolio
+- Restructured portfolio with 6 templates in 3-column layout
+- Fixed Professional Services template link
+- Removed "Template" suffix for naming consistency
+
+14 files changed, 3,324 insertions(+), 200 deletions(-)
+```
+
+---
+
+## December 7, 2025 (Afternoon) - Template Updates & Portfolio Reorganization
 
 **Time:** Updated throughout the day  
 **Focus:** Professional Services template image optimization, portfolio page content flow, homepage CTA improvements, and typography enhancements
