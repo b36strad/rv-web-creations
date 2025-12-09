@@ -5,6 +5,16 @@
   <title>Results-Focused Web Design &amp; Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Professional web design for small businesses. Simple, clear, conversion-focused websites that work on every device.">
+  
+  <!-- Google Analytics - Replace YOUR_MEASUREMENT_ID with actual GA4 ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -150,20 +160,20 @@
       <!-- Social Proof Banner -->
       <div class="text-center mb-5">
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <span class="badge bg-primary text-white px-4 py-3" style="font-size: 1rem;">
+          <span class="badge bg-primary text-white px-4 py-3" style="font-size: 1rem; width: 260px;">
             <svg width="18" height="18" fill="currentColor" class="me-2" viewBox="0 0 16 16" style="margin-top: -3px;">
               <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
               <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
             </svg>
             Small Business Focused
           </span>
-          <span class="badge bg-success text-white px-4 py-3" style="font-size: 1rem;">
+          <span class="badge bg-success text-white px-4 py-3" style="font-size: 1rem; width: 260px;">
             <svg width="18" height="18" fill="currentColor" class="me-2" viewBox="0 0 16 16" style="margin-top: -3px;">
               <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
             </svg>
             Packages from $2,500
           </span>
-          <span class="badge bg-warning text-dark px-4 py-3" style="font-size: 1rem;">
+          <span class="badge bg-warning text-dark px-4 py-3" style="font-size: 1rem; width: 260px;">
             <svg width="18" height="18" fill="currentColor" class="me-2" viewBox="0 0 16 16" style="margin-top: -3px;">
               <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
             </svg>
@@ -616,29 +626,13 @@
   <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-3">
         <div class="container text-center">
-            <div class="mb-3 d-flex align-items-center justify-content-center gap-2">
-                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
-                    <text x="8" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8b400">R</text>
-                    <text x="22" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">V</text>
-                </svg>
-                <span class="fw-bold" style="color: #f8b400;">WEB CREATIONS</span>
-            </div>
-            <p class="mb-1">Building websites that work as hard as you do</p>
-            <p class="mb-2">info@rvwebcreations.com</p>
+            <p class="mb-3">info@rvwebcreations.com</p>
       <div class="mb-3">
         <a href="policies.html" class="text-white-50 text-decoration-none me-3 small">Privacy Policy</a>
         <a href="policies.html#terms" class="text-white-50 text-decoration-none me-3 small">Terms & Conditions</a>
         <a href="policies.html#refund-policy" class="text-white-50 text-decoration-none small">Refund Policy</a>
       </div>
-            <p class="mb-0">&copy; 2025 
-                <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; vertical-align: middle; margin: 0 4px;">
-                    <rect width="40" height="40" rx="8" fill="#1f4f7b"/>
-                    <text x="8" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8b400">R</text>
-                    <text x="22" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">V</text>
-                </svg>
-                <span style="color: #f8b400;">WEB CREATIONS LLC</span>. All rights reserved.
-            </p>
+            <p class="mb-0">&copy; 2025 RV Web Creations LLC. All rights reserved.</p>
         </div>
     </footer>
 
