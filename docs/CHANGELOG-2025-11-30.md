@@ -6,6 +6,85 @@
 
 ---
 
+## December 8, 2025 - Project Structure Reorganization
+
+**Time:** Late evening  
+**Focus:** Clean up project structure for better organization and maintainability
+
+### Changes
+
+#### 1. Documentation Consolidation
+**Created:** `docs/` folder
+
+Moved 23 documentation and guide files from root to organized folder:
+- Changelog and setup guides
+- Deployment guides (NOW, GROWTH, SHOP, NETLIFY, DATABASE, DEMO)
+- Technical documentation (growth site, templates, system architecture, portfolio hosting)
+- Business documentation (legal policies, payment processing, project workflow, pricing calculator)
+- Project management (ClickUp template, audit checklist, quiz breakdown)
+- Status files (SHOP-TEMPLATE-STATUS.md)
+
+**Rationale:** Root directory was cluttered with 20+ markdown/text files. Consolidating to `docs/` improves navigation and professionalism.
+
+#### 2. Utility Files Organization
+**Created:** `utilities/` folder
+
+Moved development utility files:
+- `business-card-logo.html` - Logo design tool
+- `logo-export.html` - Logo export utility
+- `database-setup.sql` - Database schema
+- `pricing-calculator-template.csv` - Calculator spreadsheet template
+
+#### 3. Archive Management
+**Created:** `archives/` folder
+
+Moved backup files:
+- `rv-web-creations-backup-2025-11-30.zip` - Historical backup retained
+- Created fresh `rv-web-creations.zip` in root with new organized structure
+
+#### 4. Scripts Organization
+**Created:** `scripts/` folder
+
+Moved deployment automation:
+- `deploy-demos.sh` - Demo site deployment script
+
+#### 5. Source Directory Cleanup
+**Created:** `src/php/` subfolder
+
+Moved PHP backend files:
+- `admin-dashboard.php` - Admin interface
+- `pricing-calculator.php` - Calculator backend
+- `contact-handler.php` - Contact form handler
+- `intake-handler.php` - Project intake form handler
+
+**Deleted:**
+- `src/scss/` folder (empty, using compiled CSS)
+- `.tmp.drivedownload/` folder (Google Drive sync artifact)
+- `.tmp.driveupload/` folder (Google Drive sync artifact)
+
+### Final Project Structure
+
+```
+/
+├── docs/                    # All documentation (23 files)
+├── src/                     # Website source files
+│   ├── php/                 # PHP backend files
+│   ├── css/                 # Compiled stylesheets
+│   ├── js/                  # JavaScript files
+│   ├── images/              # Image assets
+│   └── *.html               # HTML pages (10 files)
+├── templates/               # Website templates collection
+├── utilities/               # Development tools and utilities
+├── archives/                # Project backups
+├── scripts/                 # Deployment scripts
+├── README.md                # Project documentation
+└── package.json             # Project dependencies
+```
+
+**Impact:** Clean, professional structure with clear separation of concerns. Easier navigation for development and deployment.
+
+---
+
 ## December 8, 2025 - Google Analytics Implementation
 
 **Time:** Afternoon session  
