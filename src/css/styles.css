@@ -196,3 +196,17 @@ small,
 .sticky-top {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Fix scroll positioning for anchor links with sticky header */
+section[id],
+div[id] {
+  scroll-margin-top: 100px;
+}
+
+/* Adjust for larger screens where mobile button is hidden */
+@media (min-width: 992px) {
+  section[id],
+  div[id] {
+    scroll-margin-top: 80px;
+  }
+}
