@@ -210,3 +210,31 @@ div[id] {
     scroll-margin-top: 80px;
   }
 }
+
+/* Pricing table mobile optimization */
+@media (max-width: 767px) {
+  .table-responsive table {
+    font-size: 0.875rem;
+  }
+  
+  .table-responsive th,
+  .table-responsive td {
+    padding: 0.5rem 0.25rem;
+    white-space: normal;
+  }
+  
+  .table-responsive th:first-child,
+  .table-responsive td:first-child {
+    min-width: 80px;
+  }
+  
+  .table-responsive th:nth-child(2),
+  .table-responsive td:nth-child(2) {
+    min-width: 120px;
+  }
+  
+  .table-responsive th:last-child,
+  .table-responsive td:last-child {
+    min-width: 90px;
+  }
+}
