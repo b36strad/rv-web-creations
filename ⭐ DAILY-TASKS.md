@@ -1,4 +1,4 @@
-# Daily prompt: 
+# DAILY PROMPT
 
 update changelog, update/replace existing zip file, push to Github
 

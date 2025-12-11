@@ -1,0 +1,656 @@
+WEB DESIGN & DEVELOPMENT SERVICE AGREEMENT
+
+This Independent Contractor Agreement (the "Agreement") is made and entered 
+into as of {{Agreement.DateSigned}} (the "Effective Date") by and between 
+RV Web Creations LLC, a Pennsylvania LLC ("Contractor" or "Provider"), and 
+{{Client.Name}}, a {{Client.Locality}} Company ("Client").
+
+===============================================================================
+
+1. ENGAGEMENT OF SERVICES
+
+Client hereby engages and retains Contractor to provide web design and 
+development services, and Contractor agrees to render such services to Client 
+as described in this Agreement and the attached Statement of Work (the "SOW").
+
+Project Name: [Project Title]
+Package Type: [Starter / Growth / Professional / Refresh / Custom]
+
+===============================================================================
+
+2. SCOPE OF SERVICES
+
+2.1 Primary Deliverables
+
+The Services shall include the following deliverables as detailed in the SOW:
+- [ ] Custom website design
+- [ ] Responsive development (mobile, tablet, desktop)
+- [ ] [X] number of pages/sections
+- [ ] Content integration
+- [ ] Basic on-page SEO optimization
+- [ ] Contact form integration
+- [ ] Google Analytics setup
+- [ ] Browser compatibility testing
+- [ ] Performance optimization
+- [ ] Initial deployment/launch
+
+2.2 Specific Features
+
+Additional features and functionality as specified in the SOW:
+- [List specific features, integrations, or functionality]
+- [E.g., E-commerce capabilities, booking system, member portal]
+- [Payment processing integration]
+- [Custom forms or calculators]
+- [Third-party service integrations]
+
+2.3 Exclusions
+
+The following services are NOT included unless separately contracted:
+- Content writing/copywriting
+- Logo design or branding services
+- Photography or custom illustrations
+- Ongoing maintenance after launch (available as separate service)
+- Training beyond initial handoff session
+- Marketing or advertising services
+- Domain registration and management
+- Third-party licensing fees or subscriptions
+
+2.4 Technical Specifications
+
+- Platform/CMS: [Static HTML/WordPress/Custom]
+- Hosting Environment: [Netlify/Client-provided/Other]
+- Framework/Technology: [Bootstrap 5, vanilla JavaScript, etc.]
+- Browser Support: Latest versions of Chrome, Firefox, Safari, Edge
+- Mobile Responsiveness: Optimized for devices 320px width and above
+
+===============================================================================
+
+3. PROJECT TIMELINE AND DELIVERABLES
+
+3.1 Phase 1: Discovery & Planning (Week 1-2)
+Duration: [X] business days
+
+Deliverables:
+- Project kickoff meeting/call
+- Requirements gathering and documentation
+- Site structure/sitemap approval
+- Style preferences and inspiration review
+
+Client Approvals Required: Sitemap and project scope confirmation
+
+3.2 Phase 2: Design (Week 2-4)
+Duration: [X] business days
+
+Deliverables:
+- Homepage design mockup
+- Interior page design concepts
+- Color scheme and typography selection
+- Design revisions (up to 2 rounds included)
+
+Client Approvals Required: Design approval before development begins
+
+3.3 Phase 3: Development (Week 4-7)
+Duration: [X] business days
+
+Deliverables:
+- Front-end development of all pages
+- Responsive implementation
+- Feature/functionality integration
+- Content population
+- Testing and quality assurance
+
+Client Approvals Required: Content approval and staging site review
+
+3.4 Phase 4: Launch & Handoff (Week 7-8)
+Duration: [X] business days
+
+Deliverables:
+- Final testing and bug fixes
+- Performance optimization
+- Deployment to live environment
+- Documentation and training session
+- 30-day post-launch support for bug fixes
+
+Client Approvals Required: Final launch approval
+
+3.5 Total Timeline
+
+Estimated Completion: [X] weeks from project start
+Start Date: [Date]
+Estimated Launch Date: [Date]
+
+Timeline assumes timely client feedback and content delivery. Delays in 
+client responses or content provision will extend the timeline accordingly.
+
+===============================================================================
+
+4. COMPENSATION
+
+4.1 Total Project Cost
+
+Package Price: $[Amount]
+
+4.2 Payment Schedule
+
+Select one option:
+
+Option A: Milestone-Based Payments
+- Deposit (50%): $[Amount] - Due upon contract signing
+- Midpoint (25%): $[Amount] - Due upon design approval
+- Final Payment (25%): $[Amount] - Due upon project completion before launch
+
+Option B: Phased Payments
+- Phase 1 Payment (40%): $[Amount] - Due upon contract signing
+- Phase 2 Payment (30%): $[Amount] - Due upon development start
+- Phase 3 Payment (30%): $[Amount] - Due upon launch approval
+
+4.3 Payment Terms
+
+Client agrees to pay invoices within 7 days of receiving the invoice. Payment 
+after that date will incur a late fee of 5.0% per month (or 1.5% per month 
+for longer grace periods) on the outstanding amount.
+
+4.4 Payment Methods Accepted
+
+- Bank transfer/ACH
+- Credit card (Stripe) - Contractor reserves the right to pass through 
+  applicable processing fees when Client provides payment with a credit card
+- Check (add 5 business days for clearance)
+
+4.5 Late Payment Consequences
+
+- Work may be paused if payments are 30+ days overdue
+- Access to site may be restricted until payment is received
+
+4.6 Additional Costs
+
+- Third-party services (stock photos, premium plugins, etc.) billed at cost
+- Scope changes beyond original agreement billed at $150/hour or flat rate 
+  per request
+- Rush delivery (50% faster timeline) adds 25% to total project cost
+- Contractor will be reimbursed for expenses that relate to the Services and 
+  that are approved by Client in advance
+
+4.7 Termination Payment
+
+Upon termination of this Agreement for any reason, Client will pay Contractor 
+any unpaid fees for Services that have been completed prior to such 
+termination.
+
+===============================================================================
+
+5. CLIENT RESPONSIBILITIES
+
+5.1 Timely Deliverables
+
+Client agrees to provide the following in a timely manner:
+- [ ] All text content for website pages
+- [ ] Images, logos, and media files (properly licensed)
+- [ ] Brand guidelines or style preferences
+- [ ] Access to existing accounts (hosting, domain, social media)
+- [ ] Feedback and approvals within [5] business days
+- [ ] Required legal documents (privacy policy, terms of service)
+
+5.2 Feedback and Approval Timeline
+
+- Client will provide feedback within [5] business days of deliverable 
+  submission
+- Delayed feedback may extend project timeline
+- Approvals should be clear and in writing (email acceptable)
+- Design revisions after approval incur additional charges
+
+5.3 Content Rights and Licensing
+
+- Client warrants they have rights to all content provided
+- Client ensures content does not violate copyright, trademark, or privacy 
+  laws
+- Client is responsible for obtaining necessary licenses for images, fonts, 
+  or media
+- Contractor is not liable for copyright infringement from client-provided 
+  content
+
+5.4 Access and Credentials
+
+- Client will provide necessary access to hosting, domain, and related 
+  services
+- Credentials should be provided securely
+- Client will maintain backup of credentials provided
+
+===============================================================================
+
+6. OWNERSHIP OF WORK PRODUCT AND INTELLECTUAL PROPERTY
+
+6.1 Transfer Upon Final Payment
+
+Upon receipt of final payment, Client is and will be the owner of all 
+interests in the product of all work performed under this Agreement (the 
+"Work Product"). Contractor hereby irrevocably sells, transfers and assigns 
+to Client all right, title and interest that Contractor has or will have in 
+and to the Work Product, and Contractor acknowledges that Client owns and 
+will own all such existing and future right, title and interest in and to 
+the Work Product.
+
+Client receives:
+- Full ownership of custom design elements created specifically for this 
+  project
+- License to use all code and development work for the agreed website
+- Rights to content integrated into the website (subject to third-party 
+  licenses)
+
+6.2 Contractor Retains Rights To
+
+- Base code frameworks and templates
+- Reusable code components and functions
+- Development methodologies and processes
+- Pre-existing work or tools
+
+Neither the Client nor Contractor shall acquire any right, title or interest 
+in any intellectual property owned, licensed or controlled by the other party 
+as of the Effective Date.
+
+6.3 Portfolio and Marketing Rights
+
+Notwithstanding the foregoing transfer of ownership, Contractor shall be 
+entitled to display Work Product in their portfolio, on their website, or 
+for any other business marketing purposes. Contractor may:
+- Showcase the completed website in portfolio
+- Use project as case study in marketing materials
+- Display website screenshots and descriptions
+- Client may request anonymity or specific restrictions
+
+6.4 Third-Party Assets
+
+- Open-source software licenses apply (MIT, GPL, etc.)
+- Stock photos, fonts, or plugins subject to their respective licenses
+- Client is responsible for maintaining necessary licenses post-launch
+
+===============================================================================
+
+7. REVISIONS AND CHANGE REQUESTS
+
+7.1 Included Revisions
+
+Design Phase: Up to [2] rounds of revisions included
+- Round 1: Major design adjustments
+- Round 2: Minor refinements and polish
+
+Development Phase: [2] rounds of content/minor adjustments included
+
+7.2 What Counts as a Revision
+
+- Color scheme adjustments
+- Typography changes
+- Layout modifications
+- Content updates to existing sections
+- Minor feature tweaks
+
+7.3 Additional Revisions
+
+Beyond included revisions:
+- Hourly rate: $150/hour
+- Minimum 1-hour charge
+- Quoted in advance for approval
+
+7.4 Scope Changes
+
+Major changes to original scope:
+- Documented via change order form
+- Additional cost calculated based on time/complexity
+- Timeline adjusted accordingly
+- Requires written approval before proceeding
+
+Examples of scope changes:
+- Adding new pages beyond original count
+- New features or functionality not in original scope
+- Redesigning approved sections
+- Integration of additional third-party services
+
+===============================================================================
+
+8. HOSTING AND MAINTENANCE
+
+8.1 Initial Hosting Setup (Included in Project)
+
+- Initial deployment to hosting platform
+- Basic hosting configuration
+- DNS setup assistance (if using recommended hosting)
+- SSL certificate installation
+
+8.2 Post-Launch Hosting (Client's Responsibility)
+
+- Ongoing hosting fees (if applicable)
+- Domain registration and renewal
+- Hosting account management
+- Backups (if not included in hosting plan)
+
+8.3 Contractor Recommendations
+
+- Netlify (free tier available for static sites)
+- Recommended hosting partners for WordPress/CMS sites
+- Technical requirements and specifications provided
+
+8.4 Maintenance Options (Available as Separate Service)
+
+Option 1: Care Plan - Essential ($150/month)
+- Software updates (WordPress, plugins, themes)
+- Security monitoring
+- Monthly backups
+- Up to 1 hour of minor updates/changes
+- Priority support response
+
+Option 2: Care Plan - Professional ($299/month)
+- Everything in Essential
+- Up to 3 hours of updates/changes monthly
+- Content updates and edits
+- Performance monitoring
+- Quarterly analytics reports
+- SEO maintenance
+
+Option 3: Pay-Per-Request ($150/request)
+- No monthly commitment
+- Billed per request basis
+- 2-3 business day turnaround
+- Suitable for occasional updates
+
+===============================================================================
+
+9. CONFIDENTIAL INFORMATION
+
+9.1 Mutual Confidentiality
+
+Contractor shall not disclose any of the Client's confidential information to 
+anyone other than its affiliates, employees, contractors or authorized 
+representatives who have a need to know the information in connection with 
+Contractor's rendering of the Services. Contractor shall exercise the same 
+degree of care to prevent disclosure of any Confidential Information as it 
+takes to preserve and safeguard its own confidential information but, in any 
+event, no less than a reasonable degree of care.
+
+Both parties agree to:
+- Keep confidential information private
+- Not disclose business strategies, plans, or proprietary information
+- Use confidential information only for project purposes
+- Return or destroy confidential materials upon request
+
+9.2 Contractor's Confidential Information
+
+- Proprietary code and development techniques
+- Business processes and methodologies
+- Pricing structures and client lists
+- Trade secrets and intellectual property
+
+9.3 Client's Confidential Information
+
+- Business plans and strategies
+- Customer data and analytics
+- Financial information
+- Proprietary content and materials
+
+9.4 Exceptions
+
+Confidentiality does not apply to:
+- Information already in public domain
+- Information independently developed
+- Information required to be disclosed by law
+- Information authorized for disclosure in writing
+
+===============================================================================
+
+10. WARRANTIES AND DISCLAIMERS
+
+10.1 Contractor Warranties
+
+Contractor warrants that:
+- Services will be performed in a professional manner
+- Work will be original and not infringe on third-party rights
+- Website will function as specified at time of launch
+- Code will be free of known defects at launch
+
+10.2 30-Day Bug Fix Warranty
+
+- Contractor will fix bugs and errors reported within 30 days of launch
+- Warranty covers issues present at launch, not new requests
+- Does not cover issues caused by client modifications
+- Does not cover third-party service failures or hosting issues
+
+10.3 Performance Disclaimer
+
+Contractor makes no warranties regarding:
+- Specific search engine rankings or SEO results
+- Website traffic or conversion rates
+- Compatibility with future browser versions
+- Third-party service availability or performance
+- Uninterrupted or error-free operation after launch
+
+10.4 Client's Responsibility
+
+Client is responsible for:
+- Regular backups after launch
+- Security of admin credentials
+- Compliance with applicable laws and regulations
+- Content accuracy and legality
+- Maintaining necessary licenses
+
+===============================================================================
+
+11. LIMITATION OF LIABILITY
+
+IN NO EVENT WILL EITHER PARTY BE LIABLE FOR DIRECT DAMAGES ARISING OUT OF OR 
+IN CONNECTION WITH THIS AGREEMENT OR ANY SOW IN EXCESS OF THE TOTAL FEES PAID 
+TO CONTRACTOR UNDER THE SOW GIVING RISE TO SUCH LIABILITY.
+
+IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, 
+CONSEQUENTIAL, SPECIAL OR PUNITIVE DAMAGES (INCLUDING WITHOUT LIMITATION LOST 
+PROFITS OR REVENUE, LOST DATA, BUSINESS INTERRUPTION, OR THIRD-PARTY CLAIMS) 
+EVEN IF IT HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Contractor's liability is limited to the amount paid under this Agreement.
+
+===============================================================================
+
+12. INDEPENDENT CONTRACTOR RELATIONSHIP
+
+Contractor's relationship with Client is that of an independent contractor, 
+and nothing in this Agreement is intended to, or should be construed to, 
+create a partnership, agency, joint venture or employment relationship.
+
+No part of Contractor's compensation will be subject to withholding by Client 
+for the payment of any social security, federal, state or any other employee 
+payroll taxes. Client will regularly report amounts paid to Contractor by 
+filing Form 1099 with the Internal Revenue Service as required by law.
+
+CONTRACTOR IS ACTING AS AN INDEPENDENT CONTRACTOR TO CLIENT; CONTRACTOR IS NOT 
+ENTITLED TO UNEMPLOYMENT INSURANCE BENEFITS, WORKERS' COMPENSATION BENEFITS, 
+PENSION, BONUS OR OTHER FRINGE BENEFITS FROM CLIENT. CONTRACTOR WILL PAY ALL 
+NATIONAL, FEDERAL AND STATE INCOME TAX, SOCIAL SECURITY TAX AND OTHER AMOUNTS 
+DUE UNDER APPLICABLE PAYROLL AND SIMILAR LAWS WITH RESPECT TO ALL AMOUNTS 
+PAID IN CONNECTION WITH THIS AGREEMENT.
+
+===============================================================================
+
+13. TERM AND TERMINATION
+
+13.1 Term
+
+The term of this Agreement will commence on the Effective Date and will 
+continue until terminated by either party as provided herein. The Services 
+shall commence as set forth in the SOW and will continue as provided therein 
+or until terminated pursuant to the terms of this Agreement.
+
+13.2 Termination by Either Party
+
+Either party may terminate this Agreement by providing [14-60] days prior 
+written notice to the other party. Either party may terminate this Agreement 
+immediately upon a material violation of this Agreement by the other party.
+
+13.3 Termination by Client Before Completion
+
+If terminated before completion:
+- Client pays for work completed to date
+- Client receives files and work completed at time of termination
+- Deposit is non-refundable
+- Any remaining balance calculated based on percentage complete
+
+13.4 Termination by Contractor
+
+Contractor may terminate if:
+- Client fails to pay invoices within [30] days
+- Client fails to provide necessary materials after [2] written requests
+- Client breaches terms of this agreement
+- Relationship becomes untenable or unworkable
+
+Upon contractor termination:
+- Client receives all completed work to date
+- Payment required for work completed
+- Refund of unearned deposits (pro-rated)
+
+13.5 Effect of Termination
+
+Upon termination:
+- All work stops immediately
+- Outstanding invoices become due immediately
+- Intellectual property rights transfer per payment status
+- Each party returns confidential materials
+- Website access and hosting transfer arranged
+
+===============================================================================
+
+14. DISPUTE RESOLUTION
+
+14.1 Good Faith Negotiation
+
+Parties agree to first attempt resolution through direct discussion and good 
+faith negotiation.
+
+14.2 Mediation
+
+If negotiation fails, parties agree to mediation before pursuing legal action:
+- Mediation in Pennsylvania
+- Costs split equally between parties
+- Non-binding mediation process
+
+14.3 Governing Law
+
+This Agreement will be governed in all respects by the laws of the United 
+States as well as the laws of Pennsylvania, excluding conflicts of law 
+principles. Disputes will be resolved in courts located in Pennsylvania.
+
+14.4 Limitation Period
+
+Any legal action must be commenced within [1] year of the dispute arising.
+
+14.5 Legal Fees
+
+Each party responsible for own legal fees unless otherwise awarded by a court.
+
+===============================================================================
+
+15. GENERAL PROVISIONS
+
+15.1 Entire Agreement
+
+This Agreement and all outstanding SOWs constitute the entire agreement 
+between the parties relating to this subject matter and supersede all prior 
+or contemporaneous oral or written agreements concerning such subject matter. 
+The terms of this Agreement and all outstanding SOWs will govern all Services 
+undertaken by Contractor for Client. This Agreement and any SOW may only be 
+changed by mutual agreement of authorized representatives of the parties in 
+writing.
+
+15.2 Severability
+
+Should any provisions of this Agreement be held by a court of law to be 
+illegal, invalid or unenforceable, the legality, validity and enforceability 
+of the remaining provisions of this Agreement will not be affected or impaired 
+thereby. Invalid provision replaced with valid provision closest to original 
+intent.
+
+15.3 Waiver
+
+The waiver by either party of a breach of any provision of this Agreement by 
+the other party will not operate or be construed as a waiver of any other or 
+subsequent breach by such party. Waiver must be in writing to be effective.
+
+15.4 Assignment
+
+Neither party shall assign or transfer this Agreement, or any rights or 
+portion thereof, to any related or unrelated third party without the other 
+party's written consent. Contractor may subcontract work as needed while 
+maintaining responsibility for Services.
+
+15.5 Force Majeure
+
+Neither party liable for delays due to circumstances beyond reasonable control:
+- Natural disasters
+- Acts of government or war
+- Internet or hosting service failures
+- Pandemics or public health emergencies
+- Other unforeseen circumstances
+
+15.6 Notices
+
+All notices must be in writing and delivered to:
+- Email addresses listed in this agreement
+- Certified mail to addresses listed in this agreement
+- Notices effective upon receipt
+
+15.7 Counterparts and Electronic Signatures
+
+- Agreement may be signed in counterparts
+- Electronic signatures legally binding
+- Scanned or digital copies acceptable
+
+===============================================================================
+
+SIGNATURE SECTION
+
+Provider Acceptance
+
+RV Web Creations LLC
+
+By: _________________________________
+Name: [Authorized Signatory]
+Title: Owner
+Date: _______________________________
+
+
+Client Acceptance
+
+By signing below, Client acknowledges they have read, understood, and agree 
+to all terms and conditions in this Service Agreement.
+
+Client Name/Company: _________________________________
+
+By: _________________________________
+Name: [Print Name]
+Title: [If applicable]
+Date: _______________________________
+
+===============================================================================
+
+STATEMENT OF WORK (SOW) - ATTACHMENT
+
+Project Name: [Project Title]
+SOW Date: [Date]
+
+DETAILED SCOPE
+[Attach detailed project specifications, feature list, page descriptions]
+
+TIMELINE AND MILESTONES
+[Attach detailed timeline with specific dates and deliverables]
+
+PAYMENT SCHEDULE
+[Attach detailed payment breakdown with amounts and due dates]
+
+CONTENT DELIVERY CHECKLIST
+[Attach list of all content and materials client needs to provide with 
+deadlines]
+
+TECHNICAL SPECIFICATIONS
+[Attach detailed technical requirements, hosting specs, integrations]
+
+===============================================================================
+
+Document Version: 1.0
+Created: December 11, 2025
+Next Review: Annually or upon significant business changes

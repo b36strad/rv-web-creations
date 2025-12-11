@@ -213,28 +213,27 @@ div[id] {
 
 /* Pricing table mobile optimization */
 @media (max-width: 767px) {
-  .table-responsive table {
-    font-size: 0.875rem;
+  .pricing-table {
+    font-size: 0.75rem;
   }
   
-  .table-responsive th,
-  .table-responsive td {
+  .pricing-table th,
+  .pricing-table td {
     padding: 0.5rem 0.25rem;
+  }
+  
+  .pricing-table th:first-child,
+  .pricing-table td:first-child {
+    white-space: nowrap;
+  }
+  
+  .pricing-table th:nth-child(2),
+  .pricing-table td:nth-child(2) {
     white-space: normal;
   }
   
-  .table-responsive th:first-child,
-  .table-responsive td:first-child {
-    min-width: 80px;
-  }
-  
-  .table-responsive th:nth-child(2),
-  .table-responsive td:nth-child(2) {
-    min-width: 120px;
-  }
-  
-  .table-responsive th:last-child,
-  .table-responsive td:last-child {
-    min-width: 90px;
+  .pricing-table th:last-child,
+  .pricing-table td:last-child {
+    white-space: nowrap;
   }
 }
