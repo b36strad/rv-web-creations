@@ -230,6 +230,26 @@
 
 ---
 
+#### 12. Mobile Pricing Table - Horizontal Scroll Solution
+**Files Modified:** 
+- src/pricing.html
+- src/css/styles.css
+
+**Changes Made:**
+- Removed mobile card layout completely (user confirmed cards still showed cut-off table)
+- Implemented horizontal scroll table using Bootstrap's `.table-responsive`
+- Added blue info alert on mobile: "Tip: Swipe left to see all package details →"
+- Set table `min-width: 600px` to ensure scrolling triggers on mobile
+- Added `white-space: nowrap` to table cells to prevent text wrapping
+- Added border and rounded corners to scrollable area on mobile (border: 1px solid #dee2e6)
+- Enabled smooth scrolling with `-webkit-overflow-scrolling: touch`
+
+**Rationale:** Card layout and CSS hide/show approaches both failed on Samsung Android Firefox. Browser caching not the issue (user cleared cache). Horizontal scroll is industry-standard solution for comparison tables on mobile - maintains all comparison data while being mobile-friendly. Users can swipe left/right to see all columns.
+
+**Testing:** Requires Samsung Android device verification. Solution eliminates cut-off issue by making entire table scrollable rather than trying to fit/hide it.
+
+---
+
 ## Summary
 
 **Total Files Changed:** 21 files
