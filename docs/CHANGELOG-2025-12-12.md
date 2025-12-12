@@ -250,9 +250,29 @@
 
 ---
 
+#### 13. Services Page Mobile Table Fix
+**Files Modified:** 
+- src/services.html
+- src/css/styles.css
+
+**Changes Made:**
+- Removed Bootstrap `.table-responsive` wrapper causing column cut-off
+- Added `.services-table` class to Compare Packages table
+- Implemented mobile-specific CSS with tighter spacing for 4 columns
+- Font size: 0.65rem (smaller than pricing table due to extra column)
+- Padding: 0.4rem 0.15rem (tighter than pricing table)
+- Feature column allows wrapping, package columns stay compact with nowrap
+- Cleaned up orphaned closing div tag
+
+**Rationale:** Bootstrap .table-responsive wrapper was causing horizontal cut-off on Samsung Android Firefox, with "Custom" column header cutting off at letter "o". Services table has 4 columns (Feature, Starter, Growth, Custom) vs pricing table's 3, requiring tighter spacing. Applied same approach as successful pricing table fix from commit 9469089, but with adjustments for the additional column.
+
+**Testing Required:** Copy files to Android phone, test in Spck Editor with Samsung Android Firefox browser to verify all 4 columns visible without cut-off.
+
+---
+
 ## Summary
 
-**Total Files Changed:** 21 files
+**Total Files Changed:** 23 files
 - 9 HTML pages (all main pages)
 - 1 CSS file
 - 1 advanced logo utility
@@ -260,15 +280,24 @@
 - 1 logo usage guide
 - 1 changelog
 
-**Session Focus:** Branding refinement, realistic timeline expectations, template/package relationship clarity, mobile pricing table solution
+**Session Focus:** Branding refinement, realistic timeline expectations, template/package relationship clarity, mobile table solutions (pricing restored, services fixed)
 
 **Key Achievements:**
 - Simplified tagline for broader appeal
 - Industry-standard project timelines set
 - Clear template-to-package relationship established
-- Mobile pricing table completely redesigned
+- Pricing table restored to working version (commit 9469089)
+- Services table fixed with mobile-optimized CSS
 - Logo sizing optimized for all contexts
 - Visual consistency across site maintained
+- Learned: Bootstrap .table-responsive can cause problems, simple wrappers with custom CSS more reliable
+
+**Mobile Table Solution:**
+- Identified commit 9469089 as last working pricing table version
+- Removed Bootstrap .table-responsive wrappers (root cause of cut-off)
+- Implemented selective white-space CSS (nowrap vs normal by column)
+- Applied small fonts with tight padding for mobile screens
+- Services table required even tighter spacing due to 4 columns
 
 ---
 
