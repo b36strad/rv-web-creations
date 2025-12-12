@@ -211,13 +211,18 @@ div[id] {
   }
 }
 
-/* Pricing table mobile optimization */
-.pricing-cards {
-  display: block;
+/* Pricing table mobile optimization - Force hide table on mobile */
+@media (max-width: 767px) {
+  .pricing-table-wrapper {
+    display: none !important;
+  }
 }
 
 @media (min-width: 768px) {
+  .pricing-table-wrapper {
+    display: block !important;
+  }
   .pricing-cards {
-    display: none;
+    display: none !important;
   }
 }

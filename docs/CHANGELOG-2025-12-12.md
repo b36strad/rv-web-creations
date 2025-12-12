@@ -191,6 +191,67 @@
 
 ---
 
+#### 10. Portfolio & Pricing Page Template Clarification
+**Files Modified:** 
+- src/portfolio.html
+- src/pricing.html
+
+**Changes Made:**
+- Added info box on portfolio page explaining templates are industry-specific variations within four core packages
+- Restructured portfolio cards to show core packages (Starter, Growth, Professional) alongside industry variations (Blog, Restaurant, Shop)
+- Added green top border and "INDUSTRY VARIATION" badge to Blog, Restaurant, Shop cards
+- Added alert boxes on industry variation cards: "Can be applied within any package tier"
+- Updated portfolio section heading from "Four Main Package Templates" to "Choose Your Package, Customize with Industry Designs"
+- Added horizontal divider (removed later when cards merged into one section)
+- Added info box on pricing page: "Industry-specific designs available: Restaurant, retail shop, blog, and other specialized layouts can be applied within any package below"
+- Both pages now link to each other for clarity
+
+**Rationale:** User identified potential confusion between templates shown on portfolio page (6 templates) and packages shown on pricing page (4 packages). Visitors might think Shop/Restaurant/Blog are separate products. Changes clarify that industry-specific designs are variations that can be applied within any package tier (Starter, Growth, etc.), not separate offerings.
+
+---
+
+#### 11. Mobile Pricing Table Complete Rebuild
+**Files Modified:** 
+- src/pricing.html
+- src/css/styles.css
+
+**Changes Made:**
+- Moved mobile card layout BEFORE desktop table in HTML structure
+- Added `d-md-none` class to mobile cards (show on mobile only)
+- Added inline `style="display: none;"` to table wrapper for extra mobile hiding
+- Removed responsive abbreviations from table headers (Pack/For/Range)
+- Updated CSS with `@media (max-width: 767px)` to force hide table wrapper
+- Removed duplicate mobile card section that was after table
+- Simplified table headers to plain text (Package, Best for, Typical range)
+
+**Rationale:** Compare packages table consistently cutting off at "Growth" column on mobile devices (Samsung Android Firefox, Spck editor preview). Multiple attempts to shrink table (smaller fonts, tighter padding, abbreviated headers) failed. Solution: Complete separation - mobile users see card layout only, desktop users see table only. Card layout standard responsive pattern for complex tables on mobile.
+
+**Status:** VS Code mobile preview still shows issues, but as learned Dec 11, VS Code preview unreliable. Real test required on Samsung Android device.
+
+---
+
+## Summary
+
+**Total Files Changed:** 21 files
+- 9 HTML pages (all main pages)
+- 1 CSS file
+- 1 advanced logo utility
+- 2 obsolete utilities deleted
+- 1 logo usage guide
+- 1 changelog
+
+**Session Focus:** Branding refinement, realistic timeline expectations, template/package relationship clarity, mobile pricing table solution
+
+**Key Achievements:**
+- Simplified tagline for broader appeal
+- Industry-standard project timelines set
+- Clear template-to-package relationship established
+- Mobile pricing table completely redesigned
+- Logo sizing optimized for all contexts
+- Visual consistency across site maintained
+
+---
+
 ## Previous Changes
 
 See `CHANGELOG-2025-12-11-session2.md` for Session 2 changes (mobile pricing table fix, service agreements, logo exporter creation).
