@@ -1,13 +1,15 @@
 # Logo Usage Guide for Business Documents
 ## RV Web Creations LLC
 
-**Last Updated:** December 11, 2025
+**Last Updated:** December 12, 2025
 
 ---
 
 ## Overview
 
 This guide provides recommendations for using the RV Web Creations logo across various business documents including invoices, proposals, contracts, and other professional materials.
+
+**Note on Icon Sizing:** Logo versions are optimized for their specific use context. The RV icon size varies to ensure appropriate visual impact - smaller for web headers (36px), medium for documents (50px), larger for marketing materials (70px), and substantial for print (180px+) and business cards (225px).
 
 ---
 
@@ -233,6 +235,14 @@ RV Web Creations LLC
 
 ## Sizing Guidelines
 
+### Icon Size by Context
+The RV icon is sized appropriately for each use case:
+- **Web headers (small 400×100px):** 36px icon - aligns with text height
+- **Documents/invoices (medium 600×150px):** 50px icon - professional presence
+- **Marketing materials (large 800×200px):** 70px icon - bold statement
+- **Print materials (2400×600px):** 180px icon - substantial at 300 DPI
+- **Business cards (3000×750px):** 225px icon - professional impact
+
 ### Minimum Sizes
 - **Digital documents:** 300px width minimum
 - **Print documents:** 2 inches width minimum at 300 DPI
@@ -286,7 +296,7 @@ Maintain clear space around logo equal to the height of the "R" in the icon:
 ### Alt Text
 When using logo in digital documents:
 - **Invoice/Contract:** "RV Web Creations LLC logo"
-- **Email signature:** "RV Web Creations - Custom small business websites"
+- **Email signature:** "RV Web Creations - Custom business websites"
 
 ### Contrast
 - Ensure sufficient contrast between logo and background
@@ -453,6 +463,7 @@ For questions about logo usage or to request additional formats:
 
 ---
 
-**Document Version:** 1.0  
+**Document Version:** 1.1  
 **Created:** December 11, 2025  
+**Last Updated:** December 12, 2025  
 **Next Review:** Annually or when rebranding

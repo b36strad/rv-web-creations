@@ -172,6 +172,7 @@
       text-transform: uppercase;
       color: #f8b400;
       line-height: 1;
+      white-space: nowrap;
     }
 
     .logo-horizontal .tagline {
@@ -307,7 +308,7 @@
           <div class="dimensions">800 × 200px</div>
           <span class="badge badge-success">Transparent</span>
           <div class="preview-area transparent" id="preview-horizontal-large"></div>
-          <button class="btn btn-primary" onclick="exportLogo('horizontal-large', 800, 200, 28, 13, 80)">Download PNG</button>
+          <button class="btn btn-primary" onclick="exportLogo('horizontal-large', 800, 200, 48, 13, 120)">Download PNG</button>
         </div>
 
         <!-- Horizontal Logo - Medium -->
@@ -317,7 +318,7 @@
           <div class="dimensions">600 × 150px</div>
           <span class="badge badge-success">Transparent</span>
           <div class="preview-area transparent" id="preview-horizontal-medium"></div>
-          <button class="btn btn-primary" onclick="exportLogo('horizontal-medium', 600, 150, 21, 10, 60)">Download PNG</button>
+          <button class="btn btn-primary" onclick="exportLogo('horizontal-medium', 600, 150, 21, 10, 50)">Download PNG</button>
         </div>
 
         <!-- Horizontal Logo - Small -->
@@ -327,7 +328,7 @@
           <div class="dimensions">400 × 100px</div>
           <span class="badge badge-success">Transparent</span>
           <div class="preview-area transparent" id="preview-horizontal-small"></div>
-          <button class="btn btn-primary" onclick="exportLogo('horizontal-small', 400, 100, 14, 7, 40)">Download PNG</button>
+          <button class="btn btn-primary" onclick="exportLogo('horizontal-small', 400, 100, 14, 7, 36)">Download PNG</button>
         </div>
 
         <!-- Horizontal Logo - Print -->
@@ -337,7 +338,7 @@
           <div class="dimensions">2400 × 600px</div>
           <span class="badge badge-info">300 DPI</span>
           <div class="preview-area transparent" id="preview-horizontal-print"></div>
-          <button class="btn btn-primary" onclick="exportLogo('horizontal-print', 2400, 600, 84, 39, 240)">Download PNG</button>
+          <button class="btn btn-primary" onclick="exportLogo('horizontal-print', 2400, 600, 84, 39, 180)">Download PNG</button>
         </div>
 
         <!-- Icon Only - Large -->
@@ -377,7 +378,7 @@
           <div class="dimensions">3000 × 750px</div>
           <span class="badge badge-info">300 DPI</span>
           <div class="preview-area transparent" id="preview-business-card"></div>
-          <button class="btn btn-primary" onclick="exportLogo('business-card', 3000, 750, 105, 49, 300)">Download PNG</button>
+          <button class="btn btn-primary" onclick="exportLogo('business-card', 3000, 750, 105, 49, 225)">Download PNG</button>
         </div>
       </div>
     </div>
@@ -505,7 +506,6 @@
           </svg>
           <div class="text">
             <span class="company-name" style="font-size: ${fontSize}px;">WEB CREATIONS</span>
-            <span class="tagline" style="font-size: ${taglineSize}px;">Custom small business websites</span>
           </div>
         </div>
       `;
@@ -536,11 +536,11 @@
     }
 
     // Initialize previews
-    createPreview('preview-horizontal-large', 800, 200, 28, 13, 80);
-    createPreview('preview-horizontal-medium', 600, 150, 21, 10, 60);
-    createPreview('preview-horizontal-small', 400, 100, 14, 7, 40);
-    createPreview('preview-horizontal-print', 2400, 600, 84, 39, 240);
-    createPreview('preview-business-card', 3000, 750, 105, 49, 300);
+    createPreview('preview-horizontal-large', 800, 200, 48, 13, 120);
+    createPreview('preview-horizontal-medium', 600, 150, 21, 10, 50);
+    createPreview('preview-horizontal-small', 400, 100, 14, 7, 36);
+    createPreview('preview-horizontal-print', 2400, 600, 84, 39, 180);
+    createPreview('preview-business-card', 3000, 750, 105, 49, 225);
     createIconPreview('preview-icon-large', 512);
     createIconPreview('preview-icon-medium', 256);
     createSocialPreview('preview-social-square', 1000);
@@ -567,10 +567,6 @@
       ctx.font = `700 ${fontSize}px system-ui, -apple-system, sans-serif`;
       ctx.fillStyle = '#f8b400';
       ctx.fillText('WEB CREATIONS', textX, textY);
-      
-      ctx.font = `400 ${taglineSize}px system-ui, -apple-system, sans-serif`;
-      ctx.fillStyle = '#6c757d';
-      ctx.fillText('Custom small business websites', textX, textY + taglineSize * 1.5);
       
       downloadCanvas(canvas, `rv-web-creations-logo-${name}.png`);
     }
@@ -619,14 +615,14 @@
     async function exportBatch() {
       const zip = new JSZip();
       const checks = {
-        'check-horizontal-large': () => generateLogoBlob('horizontal-large', 800, 200, 28, 13, 80),
-        'check-horizontal-medium': () => generateLogoBlob('horizontal-medium', 600, 150, 21, 10, 60),
-        'check-horizontal-small': () => generateLogoBlob('horizontal-small', 400, 100, 14, 7, 40),
-        'check-horizontal-print': () => generateLogoBlob('horizontal-print', 2400, 600, 84, 39, 240),
+        'check-horizontal-large': () => generateLogoBlob('horizontal-large', 800, 200, 48, 13, 120),
+        'check-horizontal-medium': () => generateLogoBlob('horizontal-medium', 600, 150, 21, 10, 50),
+        'check-horizontal-small': () => generateLogoBlob('horizontal-small', 400, 100, 14, 7, 36),
+        'check-horizontal-print': () => generateLogoBlob('horizontal-print', 2400, 600, 84, 39, 180),
         'check-icon-large': () => generateIconBlob('icon-large', 512),
         'check-icon-medium': () => generateIconBlob('icon-medium', 256),
         'check-social-square': () => generateSocialBlob('social-square', 1000),
-        'check-business-card': () => generateLogoBlob('business-card', 3000, 750, 105, 49, 300)
+        'check-business-card': () => generateLogoBlob('business-card', 3000, 750, 105, 49, 225)
       };
 
       const promises = [];
@@ -678,10 +674,6 @@
         ctx.font = `700 ${fontSize}px system-ui, -apple-system, sans-serif`;
         ctx.fillStyle = '#f8b400';
         ctx.fillText('WEB CREATIONS', textX, textY);
-        
-        ctx.font = `400 ${taglineSize}px system-ui, -apple-system, sans-serif`;
-        ctx.fillStyle = '#6c757d';
-        ctx.fillText('Custom small business websites', textX, textY + taglineSize * 1.5);
         
         canvas.toBlob((blob) => resolve({ blob, name: `rv-web-creations-logo-${name}.png` }));
       });
