@@ -237,3 +237,25 @@ div[id] {
     white-space: nowrap;
   }
 }
+
+/* Services table mobile optimization - 4 columns need tighter spacing */
+@media (max-width: 767px) {
+  .services-table {
+    font-size: 0.65rem;
+  }
+  
+  .services-table th,
+  .services-table td {
+    padding: 0.4rem 0.15rem;
+  }
+  
+  .services-table th:first-child,
+  .services-table td:first-child {
+    white-space: normal;
+  }
+  
+  .services-table th:not(:first-child),
+  .services-table td:not(:first-child) {
+    white-space: nowrap;
+  }
+}
