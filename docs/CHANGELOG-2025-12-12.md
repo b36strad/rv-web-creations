@@ -270,19 +270,139 @@
 
 ---
 
+#### 14. About Page Image Repositioned
+**Files Modified:** 
+- src/about.html
+
+**Changes Made:**
+- Moved profile image to appear before heading on mobile
+- Added `height: 200px`, `object-fit: cover`, `object-position: center top`
+- Image now displays immediately after "About" label on mobile
+- Maintains float-right layout on desktop
+
+**Rationale:** On mobile, visitors see the image immediately for instant trust-building and personal connection, rather than requiring scroll past heading and intro text. Desktop layout unchanged with float-right positioning.
+
+---
+
+#### 15. Home Page Process Section Visual Refinement
+**Files Modified:** 
+- src/index.html
+
+**Changes Made:**
+- Removed blue `alert alert-primary` backgrounds from 6 callout boxes
+- Changed to subtle gray boxes with left borders (`background-color: #f8f9fa`)
+- Removed colored text on "Goal:" and "Output:" labels
+- Applied to all three process cards (Discover & Define, Design for Real Users, Build Launch & Improve)
+
+**Rationale:** Blue alerts were visually inconsistent with rest of page - only colored elements on entire home page. Gray boxes maintain information hierarchy while matching site's clean, minimal aesthetic.
+
+---
+
+#### 16. About Page Card Visual Consistency
+**Files Modified:** 
+- src/about.html
+
+**Changes Made:**
+- Added green border to "Values that guide the work" card (matching "How I approach projects")
+- Added blue border to "Built for your growth" card
+- Added upward trending bar chart icon to growth card
+- Changed growth card icon from light bulb to growth chart
+
+**Rationale:** Side-by-side cards needed consistent styling. Green/orange match home page card colors. Growth card needed icon to match adjacent cards. Chart icon better represents business growth than light bulb.
+
+---
+
+#### 17. Portfolio Page Badge Positioning & Consistency
+**Files Modified:** 
+- src/portfolio.html
+
+**Changes Made:**
+- Moved "INDUSTRY VARIATION" badges from top-left to bottom-right on 3 cards (Shop, Blog, Restaurant)
+- Standardized all category badges to blue (`bg-info`): POPULAR, COMPREHENSIVE, E-COMMERCE, CONTENT, FOOD, PROFESSIONAL
+- Added "CONTENT" badge to Blog card (was missing)
+- Changed Restaurant badge from "NEW" to "FOOD"
+- Keep "INDUSTRY VARIATION" badges green for clear categorization
+
+**Rationale:** Top-left badges covered faces in photos (especially Shop card). Blue category badges create visual consistency while green industry variations maintain clear distinction. "CONTENT" and "FOOD" are descriptive category labels vs time-based "NEW".
+
+---
+
+#### 18. Contact Page Submit Button Centered
+**Files Modified:** 
+- src/contact.html
+
+**Changes Made:**
+- Added `text-center` class to submit button container
+- Button now centered at bottom of form
+
+**Rationale:** Centered submit buttons create better visual hierarchy and focal point at end of form. Standard UX pattern for contact forms.
+
+---
+
+#### 19. Pre-Launch Checklist Created
+**Files Created:** 
+- docs/PRE-LAUNCH-CHECKLIST.md
+
+**Content:**
+- Critical pre-launch items (mobile testing, form testing, link audit, proofread)
+- Nice-to-have items (analytics, SEO, visual assets, error pages)
+- Launch readiness checklist
+- Known issues and solutions
+- Post-launch tasks
+- Emergency rollback procedures
+- Recent changes summary
+
+**Rationale:** Comprehensive reference document for final testing and launch preparation. Ensures nothing critical is missed before going live.
+
+---
+
 ## Summary
 
-**Total Files Changed:** 23 files
+**Total Files Changed:** 28 files
 - 9 HTML pages (all main pages)
 - 1 CSS file
 - 1 advanced logo utility
 - 2 obsolete utilities deleted
 - 1 logo usage guide
+- 1 pre-launch checklist
 - 1 changelog
 
-**Session Focus:** Branding refinement, realistic timeline expectations, template/package relationship clarity, mobile table solutions (pricing restored, services fixed)
+**Session Focus:** Branding refinement, realistic timeline expectations, template/package relationship clarity, mobile table solutions (pricing restored, services fixed), visual consistency improvements, pre-launch preparation
 
 **Key Achievements:**
+- Simplified tagline for broader appeal
+- Industry-standard project timelines set
+- Clear template-to-package relationship established
+- Pricing table restored to working version (commit 9469089)
+- Services table fixed with mobile-optimized CSS
+- About page image optimized for immediate mobile visibility
+- Home page visual consistency improved (removed blue alerts)
+- Portfolio badge positioning refined (bottom-right, no face coverage)
+- Portfolio badge colors standardized (blue categories, green variations)
+- Contact form button centered for better UX
+- Logo sizing optimized for all contexts
+- Visual consistency across site maintained
+- Pre-launch checklist created for final testing
+- Learned: Bootstrap .table-responsive can cause problems, simple wrappers with custom CSS more reliable
+
+**Mobile Table Solution:**
+- Identified commit 9469089 as last working pricing table version
+- Removed Bootstrap .table-responsive wrappers (root cause of cut-off)
+- Implemented selective white-space CSS (nowrap vs normal by column)
+- Applied small fonts with tight padding for mobile screens
+- Services table required even tighter spacing due to 4 columns
+
+**Visual Design Improvements:**
+- Standardized card borders and icons across About page
+- Unified portfolio badge colors for professional appearance
+- Repositioned badges to avoid covering important image elements
+- Removed color inconsistencies from home page process section
+
+**Next Steps:**
+- Test services table on Samsung Android device
+- Verify all forms work in production
+- Complete pre-launch checklist items
+- See `docs/PRE-LAUNCH-CHECKLIST.md` for full testing plan
 - Simplified tagline for broader appeal
 - Industry-standard project timelines set
 - Clear template-to-package relationship established
