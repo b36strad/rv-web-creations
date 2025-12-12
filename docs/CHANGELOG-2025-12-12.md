@@ -172,6 +172,22 @@
 - Verify logo exports display correctly in Moxie after re-uploading large version
 - Confirm "WEB CREATIONS" stays on one line in all logo versions
 - Test responsive behavior of updated navbar logo size (36px)
+- Test mobile pricing table card layout on Samsung Android device (VS Code preview unreliable)
+
+---
+
+#### 9. Project Timeline Updates
+**Files Modified:** src/pricing.html
+
+**Changes Made:**
+- Updated Starter package timeline from "2-3 week timeline" to "3-4 week timeline"
+- Updated Growth package timeline from "3-5 week timeline" to "6-8 week timeline"
+- Professional package already at realistic "4-6 weeks"
+- Refresh package already at realistic "2-4 weeks"
+
+**Rationale:** Previous timelines were too aggressive, especially for Growth package (8-20 pages with blog, integrations, content migration). New timelines reflect industry-standard realistic durations. Realistic timelines build trust, attract better clients, set proper expectations, and prevent scope creep issues.
+
+**Note:** FAQ page already references "3-4 weeks" for smaller sites, so no update needed there.
 
 ---
 
