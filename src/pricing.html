@@ -81,44 +81,14 @@
 
       <div class="card border-0 shadow-sm mb-5">
         <div class="card-body p-4">
-          <!-- Mobile Card Layout (shown on mobile only) -->
-          <div class="pricing-cards d-md-none">
-            <div class="card mb-3" style="border-left: 4px solid #1f4f7b;">
-              <div class="card-body">
-                <h6 class="fw-bold mb-2">Starter</h6>
-                <p class="text-muted small mb-2">New small businesses</p>
-                <p class="text-primary fw-bold mb-0">$2,500 – $6,000</p>
-              </div>
-            </div>
-            
-            <div class="card mb-3" style="border-left: 4px solid #198754;">
-              <div class="card-body">
-                <h6 class="fw-bold mb-2">Growth</h6>
-                <p class="text-muted small mb-2">Established businesses with more content</p>
-                <p class="text-primary fw-bold mb-0">$7,500 – $18,000</p>
-              </div>
-            </div>
-            
-            <div class="card mb-3" style="border-left: 4px solid #1e3a5f;">
-              <div class="card-body">
-                <h6 class="fw-bold mb-2">Professional</h6>
-                <p class="text-muted small mb-2">Lawyers, doctors, accountants, consultants</p>
-                <p class="text-primary fw-bold mb-0">$3,500 – $6,500</p>
-              </div>
-            </div>
-            
-            <div class="card mb-3" style="border-left: 4px solid #6f42c1;">
-              <div class="card-body">
-                <h6 class="fw-bold mb-2">Refresh</h6>
-                <p class="text-muted small mb-2">Existing sites that need a modern look</p>
-                <p class="text-primary fw-bold mb-0">$2,000 – $5,500</p>
-              </div>
-            </div>
+          <!-- Scroll hint for mobile -->
+          <div class="alert alert-info d-md-none small mb-3">
+            <strong>Tip:</strong> Swipe left to see all package details →
           </div>
-
-          <!-- Desktop Table (shown on tablet and up) -->
-          <div class="pricing-table-wrapper d-none d-md-block" style="display: none;">
-            <table class="table table-hover mb-0 pricing-table">
+          
+          <!-- Horizontally scrollable table wrapper -->
+          <div class="table-responsive">
+            <table class="table table-hover mb-0 pricing-table" style="min-width: 600px;">
               <thead class="table-light">
                 <tr>
                   <th class="fw-semibold" style="border-left: 4px solid #1f4f7b;">Package</th>
