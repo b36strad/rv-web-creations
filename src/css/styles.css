@@ -1,3 +1,13 @@
+/* Card lift on hover for homepage foundational sections */
+.bg-info.bg-opacity-10 .card,
+.bg-info.bg-opacity-10 .card:hover {
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1);
+}
+.bg-info.bg-opacity-10 .card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0.5rem 1.5rem rgba(31,79,123,0.10), 0 0.25rem 0.5rem rgba(31,79,123,0.08);
+  z-index: 2;
+}
 /* Custom styles for Web Creations Bootstrap 5 Site */
 
 :root {
