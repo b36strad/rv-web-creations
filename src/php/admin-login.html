@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+    <h2>Admin Login</h2>
+    <form method="post" action="admin-login.php">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <?php if (isset($_GET['error'])): ?>
+        <p style="color:red;">Invalid password. Try again.</p>
+    <?php endif; ?>
+</body>
+</html>
