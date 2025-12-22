@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-      (function(){
-        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
-      })();
-    </script>
   <meta charset="UTF-8">
   <title>Pricing | Web Creations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +70,7 @@
         Legacy, complex, or content-heavy sites may require a custom quote after a site audit.
       </p>
       <div class="alert alert-info mb-4">
-        <strong>Industry-specific designs available:</strong> Restaurant, retail shop, blog, and other specialized layouts can be applied within any package below. <a href="portfolio.html" class="alert-link">View templates →</a>
+        <strong>Industry-specific designs available:</strong> Restaurant, retail shop, blog, and other specialized layouts can be applied within any package below. <a href="portfolio.html" class
       </div>
 
       <div class="mb-5">
@@ -145,233 +138,260 @@
           </div>
 
           <div class="alert alert-info border-0 mt-3 mb-0 small">
-            *Final pricing is confirmed in a written proposal after I discuss your specific content, features, and timeline with you. Redesigns of legacy or complex sites may require additional work and a custom quote.
+            *Final pricing is confirmed in a written proposal after we discuss your specific content, features, and timeline. Redesigns of legacy or complex sites may require additional work and a custom quote.
           </div>
         </div>
       </div>
 
-
       <!-- Full-featured Pricing Calculator -->
-      <div class="mt-5">
-        <h2 class="h5 fw-bold mb-3 text-primary">Estimate Your Project</h2>
-        <div class="form-text mb-3">
-          This calculator provides a detailed estimate based on your selections. Your final proposal and invoice will reflect your unique project needs and any custom requirements I discuss with you. I strive for transparency—no hidden fees or bait-and-switch pricing.
-        </div>
-        <form id="pricingCalculatorForm" class="row gy-4 gx-4 align-items-start">
-          <div class="col-12 col-lg-4 mb-3 mb-lg-0">
-            <div class="card h-100 border-0 shadow-sm pricing-calc-card">
-              <div class="card-body">
-                <label for="base_package" class="form-label fw-semibold">Base Package</label>
-                <select class="form-select mb-2" id="base_package" name="base_package">
+          <div class="mt-5">
+            <h2 class="h5 fw-bold mb-3 text-primary">Estimate Your Project</h2>
+            <form id="pricingCalculatorForm" class="row gy-3 gx-4 align-items-end">
+              <div class="col-md-4">
+                <label for="base_package" class="form-label">Base Package</label>
+                <select class="form-select" id="base_package" name="base_package">
                   <option value="starter">Starter Site ($2,500–$6,000)</option>
                   <option value="growth">Growth Site ($7,500–$12,000)</option>
                   <option value="growth_advanced">Growth Site – Advanced ($12,000–$18,000)</option>
                   <option value="custom">Custom/Enterprise ($18,000+)</option>
                 </select>
-                <div class="form-text">
-                  Choose the package that best matches your project’s size and needs. You can add features and options below for a more tailored estimate.<br>
-                  <span class="text-muted">
-                    <strong>Not sure where to start?</strong> The <a href="#package-finder">Package Finder Quiz</a> is designed to help you quickly identify which website package is the best fit for your business based on your goals, content, and features. Answer a few simple questions, and you'll get a personalized recommendation for the most suitable package.<br>
-                    <br>
-                    <strong>How does this relate to the calculator?</strong> The quiz gives you a starting point by suggesting the right package for your needs. Once you have a recommendation, you can use the estimate calculator below to see a detailed price range and customize your project with add-ons and options. The calculator lets you fine-tune your estimate based on your unique requirements, so you know exactly what to expect before reaching out for a proposal.
-                  </span>
-                </div>
+                <div class="form-text">Choose the package that best matches your project’s size and needs. You can add features and options below for a more tailored estimate.</div>
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-5 mb-3 mb-lg-0">
-            <div class="card h-100 border-0 shadow-sm pricing-calc-card">
-              <div class="card-body">
-                <div class="fw-semibold mb-2">Add-ons</div>
-                <div class="accordion" id="addonsAccordion">
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="headingContentCopy">
-                      <button class="accordion-button fw-bold bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContentCopy" aria-expanded="true" aria-controls="collapseContentCopy">
-                        Content & Copy
-                      </button>
-                    </h2>
-                    <div id="collapseContentCopy" class="accordion-collapse collapse" aria-labelledby="headingContentCopy" data-bs-parent="#addonsAccordion">
-                      <div class="accordion-body p-2">
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_basic" name="addons" value="copywriting_basic">
-                          <label class="form-check-label" for="copywriting_basic">Basic Copywriting (+$500)
-                            <span class="d-block small text-muted">Polish your text: light editing and improvements to your provided content.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_full" name="addons" value="copywriting_full">
-                          <label class="form-check-label" for="copywriting_full">Full Copywriting (+$1,500)
-                            <span class="d-block small text-muted">I write all main website content for you, based on your notes or interview.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_advanced" name="addons" value="copywriting_advanced">
-                          <label class="form-check-label" for="copywriting_advanced">Advanced Copywriting (+$3,000)
-                            <span class="d-block small text-muted">Full copywriting plus in-depth research, brand voice, and sales-focused messaging.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="content_migration" name="addons" value="content_migration">
-                          <label class="form-check-label" for="content_migration">Content Migration (+$800)
-                            <span class="d-block small text-muted">Move your existing website content (text, images, files) to your new site, ensuring everything is organized and working. <strong>Included with Growth and Refresh packages—only select for Starter sites.</strong></span>
-                          </label>
-                        </div>
+              <div class="col-md-8">
+                <label class="form-label">Add-ons</label>
+                <div class="row g-3">
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="copywriting_basic" name="addons" value="copywriting_basic">
+                        <label class="form-check-label" for="copywriting_basic">Basic Copywriting (+$500)
+                          <span class="d-block small text-muted">Polish your text: light editing and improvements to your provided content.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="copywriting_full" name="addons" value="copywriting_full">
+                        <label class="form-check-label" for="copywriting_full">Full Copywriting (+$1,500)
+                          <span class="d-block small text-muted">We write all main website content for you, based on your notes or interview.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="copywriting_advanced" name="addons" value="copywriting_advanced">
+                        <label class="form-check-label" for="copywriting_advanced">Advanced Copywriting (+$3,000)
+                          <span class="d-block small text-muted">Full copywriting plus in-depth research, brand voice, and sales-focused messaging.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="content_migration" name="addons" value="content_migration">
+                        <label class="form-check-label" for="content_migration">Content Migration (+$800)</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="headingEcommerce">
-                      <button class="accordion-button fw-bold bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEcommerce" aria-expanded="false" aria-controls="collapseEcommerce">
-                        E-commerce
-                      </button>
-                    </h2>
-                    <div id="collapseEcommerce" class="accordion-collapse collapse" aria-labelledby="headingEcommerce" data-bs-parent="#addonsAccordion">
-                      <div class="accordion-body p-2">
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="ecommerce_basic" name="addons" value="ecommerce_basic">
-                          <label class="form-check-label" for="ecommerce_basic">Basic E-commerce (+$2,000)
-                            <span class="d-block small text-muted">Simple online store: up to 10 products, basic checkout, and payment setup.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="ecommerce_standard" name="addons" value="ecommerce_standard">
-                          <label class="form-check-label" for="ecommerce_standard">Standard E-commerce (+$3,500)
-                            <span class="d-block small text-muted">Full-featured store: up to 50 products, categories, coupons, tax/shipping setup, and order management.</span>
-                          </label>
-                        </div>
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ecommerce_basic" name="addons" value="ecommerce_basic">
+                        <label class="form-check-label" for="ecommerce_basic">Basic E-commerce (+$2,000)
+                          <span class="d-block small text-muted">Simple online store: up to 10 products, basic checkout, and payment setup.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ecommerce_standard" name="addons" value="ecommerce_standard">
+                        <label class="form-check-label" for="ecommerce_standard">Standard E-commerce (+$3,500)
+                          <span class="d-block small text-muted">Full-featured store: up to 50 products, categories, coupons, tax/shipping setup, and order management.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="ecommerce_advanced" name="addons" value="ecommerce_advanced">
+                        <label class="form-check-label" for="ecommerce_advanced">Advanced E-commerce (+$5,000)
+                          <span class="d-block small text-muted">Large or complex store: unlimited products, advanced features, custom integrations, or subscriptions.</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="payment_gateway" name="addons" value="payment_gateway">
+                        <label class="form-check-label" for="payment_gateway">Extra Payment Gateway (+$500)
+                          <span class="d-block small text-muted">Add support for an additional payment processor (e.g., PayPal, Stripe, Square) beyond your main e-commerce setup.</span>
+                        </label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="headingIntegrations">
-                      <button class="accordion-button fw-bold bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntegrations" aria-expanded="false" aria-controls="collapseIntegrations">
-                        Integrations & Features
-                      </button>
-                    </h2>
-                    <div id="collapseIntegrations" class="accordion-collapse collapse" aria-labelledby="headingIntegrations" data-bs-parent="#addonsAccordion">
-                      <div class="accordion-body p-2">
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="booking_system" name="addons" value="booking_system">
-                          <label class="form-check-label" for="booking_system">Booking System (+$1,500)
-                            <span class="d-block small text-muted">Online scheduling for appointments or services, with calendar integration and automated confirmations.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="custom_forms" name="addons" value="custom_forms">
-                          <label class="form-check-label" for="custom_forms">Custom Forms (+$800)
-                            <span class="d-block small text-muted">Tailored forms for quotes, applications, surveys, or other needs, with custom fields and notifications.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="blog_setup" name="addons" value="blog_setup">
-                          <label class="form-check-label" for="blog_setup">Blog Setup (+$500)
-                            <span class="d-block small text-muted">Add a blog or news section to your site, ready for you to publish posts and updates. <strong>Included with Growth and higher packages—only select for Starter sites.</strong></span>
-                          </label>
-                        </div>
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="booking_system" name="addons" value="booking_system">
+                        <label class="form-check-label" for="booking_system">Booking System (+$1,500)</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="member_portal" name="addons" value="member_portal">
+                        <label class="form-check-label" for="member_portal">Member Portal (+$2,000)</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="custom_forms" name="addons" value="custom_forms">
+                        <label class="form-check-label" for="custom_forms">Custom Forms (+$800)</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="blog_setup" name="addons" value="blog_setup">
+                        <label class="form-check-label" for="blog_setup">Blog Setup (+$500)</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-2">
-                    <h2 class="accordion-header" id="headingMarketing">
-                      <button class="accordion-button fw-bold bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMarketing" aria-expanded="false" aria-controls="collapseMarketing">
-                        Marketing & Media
-                      </button>
-                    </h2>
-                    <div id="collapseMarketing" class="accordion-collapse collapse" aria-labelledby="headingMarketing" data-bs-parent="#addonsAccordion">
-                      <div class="accordion-body p-2">
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="email_marketing" name="addons" value="email_marketing">
-                          <label class="form-check-label" for="email_marketing">Email Marketing (+$600)
-                            <span class="d-block small text-muted">Set up signup forms, connect to your email platform (like Mailchimp), and integrate basic automations for newsletters or lead capture.</span>
-                          </label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="video_integration" name="addons" value="video_integration">
-                          <label class="form-check-label" for="video_integration">Video Integration (+$400)
-                            <span class="d-block small text-muted">Embed and display videos from YouTube, Vimeo, or your own files, with custom placement and styling.</span>
-                          </label>
-                        </div>
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="email_marketing" name="addons" value="email_marketing">
+                        <label class="form-check-label" for="email_marketing">Email Marketing (+$600)</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="api_integration" name="addons" value="api_integration">
+                        <label class="form-check-label" for="api_integration">API Integration (+$1,500)</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTimeline">
-                      <button class="accordion-button fw-bold bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTimeline" aria-expanded="false" aria-controls="collapseTimeline">
-                        Timeline
-                      </button>
-                    </h2>
-                    <div id="collapseTimeline" class="accordion-collapse collapse" aria-labelledby="headingTimeline" data-bs-parent="#addonsAccordion">
-                      <div class="accordion-body p-2">
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="rush_2weeks" name="addons" value="rush_2weeks">
-                          <label class="form-check-label" for="rush_2weeks">Rush (25% extra)<br><span class="small text-muted">Move your project to the front of the queue and complete it 50% faster than our standard timeline (typically 2–3 weeks for Starter sites). Ideal for time-sensitive launches.</span></label>
-                        </div>
-                        <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="rush_1week" name="addons" value="rush_1week">
-                          <label class="form-check-label" for="rush_1week">Urgent Rush (50% extra)<br><span class="small text-muted">Highest priority: pause other work and dedicate resources to deliver your project in 2 weeks or less (subject to availability). For critical deadlines only.</span></label>
-                        </div>
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="custom_graphics" name="addons" value="custom_graphics">
+                        <label class="form-check-label" for="custom_graphics">Custom Graphics (+$800)</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="video_integration" name="addons" value="video_integration">
+                        <label class="form-check-label" for="video_integration">Video Integration (+$400)</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-4">
+                    <div class="p-2 rounded-2 border mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="rush_2weeks" name="addons" value="rush_2weeks">
+                        <label class="form-check-label" for="rush_2weeks">Rush (25% extra)<br><span class="small text-muted">Finish 50% faster than standard timeline</span></label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="rush_1week" name="addons" value="rush_1week">
+                        <label class="form-check-label" for="rush_1week">Urgent Rush (50% extra)<br><span class="small text-muted">Finish in 2 weeks or less (subject to availability)</span></label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm mb-3 pricing-calc-card">
-              <div class="card-body">
-                <label class="form-label fw-semibold">Discounts</label>
-                <div class="form-check mb-1">
+              <div class="col-md-4">
+                <label class="form-label">Discounts</label>
+                <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="nonprofit" name="discounts" value="nonprofit">
                   <label class="form-check-label" for="nonprofit">Nonprofit (15% off)</label>
                 </div>
-                <div class="form-check mb-1">
+                <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="referral" name="discounts" value="referral">
                   <label class="form-check-label" for="referral">Referral (10% off)</label>
                 </div>
-                <div class="form-check mb-1">
+                <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="upfront_payment" name="discounts" value="upfront_payment">
                   <label class="form-check-label" for="upfront_payment">Upfront Payment (5% off)</label>
                 </div>
               </div>
-            </div>
-            <div class="card h-100 border-0 shadow-sm pricing-calc-card">
-              <div class="card-body">
-                <div id="pricingCalculatorResult" class="fs-4 fw-bold text-success"></div>
+              <div class="col-md-4">
+                <label class="form-label">Estimated price</label>
+                <div id="pricingCalculatorResult" class="fs-4 fw-bold text-success">$2,500</div>
                 <div id="pricingCalculatorBreakdown" class="small mt-2"></div>
+              </div>
+            </form>
+            <div class="form-text mt-2">
+              This calculator provides a detailed estimate based on your selections. Your final proposal and invoice will reflect your unique project needs and any custom requirements we discuss together. I strive for transparency—no hidden fees or bait-and-switch pricing.
+            </div>
+          </div>
+          <!-- End Full-featured Pricing Calculator -->
+
+      <hr class="my-5">
+
+      <section id="care-plans" class="mb-5">
+        <h2 class="h4 fw-bold mb-3">Care &amp; maintenance plans</h2>
+        <p class="text-muted mb-4">
+          Keep your site up to date without adding another ongoing task to your plate.
+        </p>
+        
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm" style="border-left: 4px solid #1f4f7b !important;">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h3 class="h5 fw-bold mb-1">Light</h3>
+                    <p class="small text-muted mb-2">Occasional updates</p>
+                    <p class="h6 text-primary fw-bold mb-0">$100 – $125 / month</p>
+                  </div>
+                  <span class="badge bg-light text-dark border">Monthly</span>
+                </div>
+                <ul class="small text-muted list-unstyled">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Basic content updates</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Platform/plugin checks (if applicable)</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Email support</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </form>
-                <div class="d-flex justify-content-center my-4">
-                  <form id="estimateEmailForm" class="card card-body shadow-sm border-0 w-100" style="max-width: 500px;">
-                  <h3 class="h6 fw-bold mb-2">Send Your Estimate</h3>
-                  <div class="mb-3 text-muted small">
-                    Enter your name and email to receive a copy of your detailed estimate. You'll get a summary of your selections and pricing in your inbox, and I'll receive your request so I can follow up with answers or a custom proposal. No spam—just helpful info and next steps.
+
+          <div class="col-lg-4">
+            <div class="card h-100 border-primary border-2 shadow" style="border-left: 4px solid #198754 !important;">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h3 class="h5 fw-bold mb-1">Standard</h3>
+                    <p class="small text-muted mb-2">Most common</p>
+                    <p class="h6 text-primary fw-bold mb-0">$150 – $350 / month</p>
                   </div>
-                  <div class="mb-2">
-                    <label for="estimateName" class="form-label mb-1">Your Name</label>
-                    <input type="text" class="form-control" id="estimateName" name="name" required>
-                  </div>
-                  <div class="mb-2">
-                    <label for="estimateEmail" class="form-label mb-1">Your Email</label>
-                    <input type="email" class="form-control" id="estimateEmail" name="email" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Send Estimate</button>
-                  <div id="estimateEmailStatus" class="small mt-2"></div>
-                </form>
-        <div class="form-text mt-2">
-        </div>
+                  <span class="badge bg-primary">Recommended</span>
+                </div>
+                <ul class="small text-muted list-unstyled">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>More frequent content updates</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Regular monitoring &amp; backups</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Priority email support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <div id="pricingCalculatorResult" class="fs-4 fw-bold text-success"></div>
-            <div id="pricingCalculatorBreakdown" class="small mt-2"></div>
+
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm" style="border-left: 4px solid #6f42c1 !important;">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <h3 class="h5 fw-bold mb-1">Custom</h3>
+                    <p class="small text-muted mb-2">Higher volume needs</p>
+                    <p class="h6 text-primary fw-bold mb-0">Custom — typically $500+/month</p>
+                  </div>
+                  <span class="badge bg-light text-dark border">Tailored</span>
+                </div>
+                <ul class="small text-muted list-unstyled">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>For sites that need ongoing content and feature changes.</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Pricing based on estimated volume of work.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          </form>
         </div>
-        <div class="form-text mt-2">
-        </div>
-      </div>
+      </section>
 
       <!-- Package Finder Quiz -->
       <section id="package-finder" class="mb-5">
@@ -436,16 +456,16 @@
               <div class="quiz-question" data-question="4">
                 <h3 class="h5 fw-semibold mb-3">4. What's your timeline?</h3>
                 <div class="d-grid gap-2">
-                  <button class="btn btn-outline-primary text-start" data-answer="rush_1week">
-                    <strong>Urgent (1 week)</strong>
-                  </button>
                   <button class="btn btn-outline-primary text-start" data-answer="rush_2weeks">
                     <strong>Rush (2 weeks)</strong>
                   </button>
-                  <button class="btn btn-outline-primary text-start" data-answer="timeline_normal">
-                    <strong>Normal (3-4 weeks)</strong>
+                  <button class="btn btn-outline-primary text-start" data-answer="rush_1week">
+                    <strong>Urgent Rush (1 week)</strong>
                   </button>
-                  <button class="btn btn-outline-primary text-start" data-answer="timeline_flexible">
+                  <button class="btn btn-outline-primary text-start" data-answer="timeline-normal">
+                    <strong>Normal (6-10 weeks)</strong>
+                  </button>
+                  <button class="btn btn-outline-primary text-start" data-answer="timeline-flexible">
                     <strong>Flexible (no rush)</strong>
                   </button>
                 </div>
@@ -530,101 +550,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <hr class="my-5">
-
-      <section id="care-plans" class="mb-5">
-        <h2 class="h4 fw-bold mb-3">Care &amp; maintenance plans</h2>
-        <p class="text-muted mb-4">
-          Keep your site up to date without adding another ongoing task to your plate.
-        </p>
-        
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="card h-100 border-0 shadow-sm care-plan-card" style="border-left: 4px solid #1f4f7b !important;">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h3 class="h5 fw-bold mb-1">Light</h3>
-                    <p class="small text-muted mb-2">Occasional updates</p>
-                    <p class="h6 text-primary fw-bold mb-0">$75 – $99 / month</p>
-                  </div>
-                  <span class="badge bg-light text-dark border">Monthly</span>
-                </div>
-                <ul class="small text-muted list-unstyled">
-                  <li class="mb-2 d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Basic content updates</span>
-                  </li>
-                  <li class="mb-2 d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Platform/plugin checks (if applicable)</span>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Email support</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card h-100 border-primary border-2 shadow care-plan-card" style="border-left: 4px solid #198754 !important;">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h3 class="h5 fw-bold mb-1">Standard</h3>
-                    <p class="small text-muted mb-2">Most common</p>
-                    <p class="h6 text-primary fw-bold mb-0">$150 – $299 / month</p>
-                  </div>
-                  <span class="badge bg-primary">Recommended</span>
-                </div>
-                <ul class="small text-muted list-unstyled">
-                  <li class="mb-2 d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>More frequent content updates</span>
-                  </li>
-                  <li class="mb-2 d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Regular monitoring &amp; backups</span>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Priority email support</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card h-100 border-0 shadow-sm care-plan-card" style="border-left: 4px solid #6f42c1 !important;">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h3 class="h5 fw-bold mb-1">Custom</h3>
-                    <p class="small text-muted mb-2">Higher volume needs</p>
-                    <p class="h6 text-primary fw-bold mb-0">Custom — typically $500+/month</p>
-                  </div>
-                  <span class="badge bg-light text-dark border">Tailored</span>
-                </div>
-                <ul class="small text-muted list-unstyled">
-                  <li class="mb-2 d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>For sites that need ongoing content and feature changes.</span>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <span class="text-primary me-2">•</span>
-                    <span>Pricing based on estimated volume of work.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section id="hosting-plans">
@@ -635,7 +560,7 @@
         
         <div class="row g-4">
           <div class="col-lg-4">
-            <div class="card h-100 border-0 shadow-sm care-plan-card" style="border-left: 4px solid #1f4f7b !important;">
+            <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start mb-3">
                   <div>
@@ -668,7 +593,7 @@
           </div>
 
           <div class="col-lg-4">
-            <div class="card h-100 border-primary border-2 shadow care-plan-card">
+            <div class="card h-100 border-primary border-2 shadow">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start mb-3">
                   <div>
@@ -701,7 +626,7 @@
           </div>
 
           <div class="col-lg-4">
-            <div class="card h-100 border-0 shadow-sm" style="border-left: 4px solid #6f42c1 !important;">
+            <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-start mb-3">
                   <div>

@@ -1,3 +1,46 @@
+/* Fix: Ensure Content & Copy accordion chevron faces down when open */
+#collapseContentCopy.show ~ .accordion-button::after,
+#collapseContentCopy.collapse.show ~ .accordion-button::after,
+#headingContentCopy .accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg) !important;
+}
+/* Prevent badge text from wrapping for 'Most popular' pill, even on mobile */
+.badge.badge-no-wrap {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  display: inline-block !important;
+  max-width: none !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+/* Ensure left border of cards is visible on small screens */
+.pricing-calc-card,
+.care-plan-card {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .pricing-calc-card,
+  .care-plan-card {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+/* Force badge text to wrap on mobile */
+@media (max-width: 575.98px) {
+  .badge {
+    white-space: normal !important;
+    word-break: break-word !important;
+    display: block;
+    text-align: left;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 1rem;
+  }
+}
 /* Card lift on hover for homepage foundational sections */
 .bg-info.bg-opacity-10 .card,
 .bg-info.bg-opacity-10 .card:hover {
@@ -70,6 +113,12 @@
   width: 6px;
   height: 6px;
   display: inline-block;
+}
+
+/* Allow badge text to wrap on mobile and small screens */
+.badge {
+  white-space: normal !important;
+  word-break: break-word;
 }
 
 /* Hero section styling */
@@ -268,4 +317,14 @@ div[id] {
   .services-table td:not(:first-child) {
     white-space: nowrap;
   }
+}
+
+.form-check-input {
+  border-width: 2px;
+  border-color: #1f4f7b;
+  box-shadow: 0 0 0 0.1rem #f8b40033;
+}
+.form-check-input:focus {
+  border-color: #f8b400;
+  box-shadow: 0 0 0 0.2rem #f8b40055;
 }
