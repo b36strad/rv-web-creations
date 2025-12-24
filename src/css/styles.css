@@ -5,15 +5,20 @@
   transform: rotate(0deg) !important;
 }
 /* Prevent badge text from wrapping for 'Most popular' pill, even on mobile */
+/* Smaller, non-wrapping badge for pills */
 .badge.badge-no-wrap {
   white-space: nowrap !important;
   word-break: normal !important;
   display: inline-block !important;
   max-width: none !important;
   text-align: center !important;
-  font-size: 1rem !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+  font-size: 0.92rem !important;
+  padding-left: 0.7em !important;
+  padding-right: 0.7em !important;
+  padding-top: 0.35em !important;
+  padding-bottom: 0.35em !important;
+  border-radius: 999px !important;
+}
 }
 /* Ensure left border of cards is visible on small screens */
 .pricing-calc-card,
@@ -116,9 +121,27 @@
 }
 
 /* Allow badge text to wrap on mobile and small screens */
+/* Default badge: smaller, pill-like, no wrap on desktop */
 .badge {
-  white-space: normal !important;
-  word-break: break-word;
+  display: inline-block;
+  font-size: 0.92rem;
+  padding: 0.35em 0.7em;
+  border-radius: 999px;
+  white-space: nowrap;
+  word-break: normal;
+  line-height: 1.2;
+}
+
+@media (max-width: 575.98px) {
+  .badge {
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    white-space: normal !important;
+    word-break: break-word !important;
+    display: block;
+    text-align: left;
+  }
 }
 
 /* Hero section styling */
