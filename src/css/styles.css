@@ -1,3 +1,7 @@
+/* Force left border color to grey for homepage callouts */
+.border-left-grey {
+  border-left-color: #dee2e6 !important;
+}
 /* Fix: Ensure Content & Copy accordion chevron faces down when open */
 #collapseContentCopy.show ~ .accordion-button::after,
 #collapseContentCopy.collapse.show ~ .accordion-button::after,
