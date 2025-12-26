@@ -5,11 +5,39 @@
 
   // Initialize when DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
+    // Always close all dropdowns and reset aria-expanded on page load
+    document.querySelectorAll('.navbar .dropdown-menu').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+    document.querySelectorAll('.navbar .dropdown-toggle').forEach(function(toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
+    });
     initializeComponents();
     initializeScrollEffects();
     initializeStats();
     initializePortfolio();
+    enableHoverDropdowns();
   });
+  // Enable hover-activated dropdowns for desktop
+  function enableHoverDropdowns() {
+    if (window.innerWidth < 992) return; // Only for desktop
+    document.querySelectorAll('.navbar .dropdown').forEach(function(dropdown) {
+      dropdown.addEventListener('mouseenter', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        if (menu) {
+          menu.classList.add('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'true');
+        }
+      });
+      dropdown.addEventListener('mouseleave', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        if (menu) {
+          menu.classList.remove('show');
+          this.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
 
   // Initialize all components
   function initializeComponents() {
