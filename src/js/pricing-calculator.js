@@ -1,5 +1,15 @@
 // Full-featured pricing calculator logic
 document.addEventListener('DOMContentLoaded', function () {
+        // Ensure timeline 'none' is selected by default if nothing is checked
+        const timelineRadios = document.querySelectorAll('input[name="timeline_option"]');
+        if (timelineRadios.length) {
+          let checked = false;
+          timelineRadios.forEach(r => { if (r.checked) checked = true; });
+          if (!checked) {
+            const noneRadio = document.getElementById('timeline_none');
+            if (noneRadio) noneRadio.checked = true;
+          }
+        }
       // Utility to enable/disable add-ons based on base package
       function updateAddonAvailability() {
         const baseKey = form.elements['base_package'].value;
@@ -27,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Gather calculator selections
         const baseKey = form.elements['base_package'].value;
         let summary = `Estimate for ${name}\n\n`;
-        summary += `Base Package: ${BASE_PACKAGES[baseKey].name} ($${BASE_PACKAGES[baseKey].price.toLocaleString()})\n`;
+        const pkg = BASE_PACKAGES[baseKey];
+        let priceRange = pkg.max ? `$${pkg.price.toLocaleString()}–$${pkg.max.toLocaleString()}` : `$${pkg.price.toLocaleString()}`;
+        summary += `Base Package: ${pkg.name} (${priceRange})\n`;
         // Add-ons
         const addonEls = form.querySelectorAll('input[name="addons"]:checked');
         if (addonEls.length) {
@@ -69,10 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Pricing data (should match PHP)
   const BASE_PACKAGES = {
-    starter: { name: 'Starter Site', price: 2500 },
-    growth: { name: 'Growth Site', price: 7500 },
-    growth_advanced: { name: 'Growth Site - Advanced', price: 12000 },
-    custom: { name: 'Custom/Enterprise', price: 18000 }
+    starter: { name: 'Starter site', price: 2500, max: 6000 },
+    growth: { name: 'Growth site', price: 5000, max: 12000 },
+    professional: { name: 'Professional site', price: 3500, max: 6500 }
   };
   const ADD_ONS = {
     copywriting_basic: 500,
@@ -106,20 +117,50 @@ document.addEventListener('DOMContentLoaded', function () {
   function calculate() {
     // Base package
     const baseKey = form.elements['base_package'].value;
-    let basePrice = BASE_PACKAGES[baseKey].price;
-    let breakdownHtml = `<div><strong>Base Package:</strong> ${BASE_PACKAGES[baseKey].name} (${formatMoney(basePrice)})</div>`;
+    const pkg = BASE_PACKAGES[baseKey];
+    let basePrice = pkg.price;
+    let breakdownHtml = `<div><strong>Base Package:</strong> ${pkg.name} (${formatMoney(basePrice)}`;
+    if (pkg.max) {
+      breakdownHtml += `–${formatMoney(pkg.max)}`;
+    }
+    breakdownHtml += ")</div>";
 
     // Add-ons
     let addonsTotal = 0;
     let percentAdd = 0;
     let addonsHtml = '';
+    // Handle copywriting radio (only one can be selected)
+    const copywritingRadio = form.querySelector('input[name="copywriting_option"]:checked');
+    if (copywritingRadio) {
+      const key = copywritingRadio.value;
+      if (ADD_ONS[key]) {
+        addonsTotal += ADD_ONS[key];
+        addonsHtml += `<div>+ ${copywritingRadio.labels[0].innerText}</div>`;
+      }
+    }
+    // Handle e-commerce radio (only one can be selected)
+    let ecommerceRadio = form.querySelector('input[name="ecommerce_option"]:checked');
+    // If nothing is selected, default to 'none'
+    if (!ecommerceRadio) {
+      ecommerceRadio = form.querySelector('input[name="ecommerce_option"][value="none"]');
+      if (ecommerceRadio) ecommerceRadio.checked = true;
+    }
+    if (ecommerceRadio) {
+      const key = ecommerceRadio.value;
+      if (key !== 'none' && ADD_ONS[key]) {
+        addonsTotal += ADD_ONS[key];
+        addonsHtml += `<div>+ ${ecommerceRadio.labels[0].innerText}</div>`;
+      }
+    }
+    // Handle all other add-ons (checkboxes)
     const addonEls = form.querySelectorAll('input[name="addons"]:checked');
     addonEls.forEach(el => {
       const key = el.value;
       if (PERCENT_ADD_ONS[key]) {
         percentAdd += PERCENT_ADD_ONS[key];
         addonsHtml += `<div>+ ${el.labels[0].innerText}</div>`;
-      } else if (ADD_ONS[key]) {
+      } else if (ADD_ONS[key] && !['copywriting_basic','copywriting_full','copywriting_advanced','ecommerce_basic','ecommerce_standard'].includes(key)) {
+        // Prevent double-counting copywriting/ecommerce if user hacks DOM
         addonsTotal += ADD_ONS[key];
         addonsHtml += `<div>+ ${el.labels[0].innerText}</div>`;
       }
@@ -175,5 +216,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   // Initialize add-on availability on load
   updateAddonAvailability();
+  // Ensure e-commerce 'none' is selected by default if nothing is checked
+  const ecommerceRadios = form.querySelectorAll('input[name="ecommerce_option"]');
+  if (ecommerceRadios.length) {
+    let checked = false;
+    ecommerceRadios.forEach(r => { if (r.checked) checked = true; });
+    if (!checked) {
+      const noneRadio = form.querySelector('input[name="ecommerce_option"][value="none"]');
+      if (noneRadio) noneRadio.checked = true;
+    }
+  }
   calculate();
 });

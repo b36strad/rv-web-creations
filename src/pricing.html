@@ -1,3 +1,4 @@
+                        <input class="form-check-input" type="radio" id="ecommerce_none" name="ecommerce_option" value="none" checked>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,18 +101,18 @@
               </thead>
               <tbody>
                 <tr style="border-left: 4px solid #1f4f7b;">
-                  <td class="fw-semibold">Starter</td>
-                  <td>New small businesses</td>
+                  <td class="fw-semibold">Starter site</td>
+                  <td>Launch your business online with a professional site that builds trust and gets you found</td>
                   <td class="text-primary fw-bold">$2,500 – $6,000</td>
                 </tr>
                 <tr style="border-left: 4px solid #198754;">
-                  <td class="fw-semibold">Growth</td>
-                  <td>Established businesses with more content</td>
-                  <td class="text-primary fw-bold">$7,500 – $18,000</td>
+                  <td class="fw-semibold">Growth site</td>
+                  <td>Refresh your website so it truly reflects who you are and helps attract the customers you want</td>
+                  <td class="text-primary fw-bold">$5,000 – $12,000</td>
                 </tr>
                 <tr style="border-left: 4px solid #1e3a5f;">
-                  <td class="fw-semibold">Professional</td>
-                  <td>Lawyers, doctors, accountants, consultants</td>
+                  <td class="fw-semibold">Professional site</td>
+                  <td>Build trust and credibility with a site designed for licensed professionals and compliance-focused businesses</td>
                   <td class="text-primary fw-bold">$3,500 – $6,500</td>
                 </tr>
               </tbody>
@@ -126,15 +127,11 @@
               </li>
               <li class="mb-2 d-flex align-items-start">
                 <span class="text-primary me-2">•</span>
-                <span><strong class="text-dark">Growth site</strong>: 8–20 pages, blog or news section, content migration, simple integrations (booking/forms), custom layouts. Tailored to your brand and goals.</span>
+                <span><strong class="text-dark">Growth site</strong>: 8–20 pages. Tailored to your brand and goals.</span>
               </li>
               <li class="mb-2 d-flex align-items-start">
                 <span class="text-primary me-2">•</span>
-                <span><strong class="text-dark">Professional services</strong>: Trust-focused design for lawyers, doctors, accountants. Personalized for your practice and audience.</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <span class="text-primary me-2">•</span>
-                <span><strong class="text-dark">Custom/complex projects</strong>: If your needs go beyond these packages, contact for a tailored quote.</span>
+                <span><strong class="text-dark">Professional services</strong>: Trust-focused design for your practice and audience.</span>
               </li>
             </ul>
           </div>
@@ -158,10 +155,9 @@
               <div class="card-body">
                 <label for="base_package" class="form-label fw-semibold">Base Package</label>
                 <select class="form-select mb-2" id="base_package" name="base_package">
-                  <option value="starter">Starter Site ($2,500–$6,000)</option>
-                  <option value="growth">Growth Site ($7,500–$12,000)</option>
-                  <option value="growth_advanced">Growth Site – Advanced ($12,000–$18,000)</option>
-                  <option value="custom">Custom/Enterprise ($18,000+)</option>
+                  <option value="starter">Starter site ($2,500–$6,000)</option>
+                  <option value="growth">Growth site ($5,000–$12,000)</option>
+                  <option value="professional">Professional site ($3,500–$6,500)</option>
                 </select>
                 <div class="form-text">
                   Choose the package that best matches your project’s size and needs. You can add features and options below for a more tailored estimate.<br>
@@ -181,26 +177,30 @@
                 <div class="accordion" id="addonsAccordion">
                   <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="headingContentCopy">
-                      <button class="accordion-button fw-bold bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContentCopy" aria-expanded="true" aria-controls="collapseContentCopy">
+                      <button class="accordion-button fw-bold bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContentCopy" aria-expanded="false" aria-controls="collapseContentCopy">
                         Content & Copy
                       </button>
                     </h2>
                     <div id="collapseContentCopy" class="accordion-collapse collapse" aria-labelledby="headingContentCopy" data-bs-parent="#addonsAccordion">
                       <div class="accordion-body p-2">
+                                                <div class="form-check mb-1">
+                                                  <input class="form-check-input" type="radio" id="ecommerce_none" name="ecommerce_option" value="none" checked>
+                                                  <label class="form-check-label" for="ecommerce_none">None (no copywriting needed)</label>
+                                                </div>
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_basic" name="addons" value="copywriting_basic">
+                          <input class="form-check-input" type="radio" id="copywriting_basic" name="copywriting_option" value="copywriting_basic">
                           <label class="form-check-label" for="copywriting_basic">Basic Copywriting (+$500)
                             <span class="d-block small text-muted">Polish your text: light editing and improvements to your provided content.</span>
                           </label>
                         </div>
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_full" name="addons" value="copywriting_full">
+                          <input class="form-check-input" type="radio" id="copywriting_full" name="copywriting_option" value="copywriting_full">
                           <label class="form-check-label" for="copywriting_full">Full Copywriting (+$1,500)
                             <span class="d-block small text-muted">I write all main website content for you, based on your notes or interview.</span>
                           </label>
                         </div>
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="copywriting_advanced" name="addons" value="copywriting_advanced">
+                          <input class="form-check-input" type="radio" id="copywriting_advanced" name="copywriting_option" value="copywriting_advanced">
                           <label class="form-check-label" for="copywriting_advanced">Advanced Copywriting (+$3,000)
                             <span class="d-block small text-muted">Full copywriting plus in-depth research, brand voice, and sales-focused messaging.</span>
                           </label>
@@ -223,13 +223,17 @@
                     <div id="collapseEcommerce" class="accordion-collapse collapse" aria-labelledby="headingEcommerce" data-bs-parent="#addonsAccordion">
                       <div class="accordion-body p-2">
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="ecommerce_basic" name="addons" value="ecommerce_basic">
+                          <input class="form-check-input" type="radio" id="ecommerce_none" name="ecommerce_option" value="none" checked>
+                          <label class="form-check-label" for="ecommerce_none">None (no e-commerce needed)</label>
+                        </div>
+                        <div class="form-check mb-1">
+                          <input class="form-check-input" type="radio" id="ecommerce_basic" name="ecommerce_option" value="ecommerce_basic">
                           <label class="form-check-label" for="ecommerce_basic">Basic E-commerce (+$2,000)
                             <span class="d-block small text-muted">Simple online store: up to 10 products, basic checkout, and payment setup.</span>
                           </label>
                         </div>
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="ecommerce_standard" name="addons" value="ecommerce_standard">
+                          <input class="form-check-input" type="radio" id="ecommerce_standard" name="ecommerce_option" value="ecommerce_standard">
                           <label class="form-check-label" for="ecommerce_standard">Standard E-commerce (+$3,500)
                             <span class="d-block small text-muted">Full-featured store: up to 50 products, categories, coupons, tax/shipping setup, and order management.</span>
                           </label>
@@ -298,11 +302,15 @@
                     <div id="collapseTimeline" class="accordion-collapse collapse" aria-labelledby="headingTimeline" data-bs-parent="#addonsAccordion">
                       <div class="accordion-body p-2">
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="rush_2weeks" name="addons" value="rush_2weeks">
+                          <input class="form-check-input" type="radio" id="timeline_none" name="timeline_option" value="none" checked>
+                          <label class="form-check-label" for="timeline_none">None (no timeline preference)<br><span class="small text-muted">Select this if you have no timeline or deadline requirements.</span></label>
+                        </div>
+                        <div class="form-check mb-1">
+                          <input class="form-check-input" type="radio" id="rush_2weeks" name="timeline_option" value="rush_2weeks">
                           <label class="form-check-label" for="rush_2weeks">Rush (25% extra)<br><span class="small text-muted">Move your project to the front of the queue and complete it 50% faster than our standard timeline (typically 2–3 weeks for Starter sites). Ideal for time-sensitive launches.</span></label>
                         </div>
                         <div class="form-check mb-1">
-                          <input class="form-check-input" type="checkbox" id="rush_1week" name="addons" value="rush_1week">
+                          <input class="form-check-input" type="radio" id="rush_1week" name="timeline_option" value="rush_1week">
                           <label class="form-check-label" for="rush_1week">Urgent Rush (50% extra)<br><span class="small text-muted">Highest priority: pause other work and dedicate resources to deliver your project in 2 weeks or less (subject to availability). For critical deadlines only.</span></label>
                         </div>
                       </div>
