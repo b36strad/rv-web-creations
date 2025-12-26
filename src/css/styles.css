@@ -1,3 +1,27 @@
+/* Prevent footer company name from wrapping on mobile */
+.footer-nowrap {
+  white-space: nowrap;
+}
+@media (max-width: 575.98px) {
+  .footer-nowrap {
+    font-size: 1rem;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+/* Responsive footer copyright stacking */
+.footer-copyright-stack {
+  margin-top: 0.5rem;
+.footer-copyright-stack span {
+  font-size: 1rem;
+}
+@media (max-width: 575.98px) {
+  .footer-copyright-stack span {
+    display: block !important;
+    font-size: 0.98rem;
+    line-height: 1.3;
+  }
+}
 /* Force left border color to grey for homepage callouts */
 .border-left-grey {
   border-left-color: #dee2e6 !important;
