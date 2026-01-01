@@ -173,8 +173,17 @@
 }
 
 /* Hero section styling */
+
 .hero-section {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--color-primary) !important; /* Navy blue for hero, matches header/footer */
+}
+
+.hero-section .display-4, .hero-section .display-5, .hero-section .display-6 {
+  color: var(--color-primary) !important; /* Navy blue headline in hero */
+}
+
+.hero-section .display-4 .text-gold {
+  color: var(--color-accent) !important; /* Gold accent for key phrase */
 }
 
 /* Footer hover effect */
