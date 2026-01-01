@@ -176,6 +176,9 @@
           <div class="col-12 col-lg-5 mb-3 mb-lg-0">
             <div class="card h-100 border-0 shadow-sm pricing-calc-card">
               <div class="card-body">
+                <div style="position:relative;">
+                  <span id="copywriting-addons" style="position:absolute;top:-80px;"></span>
+                </div>
                 <div class="fw-semibold mb-2">Add-ons</div>
                 <div class="accordion" id="addonsAccordion">
                   <div class="accordion-item mb-2">
@@ -271,9 +274,15 @@
                           </label>
                         </div>
                           <div class="form-check mb-1">
-                            <input class="form-check-input" type="checkbox" id="google_analytics" name="addons" value="google_analytics">
-                            <label class="form-check-label" for="google_analytics">Google Analytics Setup (+$350)
-                              <span class="d-block small text-muted">Professional setup and integration of Google Analytics for your website. Includes account creation (if needed), property setup, code installation, and a walkthrough of key reports so you can track visitors, conversions, and site performance. <strong>Optional add-on—only included if selected.</strong></span>
+                          <input class="form-check-input" type="checkbox" id="google_analytics" name="addons" value="google_analytics">
+                          <label class="form-check-label" for="google_analytics">Google Analytics Setup (+$350)
+                            <span class="d-block small text-muted">Professional setup and integration of Google Analytics for your website. Includes account creation (if needed), property setup, code installation, and a walkthrough of key reports so you can track visitors, conversions, and site performance. <strong>Optional add-on—only included if selected.</strong></span>
+                          </label>
+                          </div>
+                          <div class="form-check mb-1">
+                            <input class="form-check-input" type="checkbox" id="legal_policy" name="addons" value="legal_policy">
+                            <label class="form-check-label" for="legal_policy">Legal Policy Compliance (+$199)
+                              <span class="d-block small text-muted">Professional setup of privacy policy, terms, and compliance pages using Termageddon or a similar service. <strong>This is a one-time setup and integration fee only.</strong> After setup, all ongoing subscription fees and renewals (typically $99–$150/year) are the client's sole responsibility and are paid directly to Termageddon or the chosen provider. <strong>I do not manage, monitor, or bill for the subscription after setup—my role is strictly to set up the service for you. Ongoing compliance and payments are up to you.</strong></span>
                             </label>
                           </div>
                       </div>
@@ -335,7 +344,7 @@
                 <label class="form-label fw-semibold">Discounts</label>
                 <div class="form-check mb-1">
                   <input class="form-check-input" type="checkbox" id="nonprofit" name="discounts" value="nonprofit">
-                  <label class="form-check-label" for="nonprofit">Nonprofit (15% off)</label>
+                  <label class="form-check-label" for="nonprofit">Nonprofit (10% off)</label>
                 </div>
                 <div class="form-check mb-1">
                   <input class="form-check-input" type="checkbox" id="referral" name="discounts" value="referral">
@@ -550,10 +559,14 @@
       <hr class="my-5">
 
       <div class="container">
+        <!-- Mandatory Maintenance Notice -->
+        <div class="alert alert-warning border-warning rounded-3 mb-4 fw-semibold" role="alert">
+          <span class="text-dark">A Care &amp; Maintenance Plan is <u>required</u> with every template website package.</span> Ongoing updates, security, and support are included as part of your website investment. This ensures your site stays secure, up to date, and running smoothly.
+        </div>
         <section id="care-plans" class="mb-5">
-        <h2 class="h4 fw-bold mb-3">Care &amp; maintenance plans</h2>
-        <p class="text-muted mb-4">
-          Keep your site up to date without adding another ongoing task to your plate.
+        <h2 class="h4 fw-bold mb-3 text-center">Care &amp; maintenance plans</h2>
+        <p class="text-muted mb-4 text-center">
+          All template website packages require enrollment in a Care &amp; Maintenance Plan. Keep your site up to date without adding another ongoing task to your plate.
         </p>
         
         <div class="row g-4">
@@ -564,20 +577,29 @@
                   <div>
                     <h3 class="h5 fw-bold mb-1">Light</h3>
                     <p class="small text-muted mb-2">Occasional updates</p>
-                    <p class="h6 text-primary fw-bold mb-0">$75 – $99 / month</p>
+                    <p class="h6 text-primary fw-bold mb-0">$99 / month</p>
                   </div>
                   <span class="badge bg-light text-dark border badge-no-wrap">Monthly</span>
                 </div>
+                <div class="mb-2 small text-dark">Includes essential care for smaller sites or those with minimal update needs:</div>
                 <ul class="small text-muted list-unstyled">
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
-                    <span>Up to 2 content updates or service requests per month (e.g., text/image changes, adding a blog post, minor design tweaks)</span>
+                    <span>Up to 2 content updates or service requests per month (text/image changes, blog post, minor tweaks)</span>
                   </li>
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
-                    <span>Platform/plugin checks (if applicable)</span>
+                    <span>Monthly WordPress/plugin/core updates</span>
                   </li>
-                  <li class="d-flex align-items-start">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Basic security monitoring</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Monthly backups</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
                     <span>Email support (responses within 1–2 business days)</span>
                   </li>
@@ -594,20 +616,33 @@
                   <div>
                     <h3 class="h5 fw-bold mb-1">Standard</h3>
                     <p class="small text-muted mb-2">Most common</p>
-                    <p class="h6 text-primary fw-bold mb-0">$150 – $299 / month</p>
+                    <p class="h6 text-primary fw-bold mb-0">$199 / month</p>
                   </div>
                   <span class="badge bg-primary badge-no-wrap">Recommended</span>
                 </div>
+                <div class="mb-2 small text-dark">Best for most businesses—comprehensive care and support:</div>
                 <ul class="small text-muted list-unstyled">
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
-                    <span>Up to 5 content updates or service requests per month</span>
+                    <span>Up to 5 content updates or service requests per month (text/image changes, new pages, blog posts, minor design tweaks)</span>
                   </li>
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
-                    <span>Regular monitoring &amp; backups</span>
+                    <span>WordPress/plugin/core updates (at least monthly)</span>
                   </li>
-                  <li class="d-flex align-items-start">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Security monitoring &amp; malware scans</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Weekly backups</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Performance checks &amp; uptime monitoring</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
                     <span>Priority email support (same-day or next-business-day responses, handled first in queue)</span>
                   </li>
@@ -624,18 +659,39 @@
                   <div>
                     <h3 class="h5 fw-bold mb-1">Custom</h3>
                     <p class="small text-muted mb-2">Higher volume needs</p>
-                    <p class="h6 text-primary fw-bold mb-0">Custom — typically $500+/month</p>
+                    <p class="h6 text-primary fw-bold mb-0">Starting at $399 / month</p>
                   </div>
                   <span class="badge bg-light text-dark border badge-no-wrap">Tailored</span>
                 </div>
+                <div class="mb-2 small text-dark">For high-volume or complex sites—fully tailored support:</div>
                 <ul class="small text-muted list-unstyled">
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
-                    <span>Unlimited* content updates or service requests per month</span>
+                    <span>Unlimited* content updates or service requests per month (site changes, new features, content, etc.)</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>WordPress/plugin/core updates (as needed)</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Advanced security monitoring &amp; malware removal</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Daily backups &amp; disaster recovery</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Performance optimization &amp; uptime monitoring</span>
                   </li>
                   <li class="mb-2 d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
                     <span>Priority email support (same-day or next-business-day responses, handled first in queue)</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-primary me-2">•</span>
+                    <span>Custom reporting &amp; analytics (if needed)</span>
                   </li>
                   <li class="d-flex align-items-start">
                     <span class="text-primary me-2">•</span>
@@ -652,9 +708,10 @@
 
       <div class="container">
         <section id="hosting-plans">
-        <h2 class="h4 fw-bold mb-3">Web hosting plans</h2>
-        <p class="text-muted mb-4">
-          Fast, reliable hosting with security and backups included. No need to manage technical details yourself.
+        <h2 class="h4 fw-bold mb-3 text-center">Web hosting plans</h2>
+        <p class="text-muted mb-4 text-center">
+          Fast, reliable hosting with security and backups included. No need to manage technical details yourself.<br>
+          <span class="fw-semibold text-dark">Web hosting is optional—you may use your own provider or choose one of our managed plans for convenience and support.</span>
         </p>
         
         <div class="row g-4">

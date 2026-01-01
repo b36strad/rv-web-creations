@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     email_marketing: 600,
     video_integration: 400,
     google_analytics: 350,
+    legal_policy: 199,
     // rush_2weeks and rush_1week handled separately
   };
   const PERCENT_ADD_ONS = {
@@ -106,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     rush_1week: 50
   };
   const DISCOUNTS = {
-    nonprofit: 15,
+    nonprofit: 10,
     referral: 10,
     upfront_payment: 5
   };
