@@ -6,35 +6,40 @@
 
 ---
 
-## 2025-12-31 - Evening Session
+## 2025-12-31 - Add-on, UI, and Calculator Fixes
 
 **Time:** Evening session  
-**Focus:** Care & Maintenance plan clarity, pricing updates, support definitions
+**Focus:** Add-on pricing logic, UI consistency, daily housekeeping
 
 ### Changes
 
-#### 1. Content Update
+#### 1. Feature Addition & Bug Fix
 **Files Modified:**
 - src/pricing.html
+- src/js/pricing-calculator.js
+- src/portfolio.html
 
 **Changes Made:**
-- Specified number of included service requests/updates per Care & Maintenance plan
-- Added hourly rate for additional requests
-- Clarified "Email support" vs "Priority email support"
-- Added "Priority email support" to Custom plan
+- Added Google Analytics Setup as a paid add-on option in pricing calculator
+- Fixed calculator logic to include Google Analytics price in total
+- Updated projects page to show page name reference in upper left corner for UI consistency
 
 **Rationale:**
-- To align with industry norms, set clear expectations, and improve client understanding of support levels and plan limits.
+- Ensure all add-ons update pricing correctly
+- Maintain consistent UI across all pages
+- Improve clarity and transparency for users
 
 ### Summary
 
-**Files Changed:** 1
+**Files Changed:** 3
 - src/pricing.html
+- src/js/pricing-calculator.js
+- src/portfolio.html
 
 **Benefits:**
-- Greater transparency for clients
-- Easier plan comparison
-- Reduces confusion and sets clear boundaries for support
+- Accurate pricing for all add-ons
+- Consistent navigation and page labeling
+- Improved user experience and transparency
 
 ---
 

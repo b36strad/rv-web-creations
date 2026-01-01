@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     blog_setup: 500,
     email_marketing: 600,
     video_integration: 400,
+    google_analytics: 350,
     // rush_2weeks and rush_1week handled separately
   };
   const PERCENT_ADD_ONS = {
