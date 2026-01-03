@@ -131,13 +131,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let addonsTotal = 0;
     let percentAdd = 0;
     let addonsHtml = '';
+    // Utility to extract only the main label (name and price, no description)
+    function getAddonMainLabel(label) {
+      // Remove everything after the first line break or span (for checkboxes)
+      // and trim whitespace
+      let text = label.innerText.split('\n')[0];
+      // Remove description in parentheses if present after price
+      text = text.replace(/\s*\(.*/, '').trim();
+      // If price is in parentheses, keep it
+      const match = label.innerText.match(/\(\+?\$[\d,]+\)/);
+      if (match) text += ' ' + match[0];
+      return text;
+    }
     // Handle copywriting radio (only one can be selected)
     const copywritingRadio = form.querySelector('input[name="copywriting_option"]:checked');
     if (copywritingRadio) {
       const key = copywritingRadio.value;
       if (ADD_ONS[key]) {
         addonsTotal += ADD_ONS[key];
-        addonsHtml += `<div>+ ${copywritingRadio.labels[0].innerText}</div>`;
+        addonsHtml += `<div>+ ${getAddonMainLabel(copywritingRadio.labels[0])}</div>`;
       }
     }
     // Handle e-commerce radio (only one can be selected)
@@ -151,22 +163,41 @@ document.addEventListener('DOMContentLoaded', function () {
       const key = ecommerceRadio.value;
       if (key !== 'none' && ADD_ONS[key]) {
         addonsTotal += ADD_ONS[key];
-        addonsHtml += `<div>+ ${ecommerceRadio.labels[0].innerText}</div>`;
+        addonsHtml += `<div>+ ${getAddonMainLabel(ecommerceRadio.labels[0])}</div>`;
       }
     }
     // Handle all other add-ons (checkboxes)
     const addonEls = form.querySelectorAll('input[name="addons"]:checked');
+    let debugAddons = [];
     addonEls.forEach(el => {
       const key = el.value;
+      if(key === 'google_analytics') {
+        console.log('Google Analytics checkbox detected as checked.');
+      }
       if (PERCENT_ADD_ONS[key]) {
         percentAdd += PERCENT_ADD_ONS[key];
-        addonsHtml += `<div>+ ${el.labels[0].innerText}</div>`;
+        addonsHtml += `<div>+ ${getAddonMainLabel(el.labels[0])}</div>`;
+        debugAddons.push({key, type:'percent', value: PERCENT_ADD_ONS[key]});
       } else if (ADD_ONS[key] && !['copywriting_basic','copywriting_full','copywriting_advanced','ecommerce_basic','ecommerce_standard'].includes(key)) {
         // Prevent double-counting copywriting/ecommerce if user hacks DOM
         addonsTotal += ADD_ONS[key];
-        addonsHtml += `<div>+ ${el.labels[0].innerText}</div>`;
+        addonsHtml += `<div>+ ${getAddonMainLabel(el.labels[0])}</div>`;
+        debugAddons.push({key, type:'flat', value: ADD_ONS[key]});
       }
     });
+
+    // Handle timeline percent add-ons (rush/urgent)
+    const timelineRadio = form.querySelector('input[name="timeline_option"]:checked');
+    if (timelineRadio) {
+      const key = timelineRadio.value;
+      if (PERCENT_ADD_ONS[key]) {
+        percentAdd += PERCENT_ADD_ONS[key];
+        addonsHtml += `<div>+ ${getAddonMainLabel(timelineRadio.labels[0])}</div>`;
+        debugAddons.push({key, type:'percent-timeline', value: PERCENT_ADD_ONS[key]});
+      }
+    }
+    console.log('Add-ons detected:', debugAddons);
+    console.log('Add-ons total:', addonsTotal);
 
     let subtotal = basePrice + addonsTotal;
     if (addonsHtml) breakdownHtml += `<div class="mt-2"><strong>Add-ons:</strong>${addonsHtml}</div>`;
