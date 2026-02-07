@@ -1,9 +1,0 @@
-# Netlify configuration for Professional Template
-
-[build]
-  publish = "."
-  
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
