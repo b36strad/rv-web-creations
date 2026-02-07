@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SEO & Analytics System | RV Web Creations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RV Web Creations SEO & Analytics System – get found online, track what matters, and make data-driven improvements to your website." />
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-alt: #020617;
+      --card-bg: #0f172a;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --accent-2: #22c55e;
+      --text-main: #e5e7eb;
+      --text-muted: #94a3b8;
+      --border-subtle: #1f2937;
+      --danger: #f97373;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --radius-lg: 18px;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.9);
+      --shadow-subtle: 0 10px 25px rgba(15, 23, 42, 0.8);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #1e293b 0, #020617 48%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px 22px;
+      margin-bottom: 32px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.94), rgba(15,23,42,0.9));
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 20% 0, #4ade80, #0ea5e9 55%, #0f172a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 22px rgba(8, 47, 73, 0.9);
+    }
+
+    .brand-logo span {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      color: #e5f3ff;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-text .name {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .brand-text .tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .header-cta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      color: var(--text-main);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      border-color: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 12px 25px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 35px rgba(8, 47, 73, 0.9);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: #e5e7eb;
+    }
+
+    .hero {
+      margin-top: 20px;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-main {
+      padding-right: 12px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--accent);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.25;
+      margin: 0 0 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 span.accent {
+      background: linear-gradient(120deg, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .pill strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.8);
+    }
+
+    .hero-panel {
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.35), transparent 55%),
+                  radial-gradient(circle at 120% 0, rgba(34, 197, 94, 0.35), transparent 60%),
+                  rgba(15, 23, 42, 0.95);
+      border-radius: 22px;
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.26);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-panel-title {
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+      margin-bottom: 8px;
+    }
+
+    .metric-card {
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 14px;
+      padding: 10px;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      box-shadow: var(--shadow-subtle);
+      font-size: 11px;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .metric-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .metric-trend-up {
+      font-size: 11px;
+      color: var(--accent-2);
+    }
+
+    .metric-trend-down {
+      font-size: 11px;
+      color: var(--danger);
+    }
+
+    .hero-panel-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-panel-footer span strong {
+      color: #e5e7eb;
+    }
+
+    .dot-separator {
+      width: 3px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.7);
+      margin: 0 6px;
+      display: inline-block;
+    }
+
+    main {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    section {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px 18px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    section h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 span.icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    section h2 span.icon svg {
+      width: 11px;
+      height: 11px;
+      fill: var(--accent);
+    }
+
+    section p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .check-icon {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .check-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--accent-2);
+    }
+
+    .subnote {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .plan {
+      border-radius: 16px;
+      padding: 14px 12px 13px;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.2), transparent 55%),
+                  rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .plan-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(226, 232, 240, 0.85);
+    }
+
+    .plan h3 {
+      margin: 2px 0;
+      font-size: 15px;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: var(--text-muted);
+    }
+
+    .plan ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12px;
+    }
+
+    .plan ul li::before {
+      content: "•";
+      color: var(--accent);
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    .plan-footer {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 11px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .badge strong {
+      color: var(--accent);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 18px;
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .faq-item h3 {
+      font-size: 13px;
+      margin: 0 0 4px;
+      color: #e5e7eb;
+    }
+
+    .faq-item p {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .cta-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(34, 197, 94, 0.08));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    .cta-block-main {
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .cta-block-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 8px 0 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.95);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 840px) {
+      header {
+        position: static;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-main {
+        padding-right: 0;
+      }
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .plan-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-panel {
+        order: -1;
+      }
+      .brand-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-cta {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GX0G2K0LBN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GX0G2K0LBN');
+</script>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="brand-row">
+        <div class="brand-mark">
+          <div class="brand-logo"><span>RV</span></div>
+          <div class="brand-text">
+            <div class="name">RV Web Creations</div>
+            <div class="tagline">Building websites that work as hard as you do.</div>
+          </div>
+        </div>
+        <div class="header-cta">
+          <button class="btn btn-ghost" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">
+            How it works
+          </button>
+          <button class="btn btn-primary" onclick="document.getElementById('seo-cta').scrollIntoView({behavior:'smooth'})">
+            Book an SEO Strategy Call
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero fade-in">
+      <div class="hero-main">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          SEO & ANALYTICS SYSTEM
+          <span class="dot-separator"></span>
+          BUILT FOR SMALL BUSINESSES
+        </div>
+        <h1>
+          Get found. Track what matters. <br />
+          <span class="accent">Prove your website is working.</span>
+        </h1>
+        <p class="hero-subtitle">
+          A good-looking website is a start. Our SEO & Analytics System makes sure people
+          can actually <strong>find it</strong>, and that you can see exactly how it’s performing in
+          real numbers – traffic, leads, and calls.
+        </p>
+
+        <div class="hero-pills">
+          <div class="pill"><strong>Step 1:</strong> SEO foundation at launch</div>
+          <div class="pill"><strong>Step 2:</strong> Analytics that track real leads</div>
+          <div class="pill"><strong>Step 3:</strong> Monthly insights & improvements</div>
+        </div>
+
+        <div class="hero-meta">
+          <span><span class="meta-dot"></span> Designed for local & service businesses</span>
+          <span><span class="meta-dot"></span> Transparent, plain-English reporting</span>
+          <span><span class="meta-dot"></span> No guesswork, just data</span>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="hero-panel-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M5 3h2v18H5zm6 6h2v12h-2zm6-4h2v16h-2z"/>
+          </svg>
+          Live performance snapshot (example)
+        </div>
+
+        <div class="hero-panel-grid">
+          <div class="metric-card">
+            <div class="metric-label">Organic visitors (last 30 days)</div>
+            <div class="metric-value">1,240</div>
+            <div class="metric-trend-up">▲ Up 38% after SEO launch</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Website leads</div>
+            <div class="metric-value">27</div>
+            <div class="metric-trend-up">▲ Up 11 new inquiries</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Top traffic source</div>
+            <div class="metric-value">Google search</div>
+            <div class="metric-trend-up">Clients find you when they need you</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Bounce rate</div>
+            <div class="metric-value">39%</div>
+            <div class="metric-trend-down">▼ Down after content improvements</div>
+          </div>
+        </div>
+
+        <div class="hero-panel-footer">
+          <span>
+            We connect your site to tools like <strong>Google Analytics</strong> and
+            <strong>Google Search Console</strong> so you’re never guessing.
+          </span>
+        </div>
+      </aside>
+    </section>
+
+    <main>
+      <section id="how-it-works" class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a9 9 0 1 0 9 9a9.011 9.011 0 0 0-9-9Zm0 16a7 7 0 1 1 7-7a7.008 7.008 0 0 1-7 7Zm-1-11h2v5h-2Zm0 6h2v2h-2Z"/>
+            </svg>
+          </span>
+          What is SEO & analytics, in simple terms?
+        </h2>
+        <div class="two-col">
+          <div>
+            <p>
+              <strong>SEO (Search Engine Optimization)</strong> is the process of helping Google understand who
+              you are, what you do, and which customers you should show up for.
+            </p>
+            <p>
+              <strong>Analytics</strong> tracks what happens after people land on your website—how they found you,
+              what they looked at, and whether they called, filled out a form, or booked with you.
+            </p>
+            <p>
+              Together, they tell a complete story: <strong>Are the right people finding your site, and is your
+              site turning them into leads?</strong>
+            </p>
+          </div>
+          <div>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/>
+                  </svg>
+                </span>
+                <span>Show up when customers search for services you offer.</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/>
+                  </svg>
+                </span>
+                <span>Track which marketing channels are actually working.</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/>
+                  </svg>
+                </span>
+                <span>See how many visitors turn into real inquiries and customers.</span>
+              </li>
+            </ul>
+            <div class="subnote">
+              Our goal is to move you away from “I hope this is working” to
+              <strong>“Here’s what’s working, and here’s what we’re improving next.”</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 5h18v2H3zm4 4h10v2H7zm-4 4h18v2H3zm4 4h10v2H7z"/>
+            </svg>
+          </span>
+          Step 1 – SEO foundation built into your website
+        </h2>
+        <div class="two-col">
+          <div>
+            <p>
+              Every website we build includes a search-friendly foundation. This means your site is organized,
+              structured, and written so Google can understand it <em>from day one</em>.
+            </p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg>
+                </span>
+                <span>Clean URL structure (no messy, auto-generated page links).</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg>
+                </span>
+                <span>Clear page titles and meta descriptions for key pages.</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg>
+                </span>
+                <span>Fast-loading, mobile-first layout that Google favors.</span>
+              </li>
+              <li>
+                <span class="check-icon">
+                  <svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg>
+                </span>
+                <span>Image optimization and accessibility (alt text) where it matters.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>
+              We also set up the “behind the scenes” pieces that help your site get indexed properly:
+            </p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>XML sitemap so search engines can easily crawl your site.</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Robots.txt file to guide what search engines should and shouldn’t index.</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Technical checks for broken links, duplicate pages, and redirect issues.</span>
+              </li>
+            </ul>
+            <div class="subnote">
+              Translation: your site isn’t just “launched”—it’s <strong>launch-ready for search.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 5h16v2H4zm0 4h10v2H4zm0 4h16v2H4zm0 4h10v2H4z"/>
+            </svg>
+          </span>
+          Step 2 – Analytics tracking that follows real leads
+        </h2>
+        <div class="two-col">
+          <div>
+            <p>
+              Once your site goes live, we connect it to trusted tools so we can see exactly how people
+              are finding and using it.
+            </p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Google Analytics – tracks visits, pages viewed, and user behavior.</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Google Search Console – shows which search terms bring people to your site.</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Optional call/form tracking – see which pages drive inquiries.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>Instead of just counting visitors, we set up tracking around the actions that matter:</p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Form submissions (quote, contact, booking).</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Click-to-call buttons from mobile visitors.</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Key conversion pages (pricing, services, booking pages).</span>
+              </li>
+            </ul>
+            <div class="subnote">
+              This allows you to ask better questions: <br />
+              <strong>Which pages are generating revenue—and which need attention?</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 3H5a2 2 0 0 0-2 2v14l4-4h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/>
+            </svg>
+          </span>
+          Step 3 – Ongoing SEO & reporting (optional monthly plans)
+        </h2>
+        <p>
+          After launch, you can choose to have us stay on as your SEO partner. Our monthly plans are designed
+          to fit where you are now and how aggressively you want to grow.
+        </p>
+
+        <div class="plan-grid">
+          <div class="plan">
+            <div class="plan-label">Monitoring</div>
+            <h3>SEO Check-In</h3>
+            <ul>
+              <li>Monthly overview of traffic and key pages.</li>
+              <li>Simple, plain-English summary email.</li>
+              <li>Alerts if we see major changes or issues.</li>
+            </ul>
+            <div class="plan-footer">
+              Ideal if you want visibility into performance without ongoing changes every month.
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="plan-label">Optimization</div>
+            <h3>SEO Growth</h3>
+            <ul>
+              <li>Everything in SEO Check-In.</li>
+              <li>Monthly improvements to priority pages.</li>
+              <li>Content & on-page tweaks to boost rankings.</li>
+              <li>Technical fixes as issues appear.</li>
+            </ul>
+            <div class="plan-footer">
+              Ideal if you want steady, consistent improvements and more qualified traffic over time.
+            </div>
+          </div>
+
+          <div class="plan">
+            <div class="plan-label">Performance</div>
+            <h3>SEO + Conversion</h3>
+            <ul>
+              <li>Everything in SEO Growth.</li>
+              <li>Focus on turning visitors into leads.</li>
+              <li>Landing page experiments & improvements.</li>
+              <li>Strategy calls to review results and next steps.</li>
+            </ul>
+            <div class="plan-footer">
+              Ideal if you treat your website as a core sales channel and want a partner in the data.
+            </div>
+          </div>
+        </div>
+
+        <div class="badge">
+          <strong>Pricing note:</strong> We’ll recommend a plan (or a starter option) based on
+          your goals, location, and competition—no one-size-fits-all pricing.
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6Z"/>
+            </svg>
+          </span>
+          What you receive each month
+        </h2>
+        <div class="two-col">
+          <div>
+            <p>When you’re on an ongoing SEO & Analytics plan with RV Web Creations, you can expect:</p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>
+                  A monthly snapshot of traffic, leads, and key metrics
+                  in language you don’t need a marketing degree to understand.
+                </span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>
+                  A short list of <strong>“Here’s what we improved this month”</strong> and
+                  <strong>“Here’s what we’re watching next.”</strong>
+                </span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>
+                  Clear visibility into which pages and search terms are pulling their weight.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>We’ll also help you interpret the data in the context of your business:</p>
+            <ul class="checklist">
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Are you attracting the right types of visitors?</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Which services or locations are showing the most growth?</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9.707 16.293L5.414 12l1.414-1.414L9.707 13.586l7.465-7.465L18.586 7z"/></svg></span>
+                <span>Where are visitors dropping off, and how do we fix that?</span>
+              </li>
+            </ul>
+            <div class="subnote">
+              The goal is not charts for the sake of charts. It’s <strong>decisions guided by data.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 7L9 19l-5.5-5.5L5 12l4 4L19.5 5.5z"/>
+            </svg>
+          </span>
+          FAQ – common questions about SEO & analytics
+        </h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>How long does SEO take to work?</h3>
+            <p>
+              It depends on your industry and competition, but most businesses start to see meaningful
+              movement in <strong>3–6 months</strong>, with compounding results over time.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Can I see the data myself?</h3>
+            <p>
+              Yes. We can give you read-only access to the analytics dashboards, and your monthly
+              summary will highlight the key points without overwhelming you.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you guarantee specific rankings?</h3>
+            <p>
+              No ethical SEO provider can guarantee #1 positions. What we do guarantee is a
+              <strong>transparent, consistent process</strong> aimed at driving the right traffic and leads.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>What if I already have a website?</h3>
+            <p>
+              We can perform an SEO & Analytics audit on your existing site, implement fixes, and set
+              up tracking—even if RV Web Creations didn’t build it originally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="seo-cta" class="fade-in">
+        <h2>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3a9 9 0 1 0 9 9a9.01 9.01 0 0 0-9-9Zm1 13h-2v-2h2Zm0-4h-2V7h2Z"/>
+            </svg>
+          </span>
+          Ready to stop guessing and start measuring?
+        </h2>
+
+        <div class="cta-block">
+          <div>
+            <div class="cta-block-main">
+              Let’s take a look at how your website is performing today—no jargon, no pressure.
+            </div>
+            <div class="cta-block-sub">
+              We’ll review your current search visibility, traffic, and conversion opportunities,
+              then recommend a practical plan that fits your goals and budget.
+            </div>
+          </div>
+          <div>
+            <!-- Replace the href below with your actual Moxie booking or intake URL -->
+            <a href="#"
+               class="btn btn-primary"
+               style="text-decoration:none; white-space:nowrap;">
+              Book an SEO Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> RV Web Creations. SEO & Analytics services to keep your website working as hard as you do.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

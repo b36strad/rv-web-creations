@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>What I Evaluate | Homepage Diagnosis</title>
+  <meta name="description" content="See exactly what I look for when diagnosing a homepage for conversion and SEO readiness." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .scorecard-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .dual-scores {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 600px) {
+      .dual-scores { grid-template-columns: 1fr; }
+    }
+    .score-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .score-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .score-card p {
+      margin: 0;
+      color: rgba(234,240,255,.7);
+      font-size: 14px;
+    }
+    .score-card .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .summary-box {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .summary-box h2 {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .summary-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(234,240,255,.7);
+    }
+    .summary-item .dot {
+      width: 8px;
+      height: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .criteria-section {
+      margin-bottom: 32px;
+    }
+    .criteria-header {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px 16px 0 0;
+      padding: 20px 24px;
+    }
+    .criteria-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .criteria-title::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .criteria-desc {
+      color: rgba(234,240,255,.7);
+      margin: 0;
+      font-size: 15px;
+      text-align:center;
+    }
+    .criteria-list {
+      border: 1px solid rgba(255,255,255,.10);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+    }
+    .criterion {
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .criterion:last-child {
+      border-bottom: none;
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(124,92,255,.4);
+      border-radius: 6px;
+      margin-top: 2px;
+    }
+    .criterion-content {
+      flex: 1;
+    }
+    .criterion-name {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .criterion-desc {
+      color: rgba(234,240,255,.7);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GX0G2K0LBN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GX0G2K0LBN');
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="site-header-slot"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Behind the Curtain</p>
+        <h1>Homepage Diagnosis Criteria</h1>
+        <p class="lead muted">This is the exact framework I use to score homepages for conversion readiness and SEO-intent alignment. No fluff — just the criteria that determine whether your page earns inquiries or loses them.</p>
+        <div class="notice" style="max-width:540px; margin:24px auto 0 auto; text-align:center; background:rgba(41,211,255,0.08); border:1px solid rgba(41,211,255,0.18); border-radius:14px; padding:18px 20px;">
+          <strong>What you get:</strong> You’ll receive an actual score (out of 100%) for your homepage, plus clear, actionable recommendations on what and how to improve your site to increase conversions.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container scorecard-wrap">
+
+        <div class="dual-scores">
+          <div class="score-card">
+            <div class="icon">🎯</div>
+            <h3>Conversion Readiness</h3>
+            <p>Can visitors understand your value and take action?</p>
+          </div>
+          <div class="score-card">
+            <div class="icon">🔍</div>
+            <h3>SEO-Intent Alignment</h3>
+            <p>Does the page match what searchers expect to find?</p>
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <h2 style="text-align:center;">6 Categories, 36 Criteria</h2>
+          <div class="summary-grid">
+            <div class="summary-item"><span class="dot"></span> Intent & Relevance</div>
+            <div class="summary-item"><span class="dot"></span> Value Proposition Clarity</div>
+            <div class="summary-item"><span class="dot"></span> Trust & Credibility</div>
+            <div class="summary-item"><span class="dot"></span> Conversion Path Clarity</div>
+            <div class="summary-item"><span class="dot"></span> Structure & Scannability</div>
+            <div class="summary-item"><span class="dot"></span> Friction, Objections & UX</div>
+          </div>
+        </div>
+
+        <!-- Section 1: Intent & Relevance -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title" style="display:block; width:100%; text-align:center;">Intent & Relevance</h2>
+            <p class="criteria-desc" style="text-align:center;">If the right person lands here from search, do they immediately feel this page is for them?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Clear audience & problem in first screen</div>
+                <div class="criterion-desc">Within ~5 seconds, it's obvious who it's for and what problem you solve.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Headline matches likely search intent</div>
+                <div class="criterion-desc">Headline aligns with what people searched (not just brand language).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Immediate confirmation of relevance</div>
+                <div class="criterion-desc">Subhead/supporting copy quickly reinforces "I'm in the right place."</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Pain points are explicitly named</div>
+                <div class="criterion-desc">The page clearly names the visitor's problem(s) in plain language.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Outcome is described as a transformation</div>
+                <div class="criterion-desc">It describes the before/after outcome so visitors can picture success.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Language matches the buyer</div>
+                <div class="criterion-desc">Copy uses customer language (not internal jargon or overly technical wording).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Value Proposition Clarity -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title">Value Proposition Clarity</h2>
+            <p class="criteria-desc">Can a first-time visitor understand what you do, who it's for, and the outcome within 5 seconds?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">One clear primary service or outcome</div>
+                <div class="criterion-desc">A single main pricing or outcome is emphasized (no competing priorities).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Supporting sections reinforce the main idea</div>
+                <div class="criterion-desc">Sections consistently support the main promise instead of branching into unrelated claims.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Headings communicate meaning (not fluff)</div>
+                <div class="criterion-desc">Headings convey benefits and clarity—not vague slogans.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Problem + result are clear (before/after)</div>
+                <div class="criterion-desc">The problem and result are concrete, not abstract.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Differentiation is stated</div>
+                <div class="criterion-desc">The page explains why this option is different/better than alternatives.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Trust & Credibility -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title">Trust & Credibility</h2>
+            <p class="criteria-desc">Do you provide enough proof and legitimacy signals for skeptical visitors to believe you?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Proof placed near decision points</div>
+                <div class="criterion-desc">Testimonials/reviews/case proof appear where visitors decide.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Real outcomes or examples shown</div>
+                <div class="criterion-desc">Specific results, examples, or process proof (not generic claims).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Business legitimacy is obvious</div>
+                <div class="criterion-desc">Clear business info, credentials, and risk reducers are easy to find.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Primary service emphasized clearly</div>
+                <div class="criterion-desc">The main service/outcome is reinforced multiple times in plain language.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Supporting pages logically connected</div>
+                <div class="criterion-desc">Navigation and internal links reinforce the main focus.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">No buried or de-emphasized priorities</div>
+                <div class="criterion-desc">Key pages/pricing options aren't hidden behind vague labels or extra steps.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Testimonials are present and specific</div>
+                <div class="criterion-desc">Testimonials include specifics (context + outcome), not just praise.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Clear process or steps are explained</div>
+                <div class="criterion-desc">A simple process/steps section reduces uncertainty and builds trust.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Conversion Path Clarity -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title">Conversion Path Clarity</h2>
+            <p class="criteria-desc">Is the next step obvious, specific, and low-friction?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">One dominant primary CTA</div>
+                <div class="criterion-desc">A single main CTA stands out throughout key sections.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">CTA matches visitor readiness</div>
+                <div class="criterion-desc">CTA fits first-time visitors (e.g., 'Get a quote' vs 'Book now' depending on context).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">No competing or confusing actions</div>
+                <div class="criterion-desc">Secondary CTAs don't distract from the main action.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">CTA wording is benefit-driven</div>
+                <div class="criterion-desc">CTA text is specific and benefit-driven (not generic "Contact").</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">CTA repeats throughout the page</div>
+                <div class="criterion-desc">The primary CTA is repeated at logical points so scanners can act.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Next-step expectations are clear</div>
+                <div class="criterion-desc">The page explains what happens after clicking (timing, steps, what you get).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5: Structure & Scannability -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title">Structure & Scannability</h2>
+            <p class="criteria-desc">Can visitors scan the page and still understand it quickly?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Logical, scannable section order</div>
+                <div class="criterion-desc">The page follows a natural sequence: promise → proof → details → next step.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Clear separation of ideas</div>
+                <div class="criterion-desc">Each section has a purpose; content is not visually or conceptually jumbled.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Important info prioritized</div>
+                <div class="criterion-desc">Key benefits and proof appear before less important content.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Above-the-fold is clear and persuasive</div>
+                <div class="criterion-desc">Above the fold confirms relevance + provides a clear next step.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Key info is easy to find</div>
+                <div class="criterion-desc">Key info (pricing, proof, next step) is easy to find without excessive scrolling.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 6: Friction, Objections & UX -->
+        <div class="criteria-section">
+          <div class="criteria-header">
+            <h2 class="criteria-title">Friction, Objections & UX</h2>
+            <p class="criteria-desc">Do you reduce anxiety, answer objections, and keep the mobile experience frictionless?</p>
+          </div>
+          <div class="criteria-list">
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Message clarity without zooming</div>
+                <div class="criterion-desc">Headline, subhead, and pricing are readable and clear immediately.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Buttons and links easy to tap</div>
+                <div class="criterion-desc">Tap targets are comfortable; no accidental clicks.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">No critical content hidden</div>
+                <div class="criterion-desc">Key content isn't buried in accordions or missing on mobile.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Objections are acknowledged</div>
+                <div class="criterion-desc">Common objections (cost, fit, timing, risk) are addressed proactively.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Clear expectations are set</div>
+                <div class="criterion-desc">Expectations are set (timeline, steps, what you need from the client).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Risk reversal exists</div>
+                <div class="criterion-desc">Risk is reduced (no-pressure language, transparency, guarantees where appropriate).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">FAQs or reassurance section exists</div>
+                <div class="criterion-desc">An FAQ/reassurance section answers common questions quickly.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Readable typography (mobile)</div>
+                <div class="criterion-desc">Typography is readable on mobile (size, contrast, line-height).</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Layout is clean and not overwhelming</div>
+                <div class="criterion-desc">Layout feels calm and uncluttered; sections are easy to parse.</div>
+              </div>
+            </div>
+            <div class="criterion">
+              <div class="check-icon"></div>
+              <div class="criterion-content">
+                <div class="criterion-name">Contact options are easy to find</div>
+                <div class="criterion-desc">Contact options are easy to find (footer/header, consistent placement).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top: 48px;">
+          <strong>Want your homepage diagnosed?</strong>
+          <p class="muted">I'll score your page against these criteria and show you exactly what's blocking inquiries — with prioritized fixes.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="contact.html">Request a Diagnosis</a>
+            <a class="btn btn-ghost" href="work.html">See Example Diagnoses</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-slot"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
