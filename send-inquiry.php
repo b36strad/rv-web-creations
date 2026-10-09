@@ -77,7 +77,7 @@ try {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'mail.rvwebcreations.com';
+    $mail->Host = 'smtp.hostinger.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'info@rvwebcreations.com';
     $mail->Password = $smtpPassword;
