@@ -38,14 +38,40 @@ if ($email === false) {
 }
 
 $smtpPassword = getenv('SMTP_PASSWORD');
-if ($smtpPassword === false || $smtpPassword === '') {
-    error_log('Contact form unavailable: SMTP_PASSWORD is not configured.');
-    http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'We could not send your request right now. Please try again later.']);
-    exit;
+if (!is_string($smtpPassword)) {
+    $smtpPassword = '';
 }
 
+$smtpConfigPath = dirname(__DIR__) . '/private-config/smtp-config.php';
 try {
+    if (is_file($smtpConfigPath)) {
+        $smtpConfig = require $smtpConfigPath;
+        if (is_array($smtpConfig)) {
+            $configuredPassword = $smtpConfig['SMTP_PASSWORD']
+                ?? $smtpConfig['smtp_password']
+                ?? $smtpConfig['password']
+                ?? null;
+            if (is_string($configuredPassword)) {
+                $smtpPassword = $configuredPassword;
+            }
+        } elseif (is_string($smtpConfig)) {
+            $smtpPassword = $smtpConfig;
+        } elseif (isset($smtp_password)) {
+            $smtpPassword = $smtp_password;
+        } elseif (isset($SMTP_PASSWORD)) {
+            $smtpPassword = $SMTP_PASSWORD;
+        } elseif (defined('SMTP_PASSWORD')) {
+            $smtpPassword = constant('SMTP_PASSWORD');
+        }
+    }
+
+    if ($smtpPassword === '') {
+        error_log('Contact form unavailable: SMTP_PASSWORD is not configured.');
+        http_response_code(500);
+        echo json_encode(['success' => false, 'message' => 'We could not send your request right now. Please try again later.']);
+        exit;
+    }
+
     require __DIR__ . '/PHPMailer-master/src/Exception.php';
     require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
     require __DIR__ . '/PHPMailer-master/src/SMTP.php';
