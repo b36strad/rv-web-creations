@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require __DIR__ . '/PHPMailer-master/src/Exception.php';
-require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer-master/src/SMTP.php';
-
 /**
  * Form handler for project inquiries
  * Receives POST data and sends email to the business inbox.
@@ -49,8 +45,12 @@ if ($smtpPassword === false || $smtpPassword === '') {
     exit;
 }
 
-$mail = new PHPMailer(true);
 try {
+    require __DIR__ . '/PHPMailer-master/src/Exception.php';
+    require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
+    require __DIR__ . '/PHPMailer-master/src/SMTP.php';
+
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'mail.rvwebcreations.com';
     $mail->SMTPAuth = true;
@@ -71,6 +71,6 @@ try {
     echo json_encode(['success' => true, 'message' => 'Inquiry sent successfully.']);
 } catch (\Throwable $error) {
     http_response_code(500);
-    error_log('Contact form delivery failed: ' . $mail->ErrorInfo . ' ' . $error->getMessage());
+    error_log('Contact form delivery failed: ' . (isset($mail) ? $mail->ErrorInfo . ' ' : '') . $error->getMessage());
     echo json_encode(['success' => false, 'message' => 'We could not send your request right now. Please try again later.']);
 }

@@ -150,7 +150,16 @@ function initContactForm() {
         method: 'POST',
         body: new FormData(form),
       });
-      const data = await response.json();
+      const responseText = await response.text();
+      let data;
+      try {
+        data = responseText.trim() ? JSON.parse(responseText) : null;
+      } catch {
+        throw new Error(`The form server returned an invalid response (HTTP ${response.status}). Please try again later.`);
+      }
+      if (!data) {
+        throw new Error(`The form server returned an empty response (HTTP ${response.status}). Please try again later.`);
+      }
       if (!response.ok || !data.success) {
         throw new Error(data.message || 'Failed to send. Please try again.');
       }
