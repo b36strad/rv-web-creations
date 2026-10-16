@@ -1,2 +1,20 @@
-body{margin:0;background:#0b0f17;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e8eef8}
+:root{
+	color-scheme: light;
+	--scorecard-surface: #fff;
+	--scorecard-surface-alt: #eaf0ec;
+	--scorecard-text: #203039;
+	--scorecard-muted: #56676c;
+	--scorecard-muted-2: #718085;
+	--scorecard-border: rgba(32,48,57,.15);
+	--scorecard-accent: #176b5b;
+	--scorecard-accent-soft: #edf5f1;
+}
+
+body{
+	margin: 0;
+	background: #f4f7f4;
+	color: var(--scorecard-text);
+	font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
 homepage-scorecard{display:block}
